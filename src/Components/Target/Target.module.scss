@@ -1,0 +1,88 @@
+@import "../../Scss/Variables.scss";
+
+.target {
+  height: 100vh;
+  padding: 20px 0;
+}
+
+.container {
+  height: 100%;
+}
+
+.target__inner {
+  position: relative;
+  height: 100%;
+  background-color: rgba($color: $white, $alpha: 0.3);
+  backdrop-filter: blur(86px);
+  border-radius: 81px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 180px);
+    right: calc(50% - 380px);
+    transform: translate(50%, -50%);
+    width: 525px;
+    z-index: 3;
+    height: 486px;
+    background-image: url("../../Assets/Images/Target/Like.webp");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+}
+
+.target__image {
+  position: absolute;
+  left: calc(50% + 116px);
+  top: 50%;
+  transform: translate(-100%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.target__heading {
+  position: absolute;
+  bottom: calc(50% + 178px);
+  left: calc(50% - 35px);
+  transform: translate(-50%, 50%);
+  z-index: 1;
+  max-width: 570px;
+  width: 100%;
+  margin: 0;
+  font-weight: 800;
+  font-size: 134px;
+  line-height: 94px;
+  color: $textBlue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 56px;
+    left: 150px;
+    width: 61px;
+    height: 96px;
+    background-image: url("../../Assets/Images/Target/Sound.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: 75px;
+    width: 190px;
+    height: 190px;
+    background-image: url("../../Assets/Images/Target/Fire.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+}
