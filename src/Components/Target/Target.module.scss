@@ -86,3 +86,15 @@
     pointer-events: none;
   }
 }
+
+@media only screen and (min-height: 1280px) {
+  .target {
+    height: 1200px;
+  }
+}
+
+@media only screen and (max-height: 850px) {
+  .target {
+    height: 770px;
+  }
+}
