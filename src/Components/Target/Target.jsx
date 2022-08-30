@@ -1,6 +1,6 @@
 import React from "react";
 
-import useWindowDimensions from "../../Hooks/useWindowDimensions";
+// import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 import TargetImage from "../../Assets/Images/Target/Main.webp";
 
@@ -9,7 +9,7 @@ import Container from "../Container/Container";
 import styles from "./Target.module.scss";
 
 const Target = () => {
-  const { width } = useWindowDimensions();
+  // const { width } = useWindowDimensions();
 
   return (
     <section className={`${styles.target}`} id={"target"}>
