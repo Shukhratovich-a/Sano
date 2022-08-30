@@ -1,12 +1,12 @@
 @import "../../Scss/Variables.scss";
 
 .header {
-  // position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 99;
-  margin-bottom: -168px;
+  // margin-bottom: -168px;
   padding: 60px 0;
   transition: padding 0.25s ease, backdrop-filter 0.25s ease;
 
