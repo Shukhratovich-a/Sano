@@ -5,6 +5,7 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 99;
   padding: 60px 0;
   transition: padding 0.25s ease, backdrop-filter 0.25s ease;
 
@@ -78,5 +79,12 @@
 @media only screen and (max-width: 550px) {
   .header {
     padding-top: 110px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header__burger {
+    top: 20px;
+    left: 20px;
   }
 }

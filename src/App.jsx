@@ -1,7 +1,6 @@
-import { Routes, Route } from "react-router-dom";
 import Header from "./Components/Header/Header";
 
-import Home from "./Pages/Home/Home";
+import Hero from "./Components/Hero/Hero";
 
 import "./App.scss";
 
@@ -10,9 +9,9 @@ function App() {
     <div className="app">
       <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <main className="main">
+        <Hero />
+      </main>
     </div>
   );
 }

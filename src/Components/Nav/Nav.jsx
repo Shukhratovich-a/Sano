@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 import styles from "./Nav.module.scss";
 
@@ -7,33 +8,65 @@ const Nav = () => {
     <nav className={`${styles.nav}`}>
       <ul className={`${styles.nav__list}`}>
         <li className={`${styles.nav__item}`}>
-          <a className={`${styles.nav__link} ${styles["nav__link--active"]}`} href="#link">
+          <Link
+            className={`${styles.nav__link}`}
+            activeClass={`${styles["nav__link--active"]}`}
+            to="hero"
+            offset={-80}
+            spy={true}
+            smooth={true}
+          >
             Главная
-          </a>
+          </Link>
         </li>
 
         <li className={`${styles.nav__item}`}>
-          <a className={`${styles.nav__link}`} href="#link">
+          <Link
+            className={`${styles.nav__link}`}
+            activeClass={`${styles["nav__link--active"]}`}
+            to="target"
+            offset={-40}
+            spy={true}
+            smooth={true}
+          >
             Smm & Target
-          </a>
+          </Link>
         </li>
 
         <li className={`${styles.nav__item}`}>
-          <a className={`${styles.nav__link}`} href="#link">
+          <Link
+            className={`${styles.nav__link}`}
+            activeClass={`${styles["nav__link--active"]}`}
+            to="graphic"
+            spy={true}
+            smooth={true}
+          >
             Graphic Design
-          </a>
+          </Link>
         </li>
 
         <li className={`${styles.nav__item}`}>
-          <a className={`${styles.nav__link}`} href="#link">
+          <Link
+            className={`${styles.nav__link}`}
+            activeClass={`${styles["nav__link--active"]}`}
+            to="motion"
+            spy={true}
+            smooth={true}
+          >
             Motion Design
-          </a>
+          </Link>
         </li>
 
         <li className={`${styles.nav__item}`}>
-          <a className={`${styles.nav__link}`} href="#link">
+          <Link
+            className={`${styles.nav__link}`}
+            activeClass={`${styles["nav__link--active"]}`}
+            to="photos"
+            spy={true}
+            smooth={true}
+          >
             Фото и Видео
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
