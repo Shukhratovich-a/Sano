@@ -1,19 +1,21 @@
-// import Header from "./Components/Header/Header";
+import Header from "./Components/Header/Header";
 // import Footer from "./Components/Footer/Footer";
 
-// import Hero from "./Components/Hero/Hero";
+import Hero from "./Components/Hero/Hero";
 import Target from "./Components/Target/Target";
+// import Graphic from "./Components/Graphic/Graphic";
 
 import "./App.scss";
 
 function App() {
   return (
     <div className="app">
-      {/* <Header /> */}
+      <Header />
 
       <main className="main">
-        {/* <Hero /> */}
+        <Hero />
         <Target />
+        {/* <Graphic /> */}
       </main>
 
       {/* <Footer /> */}

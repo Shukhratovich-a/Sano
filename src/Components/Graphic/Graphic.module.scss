@@ -1,0 +1,21 @@
+@import "../../Scss/Variables.scss";
+
+.target {
+  height: 100vh;
+  padding: 20px 0;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 100%;
+}
+
+.target__inner {
+  position: relative;
+  height: 100%;
+  background-color: rgba($color: $white, $alpha: 0.3);
+  backdrop-filter: blur(86px);
+  border-radius: 81px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+}
