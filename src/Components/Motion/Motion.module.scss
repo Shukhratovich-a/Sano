@@ -1,0 +1,41 @@
+@import "../../Scss/Variables.scss";
+
+.motion {
+  height: 100vh;
+  padding: 20px 0;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 100%;
+}
+
+.motion__inner {
+  position: relative;
+  height: 100%;
+  background-image: url("../../Assets/Images/Motion/Background.jpg");
+  background-size: 1920px 1080px;
+  background-position: -115px -35px;
+  border-radius: 81px;
+  overflow: hidden;
+}
+
+.motion__image {
+  position: absolute;
+  top: -110px;
+  left: -100px;
+  z-index: 9;
+  pointer-events: none;
+}
+
+@media only screen and (min-height: 1280px) {
+  .motion {
+    height: 1200px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .motion__inner {
+    border-radius: 50px;
+  }
+}
