@@ -14,7 +14,7 @@ const Nav = () => {
             to="hero"
             offset={-80}
             spy={true}
-            smooth={true}
+            // smooth={true}
           >
             Главная
           </Link>
@@ -25,9 +25,8 @@ const Nav = () => {
             className={`${styles.nav__link}`}
             activeClass={`${styles["nav__link--active"]}`}
             to="target"
-            offset={-40}
             spy={true}
-            smooth={true}
+            // smooth={true}
           >
             Smm & Target
           </Link>
@@ -39,7 +38,7 @@ const Nav = () => {
             activeClass={`${styles["nav__link--active"]}`}
             to="graphic"
             spy={true}
-            smooth={true}
+            // smooth={true}
           >
             Graphic Design
           </Link>

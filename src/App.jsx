@@ -3,7 +3,7 @@ import Header from "./Components/Header/Header";
 
 import Hero from "./Components/Hero/Hero";
 import Target from "./Components/Target/Target";
-// import Graphic from "./Components/Graphic/Graphic";
+import Graphic from "./Components/Graphic/Graphic";
 
 import "./App.scss";
 
@@ -15,7 +15,7 @@ function App() {
       <main className="main">
         <Hero />
         <Target />
-        {/* <Graphic /> */}
+        <Graphic />
       </main>
 
       {/* <Footer /> */}
