@@ -6,6 +6,7 @@ import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import HeroImage from "../../Assets/Images/Hero/Main.webp";
 
 import Arrow from "../Lib/Icons/Arrow";
+import Circle from "../Lib/Icons/Circle";
 
 import Container from "../Container/Container";
 
@@ -17,6 +18,7 @@ const Hero = () => {
   return (
     <section className={`${styles.hero}`} id={"hero"}>
       <Container className={`${styles.container}`}>
+        <Circle className={`${styles.hero__circle}`} />
         <div className={`${styles.hero__inner}`}>
           <div className={`${styles.hero__info}`}>
             <h1 className={`${styles.hero__heading}`}>

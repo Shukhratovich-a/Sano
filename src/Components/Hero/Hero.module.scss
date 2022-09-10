@@ -3,6 +3,43 @@
 .hero {
   height: calc(100vh - 80px);
   margin-top: 80px;
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 218px;
+    right: calc(50% + 95px);
+    z-index: -4;
+    width: 1530px;
+    height: 1530px;
+    background-image: url("../../Assets/Images/Design/Vector.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(107.66deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -76px;
+    left: calc(50% + 360px);
+    z-index: -4;
+    width: 1730px;
+    height: 1730px;
+    background-image: url("../../Assets/Images/Design/Vector.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-109.56deg);
+  }
+}
+
+.hero__circle {
+  position: absolute;
+  top: 85px;
+  left: calc(50% + 360px);
+  z-index: -5;
+  filter: blur(133px);
 }
 
 .container {

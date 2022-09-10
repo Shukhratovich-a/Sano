@@ -23,27 +23,25 @@ const Motion = () => {
             <span className={`${styles.motion__heading__move}`}></span>
           </div>
 
-          {/* <div className={`${styles.motion__wrapper}`}>
+          <div className={`${styles.motion__wrapper}`}>
             <div className={`${styles.motion__info}`}>
-              <h3 className={`${styles.motion__info__heading}`}>BOX #2</h3>
+              <h3 className={`${styles.motion__info__heading}`}>BOX #3</h3>
 
               <div className={`${styles.motion__info__inner}`}>
-                <h4 className={`${styles.motion__info__subheading}`}>Дизайн для:</h4>
+                <h4 className={`${styles.motion__info__subheading}`}>Motion design для:</h4>
 
                 <ul className={`${styles.motion__info__list}`}>
-                  <li className={`${styles.motion__info__item}`}>• Лого</li>
-                  <li className={`${styles.motion__info__item}`}>• Бренд бук</li>
-                  <li className={`${styles.motion__info__item}`}>• Брендинг/Ребрендинг</li>
-                  <li className={`${styles.motion__info__item}`}>• POSM</li>
-                  <li className={`${styles.motion__info__item}`}>• Наружной рекламы</li>
-                  <li className={`${styles.motion__info__item}`}>• Упаковки продукции</li>
-                  <li className={`${styles.motion__info__item}`}>• Постов</li>
+                  <li className={`${styles.motion__info__item}`}>• Логотипов / слоганов</li>
+                  <li className={`${styles.motion__info__item}`}>• SMM постов</li>
+                  <li className={`${styles.motion__info__item}`}>• Сайтов</li>
+                  <li className={`${styles.motion__info__item}`}>• LED экранов</li>
+                  <li className={`${styles.motion__info__item}`}>• Телевидении</li>
                 </ul>
               </div>
 
               <span className={`${styles.motion__info__image}`}></span>
             </div>
-          </div> */}
+          </div>
         </div>
       </Container>
     </section>
