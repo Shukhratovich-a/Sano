@@ -19,7 +19,8 @@ const Graphic = () => {
 
           <div className={`${styles.graphic__inner__top}`}>
             <h2 className={`${styles.graphic__heading}`}>graphic</h2>
-            <span className={`${styles.graphic__heading__image}`}></span>
+            <span className={`${styles.graphic__heading__design}`}></span>
+            <span className={`${styles.graphic__heading__palette}`}></span>
           </div>
 
           <div className={`${styles.graphic__wrapper}`}>

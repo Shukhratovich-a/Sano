@@ -28,6 +28,67 @@
   pointer-events: none;
 }
 
+.motion__inner__top {
+  position: absolute;
+  bottom: 24px;
+  left: 32px;
+}
+
+.motion__heading {
+  margin: 0;
+  font-weight: 800;
+  font-size: 247px;
+  line-height: 301px;
+  text-transform: uppercase;
+  background: linear-gradient(270.14deg, #003246 2.11%, #006996 97.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.motion__heading__design {
+  position: absolute;
+  top: 30px;
+  right: -384px;
+  width: 445px;
+  height: 238px;
+  background-image: url("../../Assets/Images/Design/Design.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+.motion__heading__move {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 73px;
+    left: 260px;
+    width: 160px;
+    height: 160px;
+    background-image: url("../../Assets/Images/Motion/Move.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: move 2s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 73px;
+    right: 224px;
+    width: 160px;
+    height: 160px;
+    background-image: url("../../Assets/Images/Motion/Move.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: move 2s linear infinite;
+  }
+}
+
 @media only screen and (min-height: 1280px) {
   .motion {
     height: 1200px;
@@ -37,5 +98,14 @@
 @media only screen and (max-width: 1250px) {
   .motion__inner {
     border-radius: 50px;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

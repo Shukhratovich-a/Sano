@@ -16,13 +16,14 @@ const Motion = () => {
             width={1920}
             height={1080}
           />
-          {/* 
+
           <div className={`${styles.motion__inner__top}`}>
             <h2 className={`${styles.motion__heading}`}>motion</h2>
-            <span className={`${styles.motion__heading__image}`}></span>
+            <span className={`${styles.motion__heading__design}`}></span>
+            <span className={`${styles.motion__heading__move}`}></span>
           </div>
 
-          <div className={`${styles.motion__wrapper}`}>
+          {/* <div className={`${styles.motion__wrapper}`}>
             <div className={`${styles.motion__info}`}>
               <h3 className={`${styles.motion__info__heading}`}>BOX #2</h3>
 
