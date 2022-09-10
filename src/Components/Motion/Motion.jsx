@@ -1,5 +1,7 @@
 import Human from "../../Assets/Images/Motion/Human.png";
 
+import Circle from "../Lib/Icons/Circle";
+
 import Container from "../Container/Container";
 
 import styles from "./Motion.module.scss";
@@ -8,6 +10,8 @@ const Motion = () => {
   return (
     <section className={`${styles.motion}`} id={"motion"}>
       <Container className={`${styles.container}`}>
+        <Circle className={`${styles.motion__circle}`} width={550} height={550} />
+
         <div className={`${styles.motion__inner}`}>
           <img
             className={`${styles.motion__image}`}

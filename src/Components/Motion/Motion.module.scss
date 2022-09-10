@@ -3,11 +3,19 @@
 .motion {
   height: 100vh;
   padding: 20px 0;
-  overflow-x: hidden;
 }
 
 .container {
+  position: relative;
   height: 100%;
+}
+
+.motion__circle {
+  position: absolute;
+  top: -111px;
+  right: calc(50% + 570px);
+  z-index: -6;
+  filter: blur(25px);
 }
 
 .motion__inner {
@@ -168,8 +176,6 @@
 }
 
 .motion__info__image {
-  
-
   &::before {
     content: "";
     position: absolute;

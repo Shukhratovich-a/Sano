@@ -3,7 +3,6 @@
 .hero {
   height: calc(100vh - 80px);
   margin-top: 80px;
-  overflow-x: hidden;
 
   &::before {
     content: "";

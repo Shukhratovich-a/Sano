@@ -3,11 +3,29 @@
 .target {
   height: 100vh;
   padding: 20px 0;
-  overflow-x: hidden;
 }
 
 .container {
+  position: relative;
   height: 100%;
+}
+
+.target__circle {
+  position: absolute;
+
+  &:nth-child(1) {
+    top: 320px;
+    right: calc(50% + 155px);
+    z-index: -6;
+    filter: blur(25px);
+  }
+
+  &:nth-child(2) {
+    top: 460px;
+    left: calc(50% + 475px);
+    z-index: -6;
+    filter: blur(25px);
+  }
 }
 
 .target__inner {

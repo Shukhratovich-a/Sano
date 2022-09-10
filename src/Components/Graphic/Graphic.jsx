@@ -1,5 +1,7 @@
 import Human from "../../Assets/Images/Graphic/Human.png";
 
+import Circle from "../Lib/Icons/Circle";
+
 import Container from "../Container/Container";
 
 import styles from "./Graphic.module.scss";
@@ -8,6 +10,8 @@ const Graphic = () => {
   return (
     <section className={`${styles.graphic}`} id={"graphic"}>
       <Container className={`${styles.container}`}>
+        <Circle className={`${styles.graphic__circle}`} />
+
         <div className={`${styles.graphic__inner}`}>
           <img
             className={`${styles.graphic__image}`}
