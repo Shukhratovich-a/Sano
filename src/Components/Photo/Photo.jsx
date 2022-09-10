@@ -16,7 +16,7 @@ const Photo = () => {
           <img
             className={`${styles.photo__image}`}
             src={Human}
-            alt="photo"
+            alt="Human with camera"
             width={1920}
             height={1080}
           />
