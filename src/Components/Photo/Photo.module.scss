@@ -10,13 +10,13 @@
   height: 100%;
 }
 
-// .motion__circle {
-//   position: absolute;
-//   top: -111px;
-//   right: calc(50% + 570px);
-//   z-index: -6;
-//   filter: blur(25px);
-// }
+.photo__circle {
+  position: absolute;
+  top: 387px;
+  right: calc(50% - 70px);
+  z-index: -6;
+  filter: blur(25px);
+}
 
 .photo__inner {
   position: relative;
@@ -95,7 +95,7 @@
   border-radius: 60px;
 }
 
-.photo__info__inner{
+.photo__info__inner {
   max-width: 280px;
   width: 100%;
 }

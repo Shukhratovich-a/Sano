@@ -1,6 +1,6 @@
 import Human from "../../Assets/Images/Photo/Human.png";
 
-// import Circle from "../Lib/Icons/Circle";
+import Circle from "../Lib/Icons/Circle";
 
 import Container from "../Container/Container";
 
@@ -10,7 +10,7 @@ const Photo = () => {
   return (
     <section className={`${styles.photo}`} id={"photo"}>
       <Container className={`${styles.container}`}>
-        {/* <Circle className={`${styles.photo__circle}`} width={550} height={550} /> */}
+        {/* <Circle className={`${styles.photo__circle}`} width={1382} height={1382} /> */}
 
         <div className={`${styles.photo__inner}`}>
           <img
@@ -37,7 +37,7 @@ const Photo = () => {
                   Снимаем эффектные видео ролики для социальных сетей. Вовлекая пользователя
                   профессиональной съемкой:
                 </h4>
-                
+
                 <ul className={`${styles.photo__info__list}`}>
                   <li className={`${styles.photo__info__item}`}>• видео роликов</li>
                   <li className={`${styles.photo__info__item}`}>• интервью</li>
