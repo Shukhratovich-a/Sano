@@ -1,6 +1,6 @@
 import Human from "../../Assets/Images/Photo/Human.png";
 
-import Circle from "../Lib/Icons/Circle";
+// import Circle from "../Lib/Icons/Circle";
 
 import Container from "../Container/Container";
 
