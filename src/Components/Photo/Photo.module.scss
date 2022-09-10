@@ -1,0 +1,223 @@
+@import "../../Scss/Variables.scss";
+
+.photo {
+  height: 100vh;
+  padding: 20px 0;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+// .motion__circle {
+//   position: absolute;
+//   top: -111px;
+//   right: calc(50% + 570px);
+//   z-index: -6;
+//   filter: blur(25px);
+// }
+
+.photo__inner {
+  position: relative;
+  height: 100%;
+  background-image: url("../../Assets/Images/Photo/Background.jpg");
+  background-size: 1920px 1080px;
+  background-position: -190px -108px;
+  border-radius: 81px;
+  overflow: hidden;
+}
+
+.photo__image {
+  position: absolute;
+  top: -108px;
+  left: -190px;
+  z-index: 9;
+  pointer-events: none;
+}
+
+// .motion__inner__top {
+//   position: absolute;
+//   bottom: 24px;
+//   left: 32px;
+// }
+
+// .motion__heading {
+//   margin: 0;
+//   font-weight: 800;
+//   font-size: 247px;
+//   line-height: 301px;
+//   text-transform: uppercase;
+//   background: linear-gradient(270.14deg, $textBlue 2.11%, #006996 97.49%);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text;
+// }
+
+// .motion__heading__design {
+//   position: absolute;
+//   top: 30px;
+//   right: -384px;
+//   width: 445px;
+//   height: 238px;
+//   background-image: url("../../Assets/Images/Design/Design.png");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   pointer-events: none;
+// }
+
+// .motion__heading__move {
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 73px;
+//     left: 260px;
+//     width: 160px;
+//     height: 160px;
+//     background-image: url("../../Assets/Images/Motion/Move.svg");
+//     background-size: 100% 100%;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     animation: move 2.2s linear infinite;
+//   }
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: 73px;
+//     right: 224px;
+//     width: 160px;
+//     height: 160px;
+//     background-image: url("../../Assets/Images/Motion/Move.svg");
+//     background-size: 100% 100%;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     animation: move 2.2s linear infinite;
+//   }
+// }
+
+// .motion__wrapper {
+//   position: absolute;
+//   bottom: calc(50% - 45px);
+//   left: calc(50% + 145px);
+//   z-index: 9;
+//   max-width: 315px;
+//   width: 100%;
+// }
+
+// .motion__info__heading {
+//   position: absolute;
+//   top: -12px;
+//   left: -10px;
+//   margin: 0;
+//   padding: 27px 45px;
+//   font-weight: 900;
+//   font-size: 40px;
+//   line-height: 49px;
+//   color: $accent;
+//   background: radial-gradient(85.48% 131.72% at 9.41% 9.14%, #006996 0%, #003246 100%);
+//   border-radius: 25px;
+// }
+
+// .motion__info {
+//   padding-top: 120px;
+//   padding-bottom: 85px;
+//   padding-left: 35px;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 20px;
+//   background: #ffffff;
+//   border-radius: 60px;
+
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: -36px;
+//     right: -85px;
+//     z-index: 9;
+//     transform: rotate(151.16deg);
+//     width: 210px;
+//     height: 210px;
+//     filter: blur(29px);
+//     mix-blend-mode: multiply;
+//     opacity: 0.5;
+//     background-image: url("../../Assets/Images/Motion/PlayShadow.svg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: right 0 center;
+//   }
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: -70px;
+//     right: -108px;
+//     z-index: 9;
+//     transform: rotate(-19.66deg);
+//     width: 216px;
+//     height: 218px;
+//     background-image: url("../../Assets/Images/Motion/Play.png");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+// }
+
+// .motion__info__list {
+//   margin: 0;
+//   padding: 0;
+//   list-style-type: none;
+// }
+
+// .motion__info__subheading {
+//   margin: 0;
+//   font-weight: 700;
+// }
+
+// .motion__info__image {
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     bottom: 95px;
+//     right: -68px;
+//     z-index: 10;
+//     transform: rotate(20.6deg);
+//     width: 106px;
+//     height: 106px;
+//     mix-blend-mode: multiply;
+//     opacity: 0.47;
+//     background-image: url("../../Assets/Images/Motion/Clapper.png");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     filter: blur(12px);
+//   }
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     bottom: 100px;
+//     right: -100px;
+//     z-index: 10;
+//     transform: rotate(20.6deg);
+//     width: 128px;
+//     height: 128px;
+//     background-image: url("../../Assets/Images/Motion/Clapper.png");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+// }
+
+@media only screen and (min-height: 1280px) {
+  .motion {
+    height: 1200px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .motion__inner {
+    border-radius: 50px;
+  }
+}

@@ -56,7 +56,7 @@ const Nav = () => {
           <Link
             className={`${styles.nav__link}`}
             activeClass={`${styles["nav__link--active"]}`}
-            to="photos"
+            to="photo"
             spy={true}
           >
             Фото и Видео
