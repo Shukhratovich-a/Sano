@@ -10,6 +10,7 @@ import Burger from "../Lib/Icons/Burger";
 import Container from "../Container/Container";
 
 import styles from "./Header.module.scss";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const { width } = useWindowDimensions();
@@ -18,9 +19,7 @@ const Header = () => {
 
   React.useEffect(() => {
     if (typeof window !== "undefined") {
-      const app = document.querySelector(".app");
-
-      app.addEventListener("scroll", () => setSmall(app.scrollTop > 100));
+      window.addEventListener("scroll", () => setSmall(window.pageYOffset > 100));
     }
   }, []);
 
@@ -29,7 +28,9 @@ const Header = () => {
       <Container className={`${styles.container}`}>
         <div className={`${styles.header__inner}`}>
           <div className={`${styles.header__wrapper}`}>
-            <Logo width={width > 550 ? 195 : 182} height={width > 550 ? 48 : 45} />
+            <Link className={`${styles.header__link}`} to="hero" offset={-80}>
+              <Logo width={width > 550 ? 195 : 182} height={width > 550 ? 48 : 45} />
+            </Link>
 
             {width > 1150 && <Nav />}
 

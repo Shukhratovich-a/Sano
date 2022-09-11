@@ -3,11 +3,29 @@
 .target {
   height: 100vh;
   padding: 20px 0;
-  overflow-x: hidden;
 }
 
 .container {
+  position: relative;
   height: 100%;
+}
+
+.target__circle {
+  position: absolute;
+
+  &:nth-child(1) {
+    top: 320px;
+    right: calc(50% + 155px);
+    z-index: -6;
+    filter: blur(25px);
+  }
+
+  &:nth-child(2) {
+    top: 460px;
+    left: calc(50% + 475px);
+    z-index: -6;
+    filter: blur(25px);
+  }
 }
 
 .target__inner {
@@ -16,7 +34,6 @@
   background-color: rgba($color: $white, $alpha: 0.3);
   backdrop-filter: blur(86px);
   border-radius: 81px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   overflow: hidden;
 
   &::before {
@@ -99,7 +116,7 @@
   max-width: 400px;
   width: 100%;
   padding-top: 109px;
-  padding-right: 25px;
+  padding-right: 20px;
   padding-bottom: 35px;
   padding-left: 33px;
   font-weight: 500;
@@ -118,6 +135,7 @@
     width: 272px;
     height: 228px;
     background-image: url("../../Assets/Images/Target/Ball.webp");
+    pointer-events: none;
   }
 }
 
@@ -137,13 +155,17 @@
 
 .target__info__subheading {
   margin: 0;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .target__info__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.target__info__item {
+  font-weight: 500;
 }
 
 @media only screen and (min-height: 1280px) {
@@ -184,45 +206,6 @@
   .target__image {
     width: 750px;
     height: 600px;
-  }
-
-  .target__heading {
-    left: calc(50% + 15px);
-    font-size: 110px;
-    line-height: 75px;
-
-    &::before {
-      content: "";
-      top: 45px;
-      left: 105px;
-      width: 55px;
-      height: 85px;
-    }
-
-    &::after {
-      top: -45px;
-      right: 180px;
-      width: 150px;
-      height: 150px;
-    }
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  .target__inner {
-    border-radius: 50px;
-
-    &::before {
-      right: calc(50% - 300px);
-      width: 400px;
-      height: 370px;
-    }
-  }
-
-  .target__image {
-    width: 600px;
-    height: 600px;
-    object-fit: contain;
   }
 
   .target__heading {

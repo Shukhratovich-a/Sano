@@ -1,0 +1,154 @@
+@import "../../Scss/Variables.scss";
+
+.photo {
+  height: 100vh;
+  padding: 20px 0;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.photo__circle {
+  position: absolute;
+  top: 387px;
+  right: calc(50% - 70px);
+  z-index: -6;
+  filter: blur(25px);
+}
+
+.photo__inner {
+  position: relative;
+  height: 100%;
+  background-image: url("../../Assets/Images/Photo/Background.jpg");
+  background-size: 1920px 1080px;
+  background-position: -190px -108px;
+  border-radius: 81px;
+  overflow: hidden;
+}
+
+.photo__image {
+  position: absolute;
+  top: -108px;
+  left: -190px;
+  z-index: 9;
+  pointer-events: none;
+}
+
+.photo__inner__top {
+  position: absolute;
+  right: calc(50% + 52px);
+  bottom: calc(50% + 36px);
+  z-index: 9;
+}
+
+.photo__heading {
+  display: inline-block;
+  margin: 0;
+  font-weight: 800;
+  font-size: 150px;
+  line-height: 183px;
+  text-transform: uppercase;
+  color: $white;
+
+  span {
+    display: block;
+  }
+
+  span + span {
+    margin-top: -55px;
+  }
+}
+
+.photo__wrapper {
+  position: absolute;
+  top: calc(50% + 15px);
+  right: calc(50% + 218px);
+  z-index: 9;
+  max-width: 400px;
+  width: 100%;
+}
+
+.photo__info__heading {
+  position: absolute;
+  top: -12px;
+  left: -10px;
+  margin: 0;
+  padding: 27px 45px;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 49px;
+  color: $white;
+  background: $lightGreen;
+  border-radius: 25px;
+}
+
+.photo__info {
+  padding-top: 112px;
+  padding-bottom: 28px;
+  padding-left: 35px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  background: #ffffff;
+  border-radius: 60px;
+}
+
+.photo__info__inner {
+  max-width: 280px;
+  width: 100%;
+}
+
+.photo__info__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.photo__info__subheading {
+  margin: 0;
+  // font-weight: 500;
+}
+
+.photo__info__image {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: 86px;
+    width: 108px;
+    height: 135px;
+    background-image: url("../../Assets/Images/Photo/CameraShadow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: multiply;
+    filter: blur(16px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -51px;
+    right: 3px;
+    width: 181px;
+    height: 181px;
+    background-image: url("../../Assets/Images/Photo/Camera.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media only screen and (min-height: 1280px) {
+  .photo {
+    height: 1200px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .photo__inner {
+    border-radius: 50px;
+  }
+}

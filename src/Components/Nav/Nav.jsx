@@ -14,7 +14,6 @@ const Nav = () => {
             to="hero"
             offset={-80}
             spy={true}
-            smooth={true}
           >
             Главная
           </Link>
@@ -25,9 +24,7 @@ const Nav = () => {
             className={`${styles.nav__link}`}
             activeClass={`${styles["nav__link--active"]}`}
             to="target"
-            offset={-40}
             spy={true}
-            smooth={true}
           >
             Smm & Target
           </Link>
@@ -39,7 +36,6 @@ const Nav = () => {
             activeClass={`${styles["nav__link--active"]}`}
             to="graphic"
             spy={true}
-            smooth={true}
           >
             Graphic Design
           </Link>
@@ -51,7 +47,6 @@ const Nav = () => {
             activeClass={`${styles["nav__link--active"]}`}
             to="motion"
             spy={true}
-            smooth={true}
           >
             Motion Design
           </Link>
@@ -61,9 +56,8 @@ const Nav = () => {
           <Link
             className={`${styles.nav__link}`}
             activeClass={`${styles["nav__link--active"]}`}
-            to="photos"
+            to="photo"
             spy={true}
-            smooth={true}
           >
             Фото и Видео
           </Link>

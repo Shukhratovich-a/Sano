@@ -4,6 +4,8 @@ import React from "react";
 
 import TargetImage from "../../Assets/Images/Target/Main.webp";
 
+import Circle from "../Lib/Icons/Circle";
+
 import Container from "../Container/Container";
 
 import styles from "./Target.module.scss";
@@ -14,6 +16,9 @@ const Target = () => {
   return (
     <section className={`${styles.target}`} id={"target"}>
       <Container className={`${styles.container}`}>
+        <Circle className={`${styles.target__circle}`} />
+        <Circle className={`${styles.target__circle}`} width={547} height={511} />
+
         <div className={`${styles.target__inner}`}>
           <img
             className={`${styles.target__image}`}
