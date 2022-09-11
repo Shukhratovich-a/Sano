@@ -13,7 +13,7 @@ import Container from "../Container/Container";
 import styles from "./Hero.module.scss";
 
 const Hero = () => {
-  const { width } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
 
   return (
     <section className={`${styles.hero}`} id={"hero"}>
