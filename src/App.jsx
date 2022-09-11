@@ -2,9 +2,10 @@
 // import Footer from "./Components/Footer/Footer";
 
 // import Hero from "./Components/Hero/Hero";
-import Target from "./Components/Target/Target";
+// import Target from "./Components/Target/Target";
 
 import "./App.scss";
+import Benefits from "./Components/Benefits/Benefits";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
 
       <main className="main">
         {/* <Hero /> */}
-        <Target />
+        {/* <Target /> */}
+        <Benefits/>
       </main>
 
       {/* <Footer /> */}
