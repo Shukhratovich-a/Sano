@@ -3,6 +3,7 @@
 .hero {
   height: calc(100vh - 80px);
   margin-top: 80px;
+  overflow-x: visible;
 
   &::before {
     content: "";
@@ -18,19 +19,19 @@
     transform: rotate(107.66deg);
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: -76px;
-    left: calc(50% + 360px);
-    z-index: -4;
-    width: 1730px;
-    height: 1730px;
-    background-image: url("../../Assets/Images/Design/Vector.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: rotate(-109.56deg);
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: -76px;
+  //   left: calc(50% + 360px);
+  //   z-index: -4;
+  //   width: 1730px;
+  //   height: 1730px;
+  //   background-image: url("../../Assets/Images/Design/Vector.svg");
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   transform: rotate(-109.56deg);
+  // }
 }
 
 .hero__circle {
@@ -124,18 +125,6 @@
   height: auto;
 }
 
-@media only screen and (min-height: 1280px) {
-  .hero {
-    height: 1200px;
-  }
-}
-
-@media only screen and (max-height: 850px) {
-  .hero {
-    height: 770px;
-  }
-}
-
 @media only screen and (max-width: 1920px) {
   .hero {
     &::after {
@@ -193,12 +182,12 @@
   }
 }
 
-@media only screen and (max-width: 1150px) {
-  .hero {
-    height: calc(100vh - 148px);
-    margin-top: 0;
-  }
-}
+// @media only screen and (max-width: 1150px) {
+//   .hero {
+//     height: calc(100vh - 148px);
+//     margin-top: 0;
+//   }
+// }
 
 @media only screen and (max-width: 1140px) {
   .hero {
@@ -309,5 +298,35 @@
     &::after {
       left: 195px;
     }
+  }
+}
+
+@media only screen and (min-height: 1000px) and (min-width: 1450px) {
+  .hero {
+    height: 920px;
+  }
+}
+
+@media only screen and (max-height: 840px) and (min-width: 1450px) {
+  .hero {
+    height: 760px;
+  }
+}
+
+@media only screen and (min-height: 850px) and (max-width: 1450px) {
+  .hero {
+    height: 770px;
+  }
+}
+
+@media only screen and (max-height: 740px) and (min-width: 1335px) {
+  .hero {
+    height: 660px;
+  }
+}
+
+@media only screen and (max-height: 740px) and (max-width: 1335px) {
+  .hero {
+    height: 660px;
   }
 }
