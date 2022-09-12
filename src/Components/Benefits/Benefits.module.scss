@@ -1,151 +1,122 @@
 @import "../../Scss/Variables.scss";
 
 .benefits__heading__top {
-    position: relative;
-    margin: 0;
-    margin-bottom: 92px;
+  position: relative;
+  margin: 0;
+  margin-bottom: 92px;
 }
 
 .benefits__heading__text {
-    font-style: normal;
-    font-weight: 900;
-    font-size: 56px;
-    line-height: 68px;
-    text-align: center;
-    background: linear-gradient(90deg, #0095d0 0%, #006996 98.64%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  margin: 0;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 68px;
+  text-align: center;
+  background: linear-gradient(90deg, #0095d0 0%, #006996 98.64%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .benefits__heading__subtext {
-    position: absolute;
-    top: 40px;
-    right: 50%;
-    transform: translate(50%);
-    z-index: -1;
-    text-align: center;
-    content: "причины выбрать нас";
-    width: 1856px;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 143px;
-    line-height: 174px;
-    color: $white;
-    filter: drop-shadow(-15px 15px 21px rgba(0, 0, 0, 0.05));
+  position: absolute;
+  top: 40px;
+  right: 50%;
+  transform: translate(50%);
+  z-index: -1;
+  text-align: center;
+  width: 1856px;
+  font-weight: 900;
+  font-size: 143px;
+  line-height: 174px;
+  color: $white;
+  filter: drop-shadow(-15px 15px 21px rgba(0, 0, 0, 0.05));
 }
 
 .benefits__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .benefits__item {
-    max-width: 306px;
-    width: 100%;
-    height: 318px;
-    padding: 28px 33px 59px 16px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(50px);
-    border-radius: 47px;
-    margin-right: 18px;
-    
-    & + &{
-        margin-right: 18px;
-    }
-    
-    &:nth-child(1)::after{
-        top: -18px;
-        right: -4px;
-        content: '';
-        position: absolute;
-        width: 130px;
-        height: 130px;
-        background-image: url(../../Assets/Images/Benefits/hit2x.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    
-    &:nth-child(2)::after{
-        top: -2px;
-        right: 6px;
-        content: '';
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        background-image: url(../../Assets/Images/Benefits/technologist2x.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    
-    &:nth-child(3)::after{
-        top: 0;
-        right: 6px;
-        content: '';
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        background-image: url(../../Assets/Images/Benefits/stars2x.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    
-    &:nth-child(4)::after{
-        top: -2px;
-        right: 8px;
-        content: '';
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        background-image: url(../../Assets/Images/Benefits/emoji2x.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    
-    &:nth-child(5)::after{
-        top: -2px;
-        right: 8px;
-        content: '';
-        position: absolute;
-        width: 110px;
-        height: 110px;
-        background-image: url(../../Assets/Images/Benefits/money2x.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+  width: 304px;
+  padding: 28px 33px 59px 16px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(50px);
+  border-radius: 47px;
+
+  & + & {
+    margin-left: 18px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(1)::after {
+    top: -18px;
+    right: -4px;
+    width: 130px;
+    height: 130px;
+    background-image: url(../../Assets/Images/Benefits/hit2x.png);
+  }
+
+  &:nth-child(2)::after {
+    top: -2px;
+    right: 6px;
+    background-image: url(../../Assets/Images/Benefits/technologist2x.png);
+  }
+
+  &:nth-child(3)::after {
+    top: 0;
+    right: 6px;
+    background-image: url(../../Assets/Images/Benefits/stars2x.png);
+  }
+
+  &:nth-child(4)::after {
+    top: -2px;
+    right: 8px;
+    background-image: url(../../Assets/Images/Benefits/emoji2x.png);
+  }
+
+  &:nth-child(5)::after {
+    top: -2px;
+    right: 8px;
+    background-image: url(../../Assets/Images/Benefits/money2x.png);
+  }
 }
 
 .benefit__top {
-    position: relative;
-    margin-bottom: 42px;
+  position: relative;
+  margin-bottom: 42px;
 }
 
 .benefit__ordernumber {
-    display: inline-block;
-    padding: 8px 36px;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 800;
-    font-size: 41px;
-    line-height: 50px;
-    color: #ff7200;
-    background: radial-gradient(
-    91.92% 196.12% at 3.46% 14.04%,
-    #fff0a0 0%,
-    #ffb800 100%);
-    border-radius: 17px;
+  display: inline-block;
+  padding: 8px 36px;
+  font-weight: 800;
+  font-size: 41px;
+  line-height: 50px;
+  color: #ff7200;
+  background: radial-gradient(91.92% 196.12% at 3.46% 14.04%, #fff0a0 0%, #ffb800 100%);
+  border-radius: 17px;
 }
 
-.benefit__text{
-    max-width: 249px;
-    width: 100%;
-    margin: 0 auto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: center;
-    color: #727272;
+.benefit__text {
+  max-width: 249px;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #727272;
 }

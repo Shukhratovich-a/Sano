@@ -136,6 +136,15 @@
   }
 }
 
+@media only screen and (max-width: 1920px) {
+  .hero {
+    &::after {
+      right: -1130px;
+      left: unset;
+    }
+  }
+}
+
 @media only screen and (max-width: 1450px) {
   .hero__info {
     flex-shrink: 0;
@@ -197,6 +206,14 @@
     text-align: center;
   }
 
+  .hero__circle {
+    top: calc(50% - 95px);
+    left: calc(50% + 260px);
+    transform: translate(-50%, -50%);
+    filter: blur(100px);
+    opacity: 0.5;
+  }
+
   .hero__inner {
     justify-content: center;
   }
@@ -217,6 +234,29 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .hero {
+    &::before {
+      top: calc(100% + 200px);
+      right: calc(50% + 245px);
+      transform: translate(50%) rotate(-112.47deg);
+      z-index: -4;
+      width: 878px;
+      height: 836px;
+      background-image: url("../../Assets/Images/Design/VectorMobile.svg");
+    }
+
+    &::after {
+      top: calc(50% + 120px);
+      left: calc(50% + 325px);
+      transform: translate(-50%, -50%) rotate(-133.46deg);
+      width: 878px;
+      height: 836px;
+      background-image: url("../../Assets/Images/Design/VectorMobile.svg");
+    }
+  }
+}
+
 @media only screen and (max-width: 550px) {
   .hero {
     height: calc(100vh - 155px);
@@ -232,7 +272,7 @@
 
     &::after {
       top: 15px;
-      left: 215px;
+      left: 205px;
       width: 97px;
       height: 97px;
     }
