@@ -35,9 +35,10 @@
 }
 
 .header__burger {
-  position: absolute;
+  position: fixed;
   top: 30px;
   left: 30px;
+  z-index: 9999;
   display: none;
   align-items: center;
   justify-content: center;
@@ -64,7 +65,7 @@
   }
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1140px) {
   .header {
     position: relative;
     padding: 0;
@@ -83,6 +84,12 @@
 @media only screen and (max-width: 550px) {
   .header {
     padding-top: 110px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .header {
+    padding-top: 80px;
   }
 }
 

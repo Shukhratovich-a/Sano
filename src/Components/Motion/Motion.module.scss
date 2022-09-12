@@ -30,16 +30,18 @@
 
 .motion__image {
   position: absolute;
-  top: -110px;
-  left: -100px;
+  top: calc(50% + -30px);
+  left: calc(50% + 60px);
+  transform: translate(-50%, -50%);
   z-index: 9;
   pointer-events: none;
 }
 
 .motion__inner__top {
   position: absolute;
-  bottom: 24px;
-  left: 32px;
+  top: calc(50% - -285px);
+  left: calc(50% + -224px);
+  transform: translate(-50%, -50%);
 }
 
 .motion__heading {

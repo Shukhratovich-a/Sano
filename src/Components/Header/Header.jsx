@@ -24,7 +24,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`${styles.header} ${small ? styles["header--small"] : ""}`}>
+    <header className={`${styles.header} ${small && width > 1140 ? styles["header--small"] : ""}`}>
       <Container className={`${styles.container}`}>
         <div className={`${styles.header__inner}`}>
           <div className={`${styles.header__wrapper}`}>
@@ -32,9 +32,9 @@ const Header = () => {
               <Logo width={width > 550 ? 195 : 182} height={width > 550 ? 48 : 45} />
             </Link>
 
-            {width > 1150 && <Nav />}
+            {width > 1140 && <Nav />}
 
-            {width <= 1150 && (
+            {width <= 1140 && (
               <button className={`${styles.header__burger}`}>
                 <Burger />
               </button>
