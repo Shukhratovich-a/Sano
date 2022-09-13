@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Context } from "../Context/Burger";
+import { Context } from "../Context/Menu";
 
-const useBurger = () => {
+const useMenu = () => {
   const ctx = React.useContext(Context);
 
   return [ctx.state, ctx.setState];
 };
 
-export default useBurger;
+export default useMenu;

@@ -2,7 +2,7 @@
 
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: initial;
 }
 
 *,
@@ -35,6 +35,14 @@ body {
   font-size: 16px;
   color: $black;
   background-color: $bgWhite;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow: hidden;
+}
+
+.app {
   overflow: hidden;
 }
 

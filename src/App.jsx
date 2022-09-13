@@ -1,5 +1,8 @@
+import useWindowDimensions from "./Hooks/useWindowDimensions";
+
 import Header from "./Components/Header/Header";
-// import Footer from "./Components/Footer/Footer";
+import Menu from "./Components/Menu/Menu";
+import Footer from "./Components/Footer/Footer";
 
 import Hero from "./Components/Hero/Hero";
 import Target from "./Components/Target/Target";
@@ -12,9 +15,12 @@ import Achievements from "./Components/Achievements/Achievements";
 import "./App.scss";
 
 function App() {
+  const { width } = useWindowDimensions();
+
   return (
     <div className="app">
       <Header />
+      {width <= 1140 && <Menu />}
 
       <main className="main">
         <Hero />
@@ -26,7 +32,7 @@ function App() {
         <Achievements />
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

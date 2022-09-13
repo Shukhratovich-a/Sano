@@ -1,6 +1,7 @@
 import React from "react";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import useMenu from "../../Hooks/useMenu";
 
 import Nav from "../Nav/Nav";
 
@@ -14,12 +15,13 @@ import { Link } from "react-scroll";
 
 const Header = () => {
   const { width } = useWindowDimensions();
+  const [, setOpen] = useMenu();
 
   const [small, setSmall] = React.useState(false);
 
   React.useEffect(() => {
     if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => setSmall(window.pageYOffset > 100));
+      window.addEventListener("scroll", () => setSmall(window.pageYOffset > 10));
     }
   }, []);
 
@@ -35,7 +37,7 @@ const Header = () => {
             {width > 1140 && <Nav />}
 
             {width <= 1140 && (
-              <button className={`${styles.header__burger}`}>
+              <button className={`${styles.header__burger}`} onClick={() => setOpen(true)}>
                 <Burger />
               </button>
             )}
