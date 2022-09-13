@@ -9,8 +9,8 @@ import Target from "./Components/Target/Target";
 import Graphic from "./Components/Graphic/Graphic";
 import Motion from "./Components/Motion/Motion";
 import Photo from "./Components/Photo/Photo";
-import Benefits from "./Components/Benefits/Benefits";
-import Achievements from "./Components/Achievements/Achievements";
+// import Benefits from "./Components/Benefits/Benefits";
+// import Achievements from "./Components/Achievements/Achievements";
 
 import "./App.scss";
 
@@ -28,8 +28,8 @@ function App() {
         <Graphic />
         <Motion />
         <Photo />
-        <Benefits />
-        <Achievements />
+        {/* <Benefits /> */}
+        {/* <Achievements /> */}
       </main>
 
       <Footer />
