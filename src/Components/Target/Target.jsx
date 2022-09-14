@@ -2,9 +2,9 @@ import React from "react";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
-import TargetImage from "../../Assets/Images/Target/Main.webp";
+import Human from "../../Assets/Images/Target/Main.webp";
 
-// import Circle from "../Lib/Icons/Circle";
+import Circle from "../Lib/Icons/Circle";
 
 import Container from "../Container/Container";
 
@@ -16,14 +16,14 @@ const Target = () => {
   return (
     <section className={`${styles.target}`} id={"target"}>
       <Container className={`${styles.container}`}>
-        {/* <Circle className={`${styles.target__circle}`} /> */}
-        {/* <Circle className={`${styles.target__circle}`} width={547} height={511} /> */}
+        {width > 550 && <Circle className={`${styles.target__circle}`} />}
+        {width > 550 && <Circle className={`${styles.target__circle}`} width={547} height={511} />}
 
         <div className={`${styles.target__inner}`}>
           {width > 1060 ? (
             <img
               className={`${styles.target__image}`}
-              src={TargetImage}
+              src={Human}
               alt=""
               width={1014}
               height={816}
@@ -37,7 +37,7 @@ const Target = () => {
           ) : (
             <img
               className={`${styles.target__image}`}
-              src={TargetImage}
+              src={Human}
               alt=""
               width={1014}
               height={816}

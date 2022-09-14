@@ -1,5 +1,6 @@
 import Container from "../Container/Container";
 import styles from "../Benefits/Benefits.module.scss";
+import React from "react";
 
 const Benefits = () => {
   return (

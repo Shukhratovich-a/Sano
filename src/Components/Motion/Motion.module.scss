@@ -30,7 +30,7 @@
 
 .motion__image {
   position: absolute;
-  top: calc(50% + -30px);
+  top: calc(50% - 30px);
   left: calc(50% + 60px);
   transform: translate(-50%, -50%);
   z-index: 9;
@@ -39,8 +39,8 @@
 
 .motion__inner__top {
   position: absolute;
-  top: calc(50% - -285px);
-  left: calc(50% + -224px);
+  top: calc(50% + 285px);
+  left: calc(50% - 224px);
   transform: translate(-50%, -50%);
 }
 
@@ -212,15 +212,25 @@
   }
 }
 
-@media only screen and (min-height: 1280px) {
+@media only screen and (min-height: 1080px) and (min-width: 1640px) {
   .motion {
-    height: 1200px;
+    height: 1080px;
   }
 }
 
-@media only screen and (max-width: 1250px) {
-  .motion__inner {
-    border-radius: 50px;
+@media only screen and (max-height: 910px) and (min-width: 1640px) {
+  .motion__image {
+    top: calc(50% - 70px);
+  }
+
+  .motion__inner__top {
+    top: calc(50% + 245px);
+  }
+}
+
+@media only screen and (max-height: 850px) and (min-width: 1640px) {
+  .motion {
+    height: 850px;
   }
 }
 

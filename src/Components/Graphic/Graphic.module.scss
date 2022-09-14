@@ -22,8 +22,9 @@
   height: 100%;
   background-image: url("../../Assets/Images/Graphic/Background.jpg");
   background-size: 1920px 1080px;
-  background-position: -115px -68px;
+  background-position: calc(50% + 45px) calc(50% + 13px);
   border-radius: 81px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   overflow: hidden;
 }
 
@@ -32,14 +33,26 @@
   top: -68px;
   left: -115px;
   z-index: 9;
+  width: 1920px;
+  height: 1080px;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+.graphic__image {
+  position: absolute;
+  top: calc(50% + 12px);
+  left: calc(50% + 45px);
+  transform: translate(-50%, -50%);
+  z-index: 9;
   pointer-events: none;
 }
 
 .graphic__heading {
   position: absolute;
-  bottom: calc(50% + 155px);
-  left: 385px;
-  transform: translateY(0%);
+  top: calc(50% - 247px);
+  left: calc(50% + -47px);
+  transform: translate(-50%, -50%);
   margin: 0;
   font-weight: 800;
   font-size: 150px;
@@ -50,8 +63,9 @@
 
 .graphic__heading__design {
   position: absolute;
-  top: 198px;
-  left: 611px;
+  top: calc(50% - 146px);
+  left: calc(50% + 28px);
+  transform: translate(-50%, -50%);
   z-index: 9;
   width: 434px;
   height: 232px;
@@ -66,9 +80,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(calc(-50% + 18px), calc(-50% - 30px));
+    top: calc(50% - 30px);
+    left: calc(50% + 18px);
+    transform: translate(-50%, -50%);
     z-index: 9;
     width: 160px;
     height: 150px;
@@ -79,9 +93,9 @@
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(calc(-50% - 8px), calc(-50% - 15px));
+    top: calc(50% - 15px);
+    left: calc(50% - 8px);
+    transform: translate(-50%, -50%);
     z-index: 9;
     width: 160px;
     height: 150px;
@@ -188,14 +202,26 @@
   font-weight: 500;
 }
 
-@media only screen and (min-height: 1280px) {
+@media only screen and (min-height: 1080px) and (min-width: 1640px) {
   .graphic {
-    height: 1200px;
+    height: 1080px;
   }
 }
 
-@media only screen and (max-width: 1250px) {
-  .graphic__inner {
-    border-radius: 50px;
+@media only screen and (max-height: 850px) and (min-width: 1640px) {
+  .graphic {
+    height: 850px;
   }
 }
+
+// @media only screen and (min-height: 1280px) {
+//   .graphic {
+//     height: 1200px;
+//   }
+// }
+
+// @media only screen and (max-width: 1250px) {
+//   .graphic__inner {
+//     border-radius: 50px;
+//   }
+// }

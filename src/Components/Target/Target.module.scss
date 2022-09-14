@@ -168,9 +168,9 @@
   font-weight: 500;
 }
 
-@media only screen and (min-height: 1280px) {
+@media only screen and (min-height: 1080px) {
   .target {
-    height: 1280px;
+    height: 1080px;
   }
 }
 
@@ -307,6 +307,7 @@
     right: unset;
     transform: unset;
     margin: 0 auto;
+    box-shadow: -18px 18px 40px rgba(0, 0, 0, 0.35);
   }
 }
 
