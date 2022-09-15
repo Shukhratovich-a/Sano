@@ -207,7 +207,7 @@
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 900px) {
   .graphic {
     padding: 0;
   }
@@ -218,23 +218,23 @@
 
   .graphic__inner {
     background-image: url("../../Assets/Images/Graphic/BackgroundMobile.jpg");
-    background-size: cover;
-    background-position: center;
+    background-size: 900px auto;
+    background-position: 50% calc(50% + 80px);
     border-radius: unset;
   }
 
   .graphic__image {
-    top: 50%;
+    top: calc(50% + 20px);
     left: 50%;
-    width: 477px;
+    width: 540px;
     height: auto;
   }
 
   .graphic__heading {
-    font-size: 64px;
-    line-height: 78px;
-    top: calc(50% - 330px);
-    left: calc(50% + 57px);
+    font-size: 70px;
+    line-height: 90px;
+    top: calc(50% - 335px);
+    left: calc(50% + 70px);
   }
 
   .graphic__heading__design {
@@ -303,6 +303,26 @@
       width: 182px;
       height: 174px;
     }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .graphic__inner {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .graphic__image {
+    top: 50%;
+    width: 477px;
+    height: auto;
+  }
+
+  .graphic__heading {
+    font-size: 64px;
+    line-height: 78px;
+    top: calc(50% - 330px);
+    left: calc(50% + 57px);
   }
 }
 

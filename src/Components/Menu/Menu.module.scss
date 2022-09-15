@@ -3,10 +3,9 @@
 .menu {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   right: 0;
   bottom: 0;
-  transform: translate(-100%);
   z-index: 99999;
   width: 100vw;
   height: 100vh;
@@ -14,10 +13,10 @@
   color: $white;
   background-color: $textBlue;
   overflow: auto;
-  transition: transform 0.8s ease;
+  transition: left 0.6s ease-out;
 
   &--active {
-    transform: translate(0);
+    left: 0%;
   }
 }
 
@@ -34,4 +33,10 @@
   border: none;
   border-radius: 50%;
   background-color: $accent;
+}
+
+@media only screen and (max-width: 450px) {
+  .menu {
+    padding: 20px 0;
+  }
 }

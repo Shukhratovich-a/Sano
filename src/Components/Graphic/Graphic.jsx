@@ -20,10 +20,10 @@ const Graphic = () => {
         <div className={`${styles.graphic__inner}`}>
           <img
             className={`${styles.graphic__image}`}
-            src={width > 550 ? HumanDesktop : HumanMobile}
+            src={width > 900 ? HumanDesktop : HumanMobile}
             alt="Graphic"
-            width={width > 550 ? 1920 : 550}
-            height={width > 550 ? 1080 : 978}
+            width={width > 900 ? 1920 : 900}
+            height={width > 900 ? 1080 : 1600}
           />
 
           <div className={`${styles.graphic__inner__top}`}>
