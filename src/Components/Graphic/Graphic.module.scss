@@ -24,7 +24,6 @@
   background-size: 1920px 1080px;
   background-position: calc(50% + 45px) calc(50% + 13px);
   border-radius: 81px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   overflow: hidden;
 }
 
@@ -129,7 +128,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    filter: drop-shadow(-11px -3px 15px rgba($color: $black, $alpha: 0.6));
+    filter: drop-shadow(-14px 17px 15px rgba($color: $black, $alpha: 0.6));
   }
 }
 
@@ -218,7 +217,7 @@
   }
 
   .graphic__inner {
-    background-image: url("../../Assets/Images/Graphic/BackgroundMobile.png");
+    background-image: url("../../Assets/Images/Graphic/BackgroundMobile.jpg");
     background-size: cover;
     background-position: center;
     border-radius: unset;
@@ -227,8 +226,7 @@
   .graphic__image {
     top: 50%;
     left: 50%;
-    max-width: 477px;
-    width: 100%;
+    width: 477px;
     height: auto;
   }
 
