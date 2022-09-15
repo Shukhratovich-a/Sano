@@ -135,6 +135,9 @@
     width: 272px;
     height: 228px;
     background-image: url("../../Assets/Images/Target/Ball.webp");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     pointer-events: none;
   }
 }
@@ -240,6 +243,62 @@
       width: 150px;
       height: 150px;
     }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .target__inner {
+    &::before {
+      right: calc(50% - 285px);
+      width: 300px;
+      height: 280px;
+    }
+  }
+
+  .target__image {
+    width: 620px;
+    height: 500px;
+    object-fit: contain;
+  }
+
+  .target__heading {
+    left: calc(50% + 60px);
+    font-size: 100px;
+    line-height: 69px;
+
+    &::before {
+      top: 44px;
+      left: 110px;
+      width: 45px;
+      height: 70px;
+    }
+
+    &::after {
+      top: -58px;
+      right: 190px;
+    }
+  }
+
+  .target__info {
+    right: calc(50% - 50px);
+    max-width: 360px;
+    padding-top: 90px;
+    padding-left: 16px;
+    font-size: 15px;
+    line-height: 18px;
+
+    &::before {
+      top: -50px;
+      right: -28px;
+      width: 240px;
+      height: 200px;
+    }
+  }
+
+  .target__info__heading {
+    padding: 20px 35px;
+    font-size: 36px;
+    line-height: 42px;
   }
 }
 
@@ -359,8 +418,6 @@
     padding-right: 10px;
     padding-bottom: 30px;
     padding-left: 19px;
-    font-size: 15px;
-    line-height: 18px;
 
     &::before {
       top: -64px;
