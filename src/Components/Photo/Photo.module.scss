@@ -24,8 +24,10 @@
   background-image: url("../../Assets/Images/Photo/Background.jpg");
   background-size: 1920px 1080px;
   background-position: -190px -108px;
+  background-repeat: no-repeat;
   border-radius: 81px;
   overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .photo__image {
@@ -141,14 +143,49 @@
   }
 }
 
-@media only screen and (min-height: 1280px) {
-  .photo {
-    height: 1200px;
-  }
-}
-
 @media only screen and (max-width: 1250px) {
   .photo__inner {
     border-radius: 50px;
+  }
+}
+
+@media only screen and (min-height: 1000px) and (min-width: 1640px) {
+  .photo__inner {
+    background-position: calc(50% - 30px) 50%;
+  }
+
+  .photo__image {
+    top: 50%;
+    left: calc(50% - 30px);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (min-height: 1080px) and (min-width: 1640px) {
+  .photo {
+    height: 1080px;
+  }
+}
+
+@media only screen and (max-height: 950px) and (min-width: 1640px) {
+  .photo__inner {
+    background-size: 1600px 900px;
+    background-position: 50% 50%;
+    border-radius: 81px;
+    overflow: hidden;
+  }
+
+  .photo__image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1600px;
+    height: 900px;
+  }
+}
+
+@media only screen and (max-height: 850px) and (min-width: 1640px) {
+  .photo {
+    height: 850px;
   }
 }

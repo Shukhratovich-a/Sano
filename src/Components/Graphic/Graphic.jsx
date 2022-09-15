@@ -1,4 +1,7 @@
-import Human from "../../Assets/Images/Graphic/Human.png";
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
+
+import HumanDesktop from "../../Assets/Images/Graphic/HumanDesktop.png";
+import HumanMobile from "../../Assets/Images/Graphic/HumanMobile.png";
 
 import Circle from "../Lib/Icons/Circle";
 
@@ -7,18 +10,20 @@ import Container from "../Container/Container";
 import styles from "./Graphic.module.scss";
 
 const Graphic = () => {
+  const { width } = useWindowDimensions();
+
   return (
     <section className={`${styles.graphic}`} id={"graphic"}>
       <Container className={`${styles.container}`}>
-        {/* <Circle className={`${styles.graphic__circle}`} /> */}
+        <Circle className={`${styles.graphic__circle}`} />
 
         <div className={`${styles.graphic__inner}`}>
           <img
             className={`${styles.graphic__image}`}
-            src={Human}
+            src={width > 550 ? HumanDesktop : HumanMobile}
             alt="Graphic"
-            width={1920}
-            height={1080}
+            width={width > 550 ? 1920 : 550}
+            height={width > 550 ? 1080 : 978}
           />
 
           <div className={`${styles.graphic__inner__top}`}>
