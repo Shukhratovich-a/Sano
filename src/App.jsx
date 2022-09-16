@@ -7,10 +7,10 @@ import Menu from "./Components/Menu/Menu";
 import Hero from "./Components/Hero/Hero";
 import Target from "./Components/Target/Target";
 import Graphic from "./Components/Graphic/Graphic";
-// import Motion from "./Components/Motion/Motion";
-// import Photo from "./Components/Photo/Photo";
-// import Benefits from "./Components/Benefits/Benefits";
-// import Achievements from "./Components/Achievements/Achievements";
+import Motion from "./Components/Motion/Motion";
+import Photo from "./Components/Photo/Photo";
+import Benefits from "./Components/Benefits/Benefits";
+import Achievements from "./Components/Achievements/Achievements";
 
 import "./App.scss";
 
@@ -26,10 +26,10 @@ function App() {
         <Hero />
         <Target />
         <Graphic />
-        {/* <Motion /> */}
-        {/* <Photo /> */}
-        {/* <Benefits /> */}
-        {/* <Achievements /> */}
+        <Motion />
+        <Photo />
+        <Benefits />
+        <Achievements />
       </main>
 
       {/* <Footer /> */}
