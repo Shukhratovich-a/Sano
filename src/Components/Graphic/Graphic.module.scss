@@ -321,8 +321,152 @@
   .graphic__heading {
     font-size: 64px;
     line-height: 78px;
-    top: calc(50% - 330px);
+    top: calc(50% - 325px);
     left: calc(50% + 57px);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .graphic__image {
+    width: 400px;
+  }
+
+  .graphic__heading {
+    font-size: 50px;
+    line-height: 60px;
+    top: calc(50% - 265px);
+    left: calc(50% + 45px);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 230px);
+    left: calc(50% + 90px);
+    width: 140px;
+    height: 75px;
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 185px);
+      left: calc(50% + 90px);
+      width: 60px;
+      height: 57px;
+    }
+
+    &::before {
+      top: calc(50% - 175px);
+      left: calc(50% + 85px);
+      width: 60px;
+      height: 57px;
+    }
+  }
+
+  .graphic__wrapper {
+    top: calc(50% + 45px);
+    left: calc(50% - 180px);
+    max-width: 330px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .graphic__image {
+    top: calc(50% + 45px);
+  }
+
+  .graphic__heading {
+    top: calc(50% - 265px + 45px);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 230px + 45px);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 185px + 45px);
+    }
+
+    &::before {
+      top: calc(50% - 175px + 45px);
+    }
+  }
+
+  .graphic__wrapper {
+    left: calc(50% - 150px);
+    max-width: 300px;
+  }
+
+  .graphic__info {
+    max-width: 300px;
+    padding-top: 60px;
+    padding-left: 24px;
+    font-size: 13px;
+    line-height: 16px;
+    border-radius: 40px;
+
+    &::after {
+      bottom: -8px;
+      right: -8px;
+      width: 85px;
+      height: 135px;
+    }
+  }
+
+  .graphic__info__heading {
+    top: -25px;
+    left: -5px;
+    padding: 20px 35px;
+    font-size: 30px;
+    line-height: 36px;
+    border-radius: 16px;
+  }
+
+  .graphic__info__image {
+    &::before {
+      top: -40px;
+      right: 20px;
+      width: 110px;
+      height: 105px;
+    }
+
+    &::after {
+      top: -60px;
+      right: -10px;
+      width: 130px;
+      height: 125px;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .graphic__image {
+    top: 50%;
+    width: 350px;
+  }
+
+  .graphic__heading {
+    font-size: 45px;
+    line-height: 55px;
+    top: calc(50% - 230px);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 200px);
+    left: calc(50% + 80px);
+    width: 120px;
+    height: 65px;
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 155px);
+      left: calc(50% + 85px);
+    }
+
+    &::before {
+      top: calc(50% - 150px);
+      left: calc(50% + 80px);
+    }
   }
 }
 

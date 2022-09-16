@@ -7,7 +7,7 @@ import Menu from "./Components/Menu/Menu";
 import Hero from "./Components/Hero/Hero";
 import Target from "./Components/Target/Target";
 import Graphic from "./Components/Graphic/Graphic";
-import Motion from "./Components/Motion/Motion";
+// import Motion from "./Components/Motion/Motion";
 // import Photo from "./Components/Photo/Photo";
 // import Benefits from "./Components/Benefits/Benefits";
 // import Achievements from "./Components/Achievements/Achievements";
@@ -26,7 +26,7 @@ function App() {
         <Hero />
         <Target />
         <Graphic />
-        <Motion />
+        {/* <Motion /> */}
         {/* <Photo /> */}
         {/* <Benefits /> */}
         {/* <Achievements /> */}
