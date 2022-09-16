@@ -21,7 +21,7 @@
 .motion__inner {
   position: relative;
   height: 100%;
-  background-image: url("../../Assets/Images/Motion/Background.jpg");
+  background-image: url("../../Assets/Images/Motion/BackgroundDesktop.jpg");
   background-size: 1920px 1080px;
   background-position: -115px -35px;
   border-radius: 81px;
@@ -108,20 +108,6 @@
   width: 100%;
 }
 
-.motion__info__heading {
-  position: absolute;
-  top: -12px;
-  left: -10px;
-  margin: 0;
-  padding: 27px 45px;
-  font-weight: 900;
-  font-size: 40px;
-  line-height: 49px;
-  color: $accent;
-  background: radial-gradient(85.48% 131.72% at 9.41% 9.14%, #006996 0%, #003246 100%);
-  border-radius: 25px;
-}
-
 .motion__info {
   padding-top: 120px;
   padding-bottom: 85px;
@@ -164,6 +150,20 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+.motion__info__heading {
+  position: absolute;
+  top: -12px;
+  left: -10px;
+  margin: 0;
+  padding: 27px 45px;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 49px;
+  color: $accent;
+  background: radial-gradient(85.48% 131.72% at 9.41% 9.14%, #006996 0%, #003246 100%);
+  border-radius: 25px;
 }
 
 .motion__info__list {
@@ -212,6 +212,167 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .motion {
+    padding: 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .motion__inner {
+    background-image: url("../../Assets/Images/Motion/BackgroundMobile.jpg");
+    background-size: cover;
+    background-position: center 0;
+    border-radius: unset;
+  }
+
+  .motion__image {
+    top: calc(50% + 20px);
+    left: 50%;
+    width: 540px;
+    height: auto;
+  }
+
+  .motion__inner__top {
+    top: calc(50% - 113px);
+    left: 50%;
+  }
+
+  .motion__heading {
+    font-size: 116px;
+    line-height: 130px;
+  }
+
+  .motion__heading__design {
+    top: 70px;
+    right: -14px;
+    z-index: 2;
+    width: 245px;
+    height: 130px;
+  }
+
+  .motion__heading__move {
+    &::before {
+      top: 28px;
+      left: 332px;
+      width: 75px;
+      height: 75px;
+    }
+
+    &::after {
+      top: 28px;
+      right: 315px;
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  .motion__wrapper {
+    top: calc(50% + 240px);
+    bottom: unset;
+    left: calc(50% - 40px);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .motion__image {
+    top: 50%;
+    left: 50%;
+    width: 477px;
+  }
+
+  .motion__inner__top {
+    top: calc(50% - 117px);
+    left: calc(50% + 2px);
+  }
+
+  .motion__heading {
+    font-size: 103px;
+    line-height: 120px;
+  }
+
+  .motion__heading__design {
+    top: 62px;
+    right: -11px;
+    width: 245px;
+    height: 120px;
+  }
+
+  .motion__heading__move {
+    &::before {
+      top: 28px;
+      left: 294px;
+      width: 67px;
+      height: 67px;
+    }
+
+    &::after {
+      top: 28px;
+      left: 108px;
+      width: 67px;
+      height: 67px;
+    }
+  }
+
+  .motion__wrapper {
+    top: calc(50% + 213px);
+    left: calc(50% - 10px);
+    max-width: 357px;
+  }
+
+  .motion__info {
+    padding-top: 90px;
+    padding-bottom: 58px;
+    padding-left: 35px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    background: #ffffff;
+    border-radius: 60px;
+
+    &::before {
+      top: -11px;
+      right: -15px;
+      width: 155px;
+      height: 155px;
+    }
+
+    &::after {
+      top: -36px;
+      right: -33px;
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  .motion__info__heading {
+    top: -12px;
+    left: -10px;
+    padding: 21px 36px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .motion__info__image {
+    &::before {
+      bottom: 82px;
+      right: -2px;
+      width: 78px;
+      height: 78px;
+    }
+
+    &::after {
+      bottom: 85px;
+      right: -27px;
+      width: 94px;
+      height: 94px;
+    }
+  }
+}
+
 @media only screen and (min-height: 1080px) and (min-width: 1640px) {
   .motion {
     height: 1080px;
@@ -229,6 +390,18 @@
 }
 
 @media only screen and (max-height: 850px) and (min-width: 1640px) {
+  .motion {
+    height: 850px;
+  }
+}
+
+@media only screen and (min-height: 1080px) and (max-width: 1640px) {
+  .motion {
+    height: 1080px;
+  }
+}
+
+@media only screen and (min-height: 850px) and (max-width: 1250px) {
   .motion {
     height: 850px;
   }

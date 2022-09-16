@@ -1,4 +1,7 @@
-import Human from "../../Assets/Images/Motion/Human.png";
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
+
+import HumanDesktop from "../../Assets/Images/Motion/HumanDesktop.png";
+import HumanMobile from "../../Assets/Images/Motion/HumanMobile.png";
 
 import Circle from "../Lib/Icons/Circle";
 
@@ -7,6 +10,8 @@ import Container from "../Container/Container";
 import styles from "./Motion.module.scss";
 
 const Motion = () => {
+  const { width } = useWindowDimensions();
+
   return (
     <section className={`${styles.motion}`} id={"motion"}>
       <Container className={`${styles.container}`}>
@@ -15,7 +20,7 @@ const Motion = () => {
         <div className={`${styles.motion__inner}`}>
           <img
             className={`${styles.motion__image}`}
-            src={Human}
+            src={width > 900 ? HumanDesktop : HumanMobile}
             alt="motion"
             width={1920}
             height={1080}

@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 import useMenu from "../../Hooks/useMenu";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
@@ -23,7 +25,7 @@ const Menu = () => {
 
   return (
     <div className={`${styles.menu} ${isOpen ? styles["menu--active"] : ""}`}>
-      <Container>
+      <Container className={`${styles.container}`}>
         <div className={`${styles.menu__top}`}>
           <Logo width={204} height={55} />
 
@@ -31,6 +33,54 @@ const Menu = () => {
             <Close />
           </button>
         </div>
+
+        <ul className={`${styles.menu__list}`}>
+          <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={"hero"} offset={-155} onClick={() => setIsOpen(false)}>
+              Главная
+            </Link>
+          </li>
+          <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={"target"} onClick={() => setIsOpen(false)}>
+              Smm & Target
+            </Link>
+          </li>
+          <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={"graphic"} onClick={() => setIsOpen(false)}>
+              Graphic Design
+            </Link>
+          </li>
+          <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={"motion"} onClick={() => setIsOpen(false)}>
+              Motion Design
+            </Link>
+          </li>
+          <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={"photo"} onClick={() => setIsOpen(false)}>
+              Фото и Видео
+            </Link>
+          </li>
+          <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={"benefits"} onClick={() => setIsOpen(false)}>
+              5 причин выбрать нас
+            </Link>
+          </li>
+          <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={""} onClick={() => setIsOpen(false)}>
+              Основатели
+            </Link>
+          </li>
+          <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={""} onClick={() => setIsOpen(false)}>
+              Мы на карте
+            </Link>
+          </li>
+          <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={""} onClick={() => setIsOpen(false)}>
+              Связаться с нами
+            </Link>
+          </li>
+        </ul>
       </Container>
     </div>
   );
