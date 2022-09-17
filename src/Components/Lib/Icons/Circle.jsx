@@ -6,6 +6,7 @@ const Circle = ({ className, width = 1099, height = 1028 }) => {
       height={height}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1099 1028"
+      style={{ pointerEvents: "none" }}
     >
       <defs>
         <linearGradient
