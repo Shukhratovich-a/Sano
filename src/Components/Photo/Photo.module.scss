@@ -189,3 +189,45 @@
     height: 850px;
   }
 }
+
+@media only screen and (min-height: 1080px) and (max-width: 1640px) {
+  .photo {
+    height: 1080px;
+  }
+}
+
+@media only screen and (max-height: 850px) and (min-width: 1250px) {
+  .photo {
+    height: 850px;
+  }
+}
+
+@media only screen and (min-height: 850px) and (max-width: 1250px) {
+  .photo {
+    height: 850px;
+  }
+}
+
+@media only screen and (max-height: 650px) and (max-width: 1250px) {
+  .photo {
+    height: 650px;
+  }
+}
+
+@media only screen and (min-height: 650px) and (max-width: 1000px) {
+  .photo {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-height: 650px) and (max-width: 1000px) {
+  .photo {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 580px) and (max-width: 1000px) {
+  .photo {
+    height: 580px;
+  }
+}
