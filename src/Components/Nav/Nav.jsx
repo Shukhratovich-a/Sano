@@ -11,7 +11,11 @@ const Nav = () => {
   return (
     <nav
       className={`${styles.nav} ${
-        section === "graphic" ? styles["nav--white"] : section === "motion" ? styles["nav--yellow"] : ""
+        ["graphic", "photo"].includes(section)
+          ? styles["nav--white"]
+          : section === "motion"
+          ? styles["nav--yellow"]
+          : ""
       }`}
     >
       <ul className={`${styles.nav__list}`}>

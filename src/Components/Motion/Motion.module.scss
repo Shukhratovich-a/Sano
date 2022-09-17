@@ -564,7 +564,7 @@
 
   .motion__inner__top {
     top: calc(50% - 117px);
-    left: calc(50% + 2px);
+    left: 50%;
   }
 
   .motion__heading {
@@ -647,6 +647,97 @@
       right: -27px;
       width: 94px;
       height: 94px;
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .motion__image {
+    top: calc(50% - 25px);
+    width: 372px;
+  }
+
+  .motion__heading {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .motion__heading__design {
+    top: 50px;
+    right: 0px;
+    width: 160px;
+    height: 85px;
+  }
+
+  .motion__heading__move {
+    &::before {
+      top: 24px;
+      left: 84px;
+      width: 52px;
+      height: 52px;
+    }
+
+    &::after {
+      top: 24px;
+      left: 229px;
+      width: 52px;
+      height: 52px;
+    }
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .motion__wrapper {
+    left: 50%;
+    max-width: 300px;
+  }
+
+  .motion__info {
+    max-width: 300px;
+    padding-top: 60px;
+    padding-bottom: 66px;
+    padding-left: 24px;
+    font-size: 13px;
+    line-height: 16px;
+    border-radius: 40px;
+
+    &::before {
+      top: -20px;
+      right: 0px;
+      width: 115px;
+      height: 115px;
+    }
+
+    &::after {
+      top: -55px;
+      right: -10px;
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .motion__info__heading {
+    top: -25px;
+    left: -5px;
+    padding: 20px 35px;
+    font-size: 30px;
+    line-height: 36px;
+    border-radius: 16px;
+  }
+
+  .motion__info__image {
+    &::before {
+      bottom: 110px;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+    }
+
+    &::after {
+      bottom: 115px;
+      right: -10px;
+      width: 70px;
+      height: 70px;
     }
   }
 }

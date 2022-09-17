@@ -48,7 +48,7 @@ const Motion = () => {
           <div className={`${styles.motion__inner__top}`}>
             <h2 className={`${styles.motion__heading}`}>motion</h2>
             <span className={`${styles.motion__heading__design}`}></span>
-            {/* <span className={`${styles.motion__heading__move}`}></span> */}
+            <span className={`${styles.motion__heading__move}`}></span>
           </div>
 
           <div className={`${styles.motion__wrapper}`}>
