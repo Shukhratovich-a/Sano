@@ -3,7 +3,7 @@
 .menu {
   position: fixed;
   top: 0;
-  left: -100%;
+  left: calc(-100% - 20px);
   right: 0;
   bottom: 0;
   z-index: 99999;
@@ -13,7 +13,7 @@
   color: $white;
   background-color: $textBlue;
   overflow: hidden;
-  transition: left 0.6s ease-out;
+  transition: left 0.8s ease-out;
 
   &--active {
     left: 0%;
@@ -50,6 +50,7 @@
   border: none;
   border-radius: 50%;
   background-color: $accent;
+  cursor: pointer;
 }
 
 .menu__list {
