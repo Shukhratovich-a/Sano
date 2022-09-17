@@ -1,5 +1,21 @@
 @import "../../Scss/Variables.scss";
 
+.nav {
+  transition: color 0.25s ease;
+
+  &--white {
+    color: $white;
+  }
+
+  &--yellow {
+    .nav__link {
+      &::after {
+        background-color: $darkBlue;
+      }
+    }
+  }
+}
+
 .nav__list {
   display: flex;
   align-items: center;
@@ -40,7 +56,7 @@
     margin-top: 2px;
     background-color: $accent;
     border-radius: 2px;
-    transition: width 0.25s ease;
+    transition: width 0.25s ease, background-color 0.25s ease;
   }
 
   &--active {

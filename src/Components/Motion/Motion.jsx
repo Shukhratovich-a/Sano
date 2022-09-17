@@ -41,14 +41,14 @@ const Motion = () => {
             className={`${styles.motion__image}`}
             src={width > 900 ? HumanDesktop : HumanMobile}
             alt="motion"
-            width={1920}
-            height={1080}
+            width={width > 900 ? 1920 : 1080}
+            height={width > 900 ? 1080 : 1920}
           />
 
           <div className={`${styles.motion__inner__top}`}>
             <h2 className={`${styles.motion__heading}`}>motion</h2>
             <span className={`${styles.motion__heading__design}`}></span>
-            <span className={`${styles.motion__heading__move}`}></span>
+            {/* <span className={`${styles.motion__heading__move}`}></span> */}
           </div>
 
           <div className={`${styles.motion__wrapper}`}>

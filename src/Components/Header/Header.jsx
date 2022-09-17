@@ -41,7 +41,7 @@ const Header = () => {
             {width <= 1140 && (
               <button
                 className={`${styles.header__burger} ${
-                  ["graphic", "target"].includes(section) ? styles["header__burger--yellow"] : ""
+                  ["graphic", "target", "photo"].includes(section) ? styles["header__burger--yellow"] : ""
                 }`}
                 onClick={() => setOpen(true)}
               >

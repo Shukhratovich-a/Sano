@@ -610,9 +610,9 @@
   }
 }
 
-@media only screen and (max-height: 850px) and (min-width: 1640px) {
+@media only screen and (max-height: 820px) and (min-width: 1640px) {
   .graphic {
-    height: 850px;
+    height: 820px;
   }
 }
 
@@ -622,15 +622,33 @@
   }
 }
 
-@media only screen and (max-height: 850px) and (min-width: 1250px) {
+@media only screen and (max-height: 800px) and (max-width: 1640px) {
   .graphic {
-    height: 850px;
+    height: 800px;
   }
 }
 
-@media only screen and (min-height: 850px) and (max-width: 1250px) {
+@media only screen and (max-height: 800px) and (max-width: 1350px) {
   .graphic {
-    height: 850px;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1350px) {
+  .graphic {
+    height: 720px;
+  }
+}
+
+@media only screen and (max-height: 820px) and (max-width: 1250px) {
+  .graphic {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-height: 820px) and (max-width: 1250px) {
+  .graphic {
+    height: 820px;
   }
 }
 

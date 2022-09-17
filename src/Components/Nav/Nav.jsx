@@ -1,11 +1,19 @@
 import React from "react";
 import { Link } from "react-scroll";
 
+import useSection from "../../Hooks/useSection";
+
 import styles from "./Nav.module.scss";
 
 const Nav = () => {
+  const [section] = useSection();
+
   return (
-    <nav className={`${styles.nav}`}>
+    <nav
+      className={`${styles.nav} ${
+        section === "graphic" ? styles["nav--white"] : section === "motion" ? styles["nav--yellow"] : ""
+      }`}
+    >
       <ul className={`${styles.nav__list}`}>
         <li className={`${styles.nav__item}`}>
           <Link
@@ -20,12 +28,7 @@ const Nav = () => {
         </li>
 
         <li className={`${styles.nav__item}`}>
-          <Link
-            className={`${styles.nav__link}`}
-            activeClass={`${styles["nav__link--active"]}`}
-            to="target"
-            spy={true}
-          >
+          <Link className={`${styles.nav__link}`} activeClass={`${styles["nav__link--active"]}`} to="target" spy={true}>
             Smm & Target
           </Link>
         </li>
@@ -42,23 +45,13 @@ const Nav = () => {
         </li>
 
         <li className={`${styles.nav__item}`}>
-          <Link
-            className={`${styles.nav__link}`}
-            activeClass={`${styles["nav__link--active"]}`}
-            to="motion"
-            spy={true}
-          >
+          <Link className={`${styles.nav__link}`} activeClass={`${styles["nav__link--active"]}`} to="motion" spy={true}>
             Motion Design
           </Link>
         </li>
 
         <li className={`${styles.nav__item}`}>
-          <Link
-            className={`${styles.nav__link}`}
-            activeClass={`${styles["nav__link--active"]}`}
-            to="photo"
-            spy={true}
-          >
+          <Link className={`${styles.nav__link}`} activeClass={`${styles["nav__link--active"]}`} to="photo" spy={true}>
             Фото и Видео
           </Link>
         </li>
