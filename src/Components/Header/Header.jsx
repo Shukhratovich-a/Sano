@@ -1,6 +1,7 @@
 import React from "react";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import useSection from "../../Hooks/useSection";
 import useMenu from "../../Hooks/useMenu";
 
 import Nav from "../Nav/Nav";
@@ -16,6 +17,7 @@ import { Link } from "react-scroll";
 const Header = () => {
   const { width } = useWindowDimensions();
   const [, setOpen] = useMenu();
+  const [section] = useSection();
 
   const [small, setSmall] = React.useState(false);
 
@@ -37,7 +39,12 @@ const Header = () => {
             {width > 1140 && <Nav />}
 
             {width <= 1140 && (
-              <button className={`${styles.header__burger}`} onClick={() => setOpen(true)}>
+              <button
+                className={`${styles.header__burger} ${
+                  ["graphic", "target"].includes(section) ? styles["header__burger--yellow"] : ""
+                }`}
+                onClick={() => setOpen(true)}
+              >
                 <Burger />
               </button>
             )}
