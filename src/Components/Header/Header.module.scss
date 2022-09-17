@@ -9,10 +9,6 @@
   padding: 60px 0;
   transition: padding 0.25s ease, backdrop-filter 0.25s ease;
 
-  svg {
-    color: $textBlue;
-  }
-
   &--small {
     padding: 20px 0;
     backdrop-filter: blur(30px);
@@ -21,6 +17,10 @@
 
 .header__link {
   cursor: pointer;
+
+  svg {
+    color: $textBlue;
+  }
 }
 
 .header__inner {
@@ -51,6 +51,12 @@
   background-color: $textBlue;
   box-shadow: -4px 6px 20px -1px $textBlue;
   outline: none;
+  transition: color 0.25s ease, background-color 0.25s ease;
+
+  &--yellow {
+    color: $textBlue;
+    background-color: $accent;
+  }
 }
 
 @media only screen and (max-width: 1600px) {
