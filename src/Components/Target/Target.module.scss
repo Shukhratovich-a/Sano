@@ -171,17 +171,7 @@
   font-weight: 500;
 }
 
-@media only screen and (min-height: 1080px) {
-  .target {
-    height: 1080px;
-  }
-}
-
 @media only screen and (max-height: 850px) {
-  .target {
-    height: 850px;
-  }
-
   .target__inner {
     &::before {
       right: calc(50% - 350px);
@@ -206,17 +196,14 @@
 }
 
 @media only screen and (max-width: 1250px) {
-  .target {
-    height: 850px;
-  }
-
   .target__inner {
     border-radius: 50px;
 
     &::before {
+      top: calc(50% - 160px);
       right: calc(50% - 300px);
-      width: 400px;
-      height: 370px;
+      width: 350px;
+      height: 330px;
     }
   }
 
@@ -274,8 +261,10 @@
     }
 
     &::after {
-      top: -58px;
-      right: 190px;
+      top: -25px;
+      right: 225px;
+      width: 115px;
+      height: 115px;
     }
   }
 
@@ -303,10 +292,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .target {
-    height: unset;
-  }
-
   .container {
     padding: 0;
   }
@@ -352,11 +337,11 @@
     margin-bottom: 24px;
 
     &::before {
-      left: 125px;
+      left: 110px;
     }
 
     &::after {
-      right: 60px;
+      right: 120px;
     }
   }
 
@@ -372,7 +357,7 @@
 
 @media only screen and (max-width: 550px) {
   .target {
-    padding: 30px 0;
+    padding: 20px 0;
   }
 
   .target__inner {
@@ -399,14 +384,15 @@
     line-height: 55px;
 
     &::before {
-      top: 30px;
-      left: 90px;
+      top: 33px;
+      left: 88px;
       width: 37px;
       height: 58px;
     }
 
     &::after {
-      right: 23px;
+      top: -45px;
+      right: 40px;
       width: 122px;
       height: 123px;
     }
@@ -437,7 +423,7 @@
 @media only screen and (max-width: 410px) {
   .target__inner {
     &::before {
-      top: 95px;
+      top: calc(50% - 245px);
       right: calc(50% - 134px);
       width: 190px;
       height: 175px;
@@ -553,8 +539,40 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-height: 920px) and (max-width: 900px) {
   .target {
-    height: unset;
+    height: 920px;
+  }
+}
+//////////////////////////
+
+@media only screen and (min-height: 920px) and (max-width: 900px) {
+  .target {
+    height: 920px;
+  }
+}
+
+@media only screen and (max-height: 920px) and (max-width: 900px) {
+  .target {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 900px) and (max-width: 900px) {
+  .target {
+    height: 900px;
+  }
+}
+
+@media only screen and (max-height: 920px) and (max-width: 410px) {
+  .target {
+    height: 100vh;
+    padding: 10px 0;
+  }
+}
+
+@media only screen and (max-height: 724px) and (max-width: 410px) {
+  .target {
+    height: 724px;
   }
 }

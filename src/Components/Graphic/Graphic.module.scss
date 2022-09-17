@@ -658,13 +658,13 @@
   }
 }
 
-@media only screen and (min-height: 900px) and (max-width: 900px) {
+@media only screen and (min-height: 920px) and (max-width: 900px) {
   .graphic {
-    height: 900px;
+    height: 920px;
   }
 }
 
-@media only screen and (max-height: 900px) and (max-width: 900px) {
+@media only screen and (max-height: 920px) and (max-width: 900px) {
   .graphic {
     height: 100vh;
   }
@@ -708,9 +708,9 @@
   }
 }
 
-@media only screen and (min-height: 900px) and (max-width: 550px) {
+@media only screen and (min-height: 920px) and (max-width: 550px) {
   .graphic {
-    height: 900px;
+    height: 920px;
   }
 
   .graphic__inner {
@@ -718,7 +718,7 @@
   }
 }
 
-@media only screen and (max-height: 900px) and (max-width: 550px) {
+@media only screen and (max-height: 920px) and (max-width: 550px) {
   .graphic {
     height: 100vh;
   }
@@ -772,9 +772,9 @@
   }
 }
 
-@media only screen and (min-height: 900px) and (max-width: 450px) {
+@media only screen and (min-height: 920px) and (max-width: 450px) {
   .graphic {
-    height: 900px;
+    height: 920px;
   }
 
   .graphic__inner {
@@ -814,7 +814,7 @@
   }
 }
 
-@media only screen and (max-height: 900px) and (max-width: 450px) {
+@media only screen and (max-height: 920px) and (max-width: 450px) {
   .graphic {
     height: 100vh;
   }
@@ -950,9 +950,9 @@
   }
 }
 
-@media only screen and (min-height: 720px) and (max-width: 350px) {
+@media only screen and (min-height: 760px) and (max-width: 350px) {
   .graphic {
-    height: 720px;
+    height: 760px;
   }
 
   .graphic__inner {
@@ -975,6 +975,12 @@
     &::before {
       top: calc(50% - 180px);
     }
+  }
+}
+
+@media only screen and (max-height: 760px) and (max-width: 350px) {
+  .graphic__inner {
+    background-position: 50% calc(50% + 60px);
   }
 }
 
