@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import useSection from "../../Hooks/useSection";
 
 import HeroImage from "../../Assets/Images/Hero/Main.webp";
 
@@ -14,9 +15,25 @@ import styles from "./Hero.module.scss";
 
 const Hero = () => {
   const { width } = useWindowDimensions();
+  const [, setSection] = useSection();
+
+  const ref = React.useRef(null);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        if (
+          window.scrollY >= ref.current.offsetTop - 28 &&
+          window.scrollY < ref.current.offsetTop + ref.current.offsetHeight - 28
+        ) {
+          setSection("hero");
+        }
+      });
+    }
+  });
 
   return (
-    <section className={`${styles.hero}`} id={"hero"}>
+    <section className={`${styles.hero}`} id={"hero"} ref={ref}>
       <Container className={`${styles.container}`}>
         <Circle className={`${styles.hero__circle}`} />
         <div className={`${styles.hero__inner}`}>
@@ -27,9 +44,7 @@ const Hero = () => {
 
             <strong className={`${styles.hero__subheading}`}>Привет, мы команда “SANO”</strong>
 
-            <p className={`${styles.hero__description}`}>
-              Мы предоставляем услуги SMM и дазйна для вашего бизнеса.
-            </p>
+            <p className={`${styles.hero__description}`}>Мы предоставляем услуги SMM и дазйна для вашего бизнеса.</p>
 
             <Link className={`${styles.hero__link}`} to={"footer"}>
               <span>Свяжись</span>
@@ -37,15 +52,7 @@ const Hero = () => {
             </Link>
           </div>
 
-          {width > 1140 && (
-            <img
-              className={`${styles.hero__image}`}
-              src={HeroImage}
-              alt=""
-              width={800}
-              height={656}
-            />
-          )}
+          {width > 1140 && <img className={`${styles.hero__image}`} src={HeroImage} alt="" width={800} height={656} />}
         </div>
 
         {/* <span className={`${styles.hero__circle}`}></span> */}

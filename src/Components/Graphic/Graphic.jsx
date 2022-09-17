@@ -1,4 +1,7 @@
+import React from "react";
+
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import useSection from "../../Hooks/useSection";
 
 import HumanDesktop from "../../Assets/Images/Graphic/HumanDesktop.png";
 import HumanMobile from "../../Assets/Images/Graphic/HumanMobile.png";
@@ -11,9 +14,25 @@ import styles from "./Graphic.module.scss";
 
 const Graphic = () => {
   const { width } = useWindowDimensions();
+  const [, setSection] = useSection();
+
+  const ref = React.useRef(null);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        if (
+          window.scrollY >= ref.current.offsetTop - 28 &&
+          window.scrollY < ref.current.offsetTop + ref.current.offsetHeight - 28
+        ) {
+          setSection("graphic");
+        }
+      });
+    }
+  });
 
   return (
-    <section className={`${styles.graphic}`} id={"graphic"}>
+    <section className={`${styles.graphic}`} id={"graphic"} ref={ref}>
       <Container className={`${styles.container}`}>
         <Circle className={`${styles.graphic__circle}`} />
 
