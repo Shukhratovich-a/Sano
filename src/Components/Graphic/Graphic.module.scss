@@ -382,7 +382,7 @@
   .graphic__inner {
     background-image: url("../../Assets/Images/Graphic/BackgroundMobile.jpg");
     background-size: 900px auto;
-    background-position: 50% calc(50% + 80px);
+    background-position: 50% -250px;
     border-radius: unset;
   }
 
@@ -432,7 +432,7 @@
 
 @media only screen and (max-width: 550px) {
   .graphic__inner {
-    background-size: cover;
+    background-size: 600px auto;
     background-position: center;
   }
 
@@ -447,6 +447,16 @@
     line-height: 78px;
     top: calc(50% - 325px);
     left: calc(50% + 57px);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      left: calc(50% + 105px);
+    }
+
+    &::before {
+      left: calc(50% + 95px);
+    }
   }
 }
 
@@ -648,3 +658,390 @@
   }
 }
 
+@media only screen and (min-height: 900px) and (max-width: 900px) {
+  .graphic {
+    height: 900px;
+  }
+}
+
+@media only screen and (max-height: 900px) and (max-width: 900px) {
+  .graphic {
+    height: 100vh;
+  }
+
+  .graphic__inner {
+    background-position: 50% calc(50% + 100px);
+  }
+}
+
+@media only screen and (max-height: 850px) and (max-width: 900px) {
+  .graphic__inner {
+    background-position: 50% calc(50% + 140px);
+  }
+
+  .graphic__image {
+    top: calc(50% + 20px + 40px);
+  }
+
+  .graphic__heading {
+    top: calc(50% - 335px + 40px);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 282px + 40px);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 214px + 40px);
+    }
+
+    &::before {
+      top: calc(50% - 205px + 40px);
+    }
+  }
+}
+
+@media only screen and (max-height: 750px) and (max-width: 900px) {
+  .graphic {
+    height: 750px;
+  }
+}
+
+@media only screen and (min-height: 900px) and (max-width: 550px) {
+  .graphic {
+    height: 900px;
+  }
+
+  .graphic__inner {
+    background-position: 50% calc(50% + 30px);
+  }
+}
+
+@media only screen and (max-height: 900px) and (max-width: 550px) {
+  .graphic {
+    height: 100vh;
+  }
+
+  .graphic__inner {
+    background-position: 50% calc(50% + 40px);
+  }
+}
+
+@media only screen and (max-height: 850px) and (max-width: 550px) {
+  .graphic__inner {
+    background-position: 50% -90px;
+  }
+
+  .graphic__image {
+    top: -30px;
+    transform: translate(-50%, 0);
+  }
+
+  .graphic__heading {
+    top: 30px;
+    transform: translate(-50%, 0);
+  }
+
+  .graphic__heading__design {
+    top: 70px;
+    transform: translate(-50%, 0);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: 135px;
+      transform: translate(-50%, 0);
+    }
+
+    &::before {
+      top: 145px;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .graphic__wrapper {
+    top: unset;
+    bottom: 30px;
+  }
+}
+
+@media only screen and (max-height: 700px) and (max-width: 550px) {
+  .graphic {
+    height: 700px;
+  }
+}
+
+@media only screen and (min-height: 900px) and (max-width: 450px) {
+  .graphic {
+    height: 900px;
+  }
+
+  .graphic__inner {
+    background-position: 50% -90px;
+  }
+
+  .graphic__image {
+    top: calc(50% - 30px);
+    transform: translate(-50%, -50%);
+  }
+
+  .graphic__heading {
+    top: calc(50% - 295px);
+    transform: translate(-50%, -50%);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 255px);
+    transform: translate(-50%, -50%);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 215px);
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      top: calc(50% - 205px);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .graphic__wrapper {
+    top: calc(50% + 70px);
+    bottom: unset;
+  }
+}
+
+@media only screen and (max-height: 900px) and (max-width: 450px) {
+  .graphic {
+    height: 100vh;
+  }
+
+  .graphic__inner {
+    background-position: 50% calc(50% + 5px);
+  }
+
+  .graphic__image {
+    top: calc(50% - 30px);
+    transform: translate(-50%, -50%);
+  }
+
+  .graphic__heading {
+    top: calc(50% - 295px);
+    transform: translate(-50%, -50%);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 255px);
+    transform: translate(-50%, -50%);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 215px);
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      top: calc(50% - 205px);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .graphic__wrapper {
+    top: calc(50% + 70px);
+    bottom: unset;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 450px) {
+  .graphic__inner {
+    background-position: 50% -150px;
+  }
+
+  .graphic__image {
+    top: -30px;
+    transform: translate(-50%, 0);
+  }
+
+  .graphic__heading {
+    top: 30px;
+    transform: translate(-50%, 0);
+  }
+
+  .graphic__heading__design {
+    top: 70px;
+    transform: translate(-50%, 0);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: 135px;
+      transform: translate(-50%, 0);
+    }
+
+    &::before {
+      top: 145px;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .graphic__wrapper {
+    top: unset;
+    bottom: 30px;
+  }
+}
+
+@media only screen and (max-height: 650px) and (max-width: 450px) {
+  .graphic {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 410px) {
+  .graphic__inner {
+    background-position: 50% calc(50% + 60px);
+  }
+
+  .graphic__image {
+    top: calc(50% + 30px);
+    transform: translate(-50%, -50%);
+  }
+
+  .graphic__heading {
+    top: calc(50% - 235px);
+    transform: translate(-50%, -50%);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 195px);
+    transform: translate(-50%, -50%);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 155px);
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      top: calc(50% - 145px);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .graphic__wrapper {
+    top: calc(50% + 60px);
+    bottom: unset;
+  }
+}
+
+@media only screen and (max-height: 650px) and (max-width: 410px) {
+  .graphic {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 580px) and (max-width: 410px) {
+  .graphic {
+    height: 580px;
+  }
+}
+
+@media only screen and (min-height: 720px) and (max-width: 350px) {
+  .graphic {
+    height: 720px;
+  }
+
+  .graphic__inner {
+    background-position: 50% calc(50% + 60px);
+  }
+
+  .graphic__heading {
+    top: calc(50% - 260px);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 230px);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 190px);
+    }
+
+    &::before {
+      top: calc(50% - 180px);
+    }
+  }
+}
+
+@media only screen and (min-height: 550px) and (max-width: 350px) {
+  .graphic__image {
+    top: calc(50% + 10px);
+  }
+
+  .graphic__heading {
+    top: calc(50% - 220px);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 190px);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 150px);
+    }
+
+    &::before {
+      top: calc(50% - 130px);
+    }
+  }
+
+  .graphic__wrapper {
+    top: calc(50% + 40px);
+  }
+}
+
+@media only screen and (max-height: 550px) and (max-width: 350px) {
+  .graphic__image {
+    top: calc(50% + 10px);
+  }
+
+  .graphic__heading {
+    top: calc(50% - 220px);
+  }
+
+  .graphic__heading__design {
+    top: calc(50% - 190px);
+  }
+
+  .graphic__heading__palette {
+    &::after {
+      top: calc(50% - 150px);
+    }
+
+    &::before {
+      top: calc(50% - 130px);
+    }
+  }
+
+  .graphic__wrapper {
+    top: calc(50% + 40px);
+  }
+}
+
+@media only screen and (max-height: 580px) and (max-width: 350px) {
+  .graphic {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 550px) and (max-width: 350px) {
+  .graphic {
+    height: 550px;
+  }
+}
