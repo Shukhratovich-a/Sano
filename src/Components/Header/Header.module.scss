@@ -16,10 +16,12 @@
 }
 
 .header__link {
+  color: $textBlue;
   cursor: pointer;
+  transition: color 0.25s ease;
 
-  svg {
-    color: $textBlue;
+  &--white {
+    color: $white;
   }
 }
 

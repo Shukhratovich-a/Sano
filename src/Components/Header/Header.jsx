@@ -32,7 +32,13 @@ const Header = () => {
       <Container className={`${styles.container}`}>
         <div className={`${styles.header__inner}`}>
           <div className={`${styles.header__wrapper}`}>
-            <Link className={`${styles.header__link}`} to="hero" offset={-80}>
+            <Link
+              className={`${styles.header__link} ${
+                ["graphic", "photo"].includes(section) ? styles["header__link--white"] : ""
+              }`}
+              to="hero"
+              offset={-80}
+            >
               <Logo width={width > 550 ? 195 : 182} height={width > 550 ? 48 : 45} />
             </Link>
 
