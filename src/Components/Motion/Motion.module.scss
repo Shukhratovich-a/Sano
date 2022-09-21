@@ -814,6 +814,10 @@
 }
 
 @media only screen and (max-width: 360px) {
+  .motion__inner {
+    background-size: 360px auto;
+  }
+
   .motion__image {
     top: 55px;
     width: 330px;
@@ -1204,9 +1208,55 @@
   }
 }
 
+@media only screen and (max-height: 920px) and (max-width: 360px) {
+  .motion__image {
+    top: 55px;
+  }
+}
+
+@media only screen and (max-height: 825px) and (max-width: 360px) {
+  .motion__image {
+    top: 40px;
+  }
+}
+
+@media only screen and (max-height: 690px) and (max-width: 360px) {
+  .motion__image {
+    top: 5px;
+  }
+}
+
+@media only screen and (max-height: 640px) and (max-width: 360px) {
+  .motion__inner {
+    background-position: center 0;
+    background-size: 360px auto;
+  }
+}
+
+@media only screen and (max-height: 610px) and (max-width: 360px) {
+  .motion__image {
+    top: -5px;
+  }
+}
+
+@media only screen and (max-height: 580px) and (max-width: 360px) {
+  .motion__image {
+    top: -25px;
+  }
+
+  .motion__inner__top {
+    top: 140px;
+  }
+}
+
 @media only screen and (min-height: 760px) and (max-width: 350px) {
   .motion {
     height: 760px;
+  }
+
+  .motion__inner {
+    background-position: center 0;
+    background-size: 430px auto;
   }
 }
 
