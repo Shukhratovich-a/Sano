@@ -149,15 +149,17 @@
   }
 }
 
-@media only screen and (min-height: 1000px) and (min-width: 1640px) {
-  .photo__inner {
-    background-position: calc(50% - 30px) 50%;
+@media only screen and (max-width: 900px) {
+  .photo {
+    padding: 0;
   }
 
-  .photo__image {
-    top: 50%;
-    left: calc(50% - 30px);
-    transform: translate(-50%, -50%);
+  .container {
+    padding: 0;
+  }
+
+  .photo__inner {
+    border-radius: 0;
   }
 }
 
@@ -167,26 +169,9 @@
   }
 }
 
-@media only screen and (max-height: 950px) and (min-width: 1640px) {
-  .photo__inner {
-    background-size: 1600px 900px;
-    background-position: 50% 50%;
-    border-radius: 81px;
-    overflow: hidden;
-  }
-
-  .photo__image {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1600px;
-    height: 900px;
-  }
-}
-
-@media only screen and (max-height: 850px) and (min-width: 1640px) {
+@media only screen and (max-height: 820px) and (min-width: 1640px) {
   .photo {
-    height: 850px;
+    height: 820px;
   }
 }
 
@@ -196,15 +181,33 @@
   }
 }
 
-@media only screen and (max-height: 850px) and (min-width: 1250px) {
+@media only screen and (max-height: 800px) and (max-width: 1640px) {
   .photo {
-    height: 850px;
+    height: 800px;
   }
 }
 
-@media only screen and (min-height: 850px) and (max-width: 1250px) {
+@media only screen and (max-height: 800px) and (max-width: 1350px) {
   .photo {
-    height: 850px;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 720px) and (max-width: 1350px) {
+  .photo {
+    height: 720px;
+  }
+}
+
+@media only screen and (max-height: 820px) and (max-width: 1250px) {
+  .photo {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-height: 820px) and (max-width: 1250px) {
+  .photo {
+    height: 820px;
   }
 }
 
@@ -229,5 +232,89 @@
 @media only screen and (max-height: 580px) and (max-width: 1000px) {
   .photo {
     height: 580px;
+  }
+}
+
+@media only screen and (min-height: 920px) and (max-width: 900px) {
+  .photo {
+    height: 920px;
+  }
+}
+
+@media only screen and (max-height: 920px) and (max-width: 900px) {
+  .photo {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 750px) and (max-width: 900px) {
+  .photo {
+    height: 750px;
+  }
+}
+
+@media only screen and (min-height: 920px) and (max-width: 550px) {
+  .photo {
+    height: 920px;
+  }
+}
+
+@media only screen and (max-height: 920px) and (max-width: 550px) {
+  .photo {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 700px) and (max-width: 550px) {
+  .photo {
+    height: 700px;
+  }
+}
+
+@media only screen and (min-height: 920px) and (max-width: 450px) {
+  .photo {
+    height: 920px;
+  }
+}
+
+@media only screen and (max-height: 920px) and (max-width: 450px) {
+  .photo {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 650px) and (max-width: 450px) {
+  .photo {
+    height: 650px;
+  }
+}
+
+@media only screen and (max-height: 650px) and (max-width: 410px) {
+  .photo {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 580px) and (max-width: 410px) {
+  .photo {
+    height: 580px;
+  }
+}
+
+@media only screen and (min-height: 760px) and (max-width: 350px) {
+  .photo {
+    height: 760px;
+  }
+}
+
+@media only screen and (max-height: 580px) and (max-width: 350px) {
+  .photo {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-height: 550px) and (max-width: 350px) {
+  .photo {
+    height: 550px;
   }
 }
