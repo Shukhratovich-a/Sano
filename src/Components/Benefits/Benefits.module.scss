@@ -1,5 +1,43 @@
 @import "../../Scss/Variables.scss";
 
+.benefits {
+  position: relative;
+  padding-top: 265px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 170px);
+    left: calc(50% - 360px);
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    width: 1021px;
+    height: 251px;
+    background-image: url("../../Assets/Images/Logo/Logo.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% + 250px);
+    left: calc(50% - 790px);
+    z-index: -2;
+    transform: translate(-50%, -50%) rotate(107.66deg);
+    width: 1473px;
+    height: 1404px;
+    background-image: url("../../Assets/Images/Design/Vector.svg");
+    background-size: 1473px 1404px;
+    pointer-events: none;
+  }
+}
+
+.container {
+  overflow-x: visible;
+}
+
 .benefits__heading__top {
   position: relative;
   margin: 0;
@@ -8,6 +46,7 @@
 
 .benefits__heading__text {
   margin: 0;
+  font-family: "MontserratAlternates";
   font-weight: 900;
   font-size: 56px;
   line-height: 68px;
@@ -24,34 +63,25 @@
   right: 50%;
   transform: translate(50%);
   z-index: -1;
-  text-align: center;
-  width: 1856px;
+  font-family: "MontserratAlternates";
   font-weight: 900;
   font-size: 143px;
   line-height: 174px;
+  text-align: center;
+  white-space: nowrap;
   color: $white;
   filter: drop-shadow(-15px 15px 21px rgba(0, 0, 0, 0.05));
 }
 
-.benefits__list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .benefits__item {
+  box-sizing: border-box;
   position: relative;
   width: 304px;
-  padding: 28px 33px 59px 16px;
-  background: rgba(255, 255, 255, 0.7);
+  min-height: 318px;
+  padding: 28px 16px;
+  background-color: rgba($color: $white, $alpha: 0.7);
   backdrop-filter: blur(50px);
   border-radius: 47px;
-
-  & + & {
-    margin-left: 18px;
-  }
 
   &::after {
     content: "";
@@ -62,36 +92,58 @@
     background-repeat: no-repeat;
   }
 
-  &:nth-child(1)::after {
-    top: -18px;
-    right: -4px;
-    width: 130px;
-    height: 130px;
-    background-image: url(../../Assets/Images/Benefits/hit2x.png);
+  &:nth-child(1) {
+    &::after {
+      top: -18px;
+      right: -4px;
+      width: 130px;
+      height: 130px;
+      background-image: url(../../Assets/Images/Benefits/hit2x.png);
+    }
   }
 
-  &:nth-child(2)::after {
-    top: -2px;
-    right: 6px;
-    background-image: url(../../Assets/Images/Benefits/technologist2x.png);
+  &:nth-child(2) {
+    &::after {
+      top: -2px;
+      right: 6px;
+      background-image: url(../../Assets/Images/Benefits/technologist2x.png);
+    }
   }
 
-  &:nth-child(3)::after {
-    top: 0;
-    right: 6px;
-    background-image: url(../../Assets/Images/Benefits/stars2x.png);
+  &:nth-child(3) {
+    .benefit__text {
+      max-width: 222px;
+    }
+
+    &::after {
+      top: 0;
+      right: 6px;
+      background-image: url(../../Assets/Images/Benefits/stars2x.png);
+    }
   }
 
-  &:nth-child(4)::after {
-    top: -2px;
-    right: 8px;
-    background-image: url(../../Assets/Images/Benefits/emoji2x.png);
+  &:nth-child(4) {
+    .benefit__text {
+      max-width: 230px;
+    }
+
+    &::after {
+      top: -2px;
+      right: 8px;
+      background-image: url(../../Assets/Images/Benefits/emoji2x.png);
+    }
   }
 
-  &:nth-child(5)::after {
-    top: -2px;
-    right: 8px;
-    background-image: url(../../Assets/Images/Benefits/money2x.png);
+  &:nth-child(5) {
+    .benefit__text {
+      max-width: 210px;
+    }
+
+    &::after {
+      top: -2px;
+      right: 8px;
+      background-image: url(../../Assets/Images/Benefits/money2x.png);
+    }
   }
 }
 

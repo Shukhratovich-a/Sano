@@ -71,12 +71,12 @@ const Menu = () => {
             </Link>
           </li>
           <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
-            <Link className={`${styles.menu__link}`} to={""} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={"contact"} onClick={() => setIsOpen(false)}>
               Мы на карте
             </Link>
           </li>
           <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
-            <Link className={`${styles.menu__link}`} to={""} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={"contact"} onClick={() => setIsOpen(false)}>
               Связаться с нами
             </Link>
           </li>

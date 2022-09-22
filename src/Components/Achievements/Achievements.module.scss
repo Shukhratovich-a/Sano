@@ -1,82 +1,173 @@
 @import "../../Scss/Variables.scss";
 
+.achievements {
+  margin: 100px 0;
+}
+
 .achievements__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 100%;
-    margin: 0 auto;
-    padding: 68px 100px;
-    padding-bottom: 46px;
-    background: #ffffff;
-    backdrop-filter: blur(86px);
-    border-radius: 61px;
-    list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  margin: 0 auto;
+  padding: 68px 100px;
+  padding-bottom: 46px;
+  background: $white;
+  backdrop-filter: blur(86px);
+  border-radius: 61px;
+  list-style-type: none;
 }
 
-.achievements__item {
-    margin: 0 auto;
-    
-    &:nth-child(3) {
-        .achievements__circlesmall__inner {
-            display: flex;
-            align-items: flex-end;
-        }
-        
-        .achievements__text{
-            width: 143px;
-        }
+.achievement {
+  position: relative;
+  color: rgba($color: $textBlue, $alpha: 0.98);
+
+  &:nth-child(1) {
+    .achievement__image {
+      &::after {
+        width: 93px;
+        height: 93px;
+        background-image: url("../../Assets/Images/Achievements/Bag.png");
+      }
+
+      &::before {
+        width: 93px;
+        height: 93px;
+        background-image: url("../../Assets/Images/Achievements/Bag.png");
+      }
     }
-    
+  }
+
+  &:nth-child(2) {
+    .achievement__image {
+      &::after {
+        top: calc(50% - 40px);
+        left: 0px;
+        width: 128px;
+        height: 128px;
+        background-image: url("../../Assets/Images/Achievements/Hit.png");
+      }
+
+      &::before {
+        top: calc(50% - 26px);
+        left: -10px;
+        width: 128px;
+        height: 128px;
+        background-image: url("../../Assets/Images/Achievements/Hit.png");
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .achievement__text {
+      width: 143px;
+    }
+
+    .achievement__image {
+      &::after {
+        width: 93px;
+        height: 93px;
+        background-image: url("../../Assets/Images/Achievements/Heart.png");
+      }
+
+      &::before {
+        width: 93px;
+        height: 93px;
+        background-image: url("../../Assets/Images/Achievements/Heart.png");
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    .achievement__image {
+      &::after {
+        left: -25px;
+        width: 114px;
+        height: 114px;
+        background-image: url("../../Assets/Images/Achievements/Hat.png");
+      }
+
+      &::before {
+        left: -35px;
+        width: 114px;
+        height: 114px;
+        background-image: url("../../Assets/Images/Achievements/Hat.png");
+      }
+    }
+  }
 }
 
-.achievements__circlebig {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 12px;
-    width: 169px;
-    height: 169px;
-    border: 10px solid rgba(0, 51, 70, 0.98);
-    border-radius: 50%;
+.achievement__inner {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  padding: 30px;
 }
 
-.achievements__circlesmall {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 110px;
-    height: 110px;
-    margin: 0 auto;
-    background-color: #ffb800;
-    border-radius: 50%;
-    align-items: center;
+.achievement__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
-.achievements__number {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 49px;
-    color: #043649;
+.achievement__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  color: #043649;
+  background-color: $accent;
+  border-radius: 50%;
+
+  &[aria-label="procent"] {
+    span:nth-child(2) {
+      margin-top: 12px;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 900;
+    }
+  }
 }
 
-.achievements__procent {
-    margin-bottom: 5px;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: #043649;
+.achievement__text {
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: $black;
+  text-align: center;
 }
 
-.achievements__text {
-    margin: 0 auto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    color: #000000;
-    text-align: center;
+.achievement__image {
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 32px);
+    left: -4px;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 20px);
+    left: -14px;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    filter: blur(19px) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
 }

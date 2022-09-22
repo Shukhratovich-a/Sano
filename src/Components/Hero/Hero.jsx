@@ -46,7 +46,7 @@ const Hero = () => {
 
             <p className={`${styles.hero__description}`}>Мы предоставляем услуги SMM и дазйна для вашего бизнеса.</p>
 
-            <Link className={`${styles.hero__link}`} to={"footer"}>
+            <Link className={`${styles.hero__link}`} to={"contact"}>
               <span>Свяжись</span>
               <Arrow />
             </Link>
