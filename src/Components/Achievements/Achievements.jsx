@@ -1,10 +1,31 @@
+import React from "react";
+
+import useSection from "../../Hooks/useSection";
+
 import Container from "../Container/Container";
 
 import styles from "../Achievements/Achievements.module.scss";
 
 const Achievements = () => {
+  const [, setSection] = useSection();
+
+  const ref = React.useRef(null);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        if (
+          window.scrollY >= ref.current.offsetTop &&
+          window.scrollY < ref.current.offsetTop + ref.current.offsetHeight
+        ) {
+          setSection("achievements");
+        }
+      });
+    }
+  });
+
   return (
-    <section className={`${styles.achievements}`} id={"achievements"}>
+    <section className={`${styles.achievements}`} id={"achievements"} ref={ref}>
       <Container>
         <ul className={`${styles.achievements__list}`}>
           <li className={`${styles.achievement}`}>

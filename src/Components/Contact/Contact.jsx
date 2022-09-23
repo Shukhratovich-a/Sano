@@ -4,12 +4,13 @@ import styles from "./Contact.module.scss";
 const Contact = () => {
   return (
     <section className={`${styles.contact}`} id={"contact"}>
-      <Container>
+      <Container className={`${styles.container}`}>
         <div className={styles.contact__box}>
           <div className={styles.contact__left}>
             <p className={styles.contact__heading}>Мы на карте</p>
+
             <iframe
-              className={styles.contact_maps}
+              className={styles.contact_map}
               src="https://yandex.uz/map-widget/v1/-/CCUVBYVd9B"
               width="665"
               height="487"
@@ -26,7 +27,11 @@ const Contact = () => {
                 <input placeholder="Фамилия" className={styles.contact__input} type="text" />
                 <input placeholder="E-mail" className={styles.contact__input} type="mail" />
                 <input placeholder="Телефон" className={styles.contact__input} type="number" />
-                <input placeholder="Наименование организации" className={styles.contact__input} type="text" />
+                <input
+                  placeholder="Наименование организации"
+                  className={styles.contact__input}
+                  type="text"
+                />
                 <textarea
                   placeholder="Ваше сообщение"
                   className={styles.contact__input}
@@ -36,6 +41,7 @@ const Contact = () => {
                   rows="10"
                 ></textarea>
               </div>
+
               <button className={styles.contact__btn} type="submit">
                 Отправить
               </button>

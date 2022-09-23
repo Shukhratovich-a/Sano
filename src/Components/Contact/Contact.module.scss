@@ -1,10 +1,47 @@
+@import "../../Scss/Variables.scss";
+
+.contact {
+  position: relative;
+  padding-bottom: 135px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 340px);
+    left: calc(50% - 1005px);
+    z-index: -2;
+    transform: translate(-50%, -50%) rotate(-36.46deg);
+    width: 1662px;
+    height: 1585px;
+    background-image: url("../../Assets/Images/Design/Vector.svg");
+    background-size: 1662px 1585px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 .contact__box {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 28px 132px 40px 75px;
-  background: #ffffff;
+  background: $white;
   border-radius: 94px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: -50px;
+    z-index: 9;
+    width: 265px;
+    height: 270px;
+    background-image: url("../../Assets/Images/Contact/Ping.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 
 .contact__heading {
@@ -22,14 +59,14 @@
   background-clip: text;
 }
 
-.contact_maps {
+.contact_map {
   border-radius: 51px;
   border: none;
-  filter: drop-shadow(-34px 53px 68px rgba(0, 0, 0, 0.13));
+  filter: drop-shadow(-34px 53px 68px rgba($color: $black, $alpha: 0.13));
 }
 
-.contact__form{
-  max-width:676px ;
+.contact__form {
+  max-width: 676px;
   width: 100%;
 }
 
@@ -45,9 +82,19 @@
   font-size: 24px;
   line-height: 29px;
   padding: 12px 30px;
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   border: 1px solid #e4e4e4;
   border-radius: 48px;
+  outline: none;
+  transition: border-color 0.25s ease, color 0.25s ease;
+
+  &:focus {
+    border-color: $darkBlue;
+  }
+
+  &::placeholder {
+    color: #c0c0c0;
+  }
 
   &:nth-child(5) {
     grid-column-start: 1;
@@ -70,7 +117,7 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  color: #ffffff;
+  color: $white;
   padding: 13px 50px;
   background: linear-gradient(93.67deg, #30ce88 -3.53%, #1ea569 101.01%);
   border-radius: 48px;

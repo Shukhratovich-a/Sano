@@ -2,7 +2,7 @@ import useWindowDimensions from "./Hooks/useWindowDimensions";
 
 import Header from "./Components/Header/Header";
 import Menu from "./Components/Menu/Menu";
-// import Footer from "./Components/Footer/Footer";
+import Footer from "./Components/Footer/Footer";
 
 import Hero from "./Components/Hero/Hero";
 import Target from "./Components/Target/Target";
@@ -10,6 +10,7 @@ import Graphic from "./Components/Graphic/Graphic";
 import Motion from "./Components/Motion/Motion";
 import Photo from "./Components/Photo/Photo";
 import Benefits from "./Components/Benefits/Benefits";
+import Founders from "./Components/Founders/Founders";
 import Achievements from "./Components/Achievements/Achievements";
 import Contact from "./Components/Contact/Contact";
 
@@ -30,11 +31,12 @@ function App() {
         <Motion />
         <Photo />
         <Benefits />
+        <Founders />
         <Achievements />
         <Contact />
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

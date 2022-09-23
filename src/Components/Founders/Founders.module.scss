@@ -1,0 +1,258 @@
+@import "../../Scss/Variables.scss";
+
+.founders {
+  position: relative;
+  padding-top: 340px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 135px;
+    left: calc(50% - 365px);
+    transform: translate(-50%);
+    width: 1020px;
+    height: 250px;
+    background-image: url("../../Assets/Images/Logo/Logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 700px);
+    left: calc(50% + 880px);
+    z-index: -2;
+    transform: translate(-50%, -50%) rotate(-109.56deg);
+    width: 1662px;
+    height: 1585px;
+    background-image: url("../../Assets/Images/Design/Vector.svg");
+    background-size: 1662px 1585px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.founders__top {
+  position: relative;
+  margin-bottom: 135px;
+}
+
+.founders__heading__text {
+  margin: 0;
+  font-family: "MontserratAlternates";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 56px;
+  text-align: center;
+  text-transform: capitalize;
+  background: $blueGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.founders__heading__subtext {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "MontserratAlternates";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 152px;
+  line-height: 172px;
+  text-align: center;
+  white-space: nowrap;
+  color: $white;
+}
+
+.founders__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 912px;
+  width: 100%;
+  list-style-type: none;
+  gap: 58px;
+}
+
+.founder {
+  position: relative;
+  max-width: 265px;
+  width: 100%;
+  background-color: $white;
+  border-radius: 41px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: -31px;
+    z-index: -1;
+    max-width: inherit;
+    width: inherit;
+    height: 365px;
+    background-color: $gray;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+    filter: blur(20px);
+    border-radius: 41px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 54px;
+    height: 54px;
+    background-image: url("../../Assets/Images/Founders/Star.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-child(2) {
+    .founder__inner {
+      background: linear-gradient(315.63deg, #ffbe00 0%, #fff0a0 95.2%);
+    }
+
+    .founder__image {
+      right: calc(50% + 7px);
+    }
+
+    .founder__name {
+      color: $textBlue;
+    }
+  }
+
+  &:nth-child(3) {
+    .founder__inner {
+      background: linear-gradient(314.38deg, #003246 1.5%, #0095d0 96.31%);
+    }
+  }
+}
+
+.founder__inner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 220px;
+  padding: 22px;
+  background: linear-gradient(315.23deg, #003246 0%, #19d2a6 95.85%);
+  border-radius: 41px 41px 0px 0px;
+}
+
+.founder__image {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.founder__name {
+  z-index: 2;
+  max-width: 110px;
+  width: 100%;
+  margin: 0;
+  font-size: 20px;
+  line-height: 20px;
+  color: $white;
+}
+
+.founder__info {
+  padding: 20px 22px;
+}
+
+.founder__job {
+  max-width: 200px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: $textBlue;
+}
+
+.founder__experience {
+  display: block;
+  max-width: 110px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 8px;
+  color: $gray;
+}
+
+.founder__quote {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 467px;
+  height: 262px;
+  padding: 16px;
+  padding-bottom: 45px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  background-image: url("../../Assets/Images/Founders/QuoteBackground.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.founder__quote__text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.founder {
+  &:nth-child(1) {
+    .founder__quote {
+      top: calc(0% - 8px);
+      left: calc(50% - 230px);
+      transform: translate(-50%, -100%) scaleX(-1);
+
+      .founder__quote__text {
+        transform: scaleX(-1);
+        max-width: 382px;
+        width: 100%;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .founder__quote {
+      top: calc(0% - 158px);
+      left: calc(50% - 5px);
+
+      .founder__quote__text {
+        max-width: 345px;
+        width: 100%;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .founder__quote {
+      top: calc(0% - 20px);
+      left: calc(50% + 150px);
+
+      .founder__quote__text {
+        max-width: 346px;
+        width: 100%;
+      }
+    }
+  }
+}
