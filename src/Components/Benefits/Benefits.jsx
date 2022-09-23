@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import useSection from "../../Hooks/useSection";
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 import Container from "../Container/Container";
 
@@ -10,6 +11,7 @@ import "./BenefitsSwiper.scss";
 import styles from "../Benefits/Benefits.module.scss";
 
 const Benefits = () => {
+  const { width } = useWindowDimensions();
   const [, setSection] = useSection();
 
   const ref = React.useRef(null);
@@ -32,11 +34,14 @@ const Benefits = () => {
       <Container className={`${styles.container}`}>
         <div className={`${styles.benefits__heading__top}`}>
           <h2 className={`${styles.benefits__heading__text}`}>
-            <span>5 </span>
+            <span>5</span>
+            {width > 768 && <span> </span>}
             <span>причин выбрать нас</span>
           </h2>
 
-          <span className={`${styles.benefits__heading__subtext}`}>причины выбрать нас</span>
+          {width > 1050 && (
+            <span className={`${styles.benefits__heading__subtext}`}>причины выбрать нас</span>
+          )}
         </div>
 
         <Swiper className={styles.benefits__list} slidesPerView={"auto"} spaceBetween={20}>

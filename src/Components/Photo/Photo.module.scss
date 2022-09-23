@@ -41,7 +41,6 @@
   background-repeat: no-repeat;
   border-radius: 81px;
   overflow: hidden;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .photo__image {
@@ -174,6 +173,31 @@
 
   .photo__inner {
     border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .photo {
+    &::before {
+      top: calc(50% + 497px);
+      left: calc(50% - 260px);
+      transform: translate(-50%, -50%) rotate(-27.27deg);
+      width: 1250px;
+      height: 1192px;
+      background-image: url("../../Assets/Images/Design/VectorMobile.svg");
+      background-size: 1250px 1192px;
+    }
+  }
+
+  .photo__circle {
+    position: absolute;
+    top: unset;
+    bottom: 20px;
+    right: calc(50% - 195px);
+    transform: translate(50%, 100%);
+    z-index: -6;
+    filter: blur(25px);
+    opacity: 0.8;
   }
 }
 

@@ -26,7 +26,7 @@ const Achievements = () => {
 
   return (
     <section className={`${styles.achievements}`} id={"achievements"} ref={ref}>
-      <Container>
+      <Container className={`${styles.container}`}>
         <ul className={`${styles.achievements__list}`}>
           <li className={`${styles.achievement}`}>
             <div className={`${styles.achievement__inner}`}>

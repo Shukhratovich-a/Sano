@@ -16,6 +16,7 @@
   backdrop-filter: blur(86px);
   border-radius: 61px;
   list-style-type: none;
+  overflow: hidden;
 }
 
 .achievement {
@@ -25,12 +26,14 @@
   &:nth-child(1) {
     .achievement__image {
       &::after {
+        top: calc(50% - 40px);
         width: 93px;
         height: 93px;
         background-image: url("../../Assets/Images/Achievements/Bag.png");
       }
 
       &::before {
+        top: calc(50% - 25px);
         width: 93px;
         height: 93px;
         background-image: url("../../Assets/Images/Achievements/Bag.png");
@@ -41,16 +44,16 @@
   &:nth-child(2) {
     .achievement__image {
       &::after {
-        top: calc(50% - 40px);
-        left: 0px;
+        top: calc(50% - 50px);
+        left: calc(50% - 117px);
         width: 128px;
         height: 128px;
         background-image: url("../../Assets/Images/Achievements/Hit.png");
       }
 
       &::before {
-        top: calc(50% - 26px);
-        left: -10px;
+        top: calc(50% - 35px);
+        left: calc(50% - 127px);
         width: 128px;
         height: 128px;
         background-image: url("../../Assets/Images/Achievements/Hit.png");
@@ -79,16 +82,21 @@
   }
 
   &:nth-child(4) {
+    .achievement__text {
+      width: 260px;
+      text-align: center;
+    }
+
     .achievement__image {
       &::after {
-        left: -25px;
+        left: calc(50% - 140px);
         width: 114px;
         height: 114px;
         background-image: url("../../Assets/Images/Achievements/Hat.png");
       }
 
       &::before {
-        left: -35px;
+        left: calc(50% - 150px);
         width: 114px;
         height: 114px;
         background-image: url("../../Assets/Images/Achievements/Hat.png");
@@ -151,9 +159,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: calc(50% - 32px);
-    left: -4px;
-    transform: translateY(-50%);
+    top: calc(50% - 35px);
+    left: calc(50% - 135px);
+    transform: translate(-50%, -50%);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -163,12 +171,119 @@
     content: "";
     position: absolute;
     top: calc(50% - 20px);
-    left: -14px;
-    transform: translateY(-50%);
+    left: calc(50% - 145px);
+    transform: translate(-50%, -50%);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.7;
     filter: blur(19px) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .achievements__list {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 1420px) {
+  .achievements__list {
+    max-width: 600px;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .achievements {
+    padding-top: 108px;
+    padding-bottom: 95px;
+  }
+
+  .achievements__list {
+    max-width: 354px;
+    gap: 160px;
+    padding: 10px;
+    padding-top: 155px;
+    padding-bottom: 66px;
+  }
+
+  .achievement {
+    position: relative;
+    color: rgba($color: $textBlue, $alpha: 0.98);
+
+    &:nth-child(1) {
+      .achievement__image {
+        &::after {
+          top: calc(-30px);
+          background-image: url("../../Assets/Images/Achievements/Bag.png");
+        }
+
+        &::before {
+          top: calc(-18px);
+          left: calc(50% - 10px);
+          background-image: url("../../Assets/Images/Achievements/Bag.png");
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .achievement__image {
+        &::after {
+          top: calc(-7px);
+          left: calc(50% + 20px);
+        }
+
+        &::before {
+          top: calc(7px);
+          left: calc(50% + 6px);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .achievement__image {
+        &::after {
+          top: calc(-26px);
+          left: calc(50%);
+        }
+
+        &::before {
+          top: calc(-11px);
+          left: calc(50% - 11px);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .achievement__image {
+        &::after {
+          top: calc(-14px);
+          left: calc(50%);
+        }
+
+        &::before {
+          top: calc(8px);
+          left: calc(50% - 10px);
+        }
+      }
+    }
+  }
+
+  .achievement__image {
+    &::after {
+      top: calc(50%);
+      left: calc(50%);
+      transform: translate(-50%, -100%);
+    }
+
+    &::before {
+      top: calc(50%);
+      left: calc(50%);
+      transform: translate(-50%, -100%);
+    }
   }
 }
