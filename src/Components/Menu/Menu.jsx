@@ -36,7 +36,12 @@ const Menu = () => {
 
         <ul className={`${styles.menu__list}`}>
           <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
-            <Link className={`${styles.menu__link}`} to={"hero"} offset={-155} onClick={() => setIsOpen(false)}>
+            <Link
+              className={`${styles.menu__link}`}
+              to={"hero"}
+              offset={-155}
+              onClick={() => setIsOpen(false)}
+            >
               Главная
             </Link>
           </li>
@@ -46,7 +51,11 @@ const Menu = () => {
             </Link>
           </li>
           <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
-            <Link className={`${styles.menu__link}`} to={"graphic"} onClick={() => setIsOpen(false)}>
+            <Link
+              className={`${styles.menu__link}`}
+              to={"graphic"}
+              onClick={() => setIsOpen(false)}
+            >
               Graphic Design
             </Link>
           </li>
@@ -61,22 +70,34 @@ const Menu = () => {
             </Link>
           </li>
           <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
-            <Link className={`${styles.menu__link}`} to={"benefits"} onClick={() => setIsOpen(false)}>
+            <Link
+              className={`${styles.menu__link}`}
+              to={"benefits"}
+              onClick={() => setIsOpen(false)}
+            >
               5 причин выбрать нас
             </Link>
           </li>
           <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
-            <Link className={`${styles.menu__link}`} to={"founders"} onClick={() => setIsOpen(false)}>
+            <Link
+              className={`${styles.menu__link}`}
+              to={"founders"}
+              onClick={() => setIsOpen(false)}
+            >
               Основатели
             </Link>
           </li>
           <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
-            <Link className={`${styles.menu__link}`} to={"contact"} onClick={() => setIsOpen(false)}>
+            <Link className={`${styles.menu__link}`} to={"maps"} onClick={() => setIsOpen(false)}>
               Мы на карте
             </Link>
           </li>
           <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
-            <Link className={`${styles.menu__link}`} to={"contact"} onClick={() => setIsOpen(false)}>
+            <Link
+              className={`${styles.menu__link}`}
+              to={"contact"}
+              onClick={() => setIsOpen(false)}
+            >
               Связаться с нами
             </Link>
           </li>

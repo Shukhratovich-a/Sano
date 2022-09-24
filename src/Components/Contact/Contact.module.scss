@@ -26,7 +26,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 28px 132px 40px 75px;
-  background: $white;
+  background-color: $white;
   border-radius: 94px;
 
   &::before {
@@ -44,11 +44,16 @@
   }
 }
 
+.contact__left {
+  margin-right: 30px;
+}
+
 .contact__heading {
   margin: 0 auto;
   margin-top: 0;
   margin-bottom: 16px;
   text-align: center;
+  font-family: "MontserratAlternates";
   font-style: normal;
   font-weight: 900;
   font-size: 56px;
@@ -59,7 +64,7 @@
   background-clip: text;
 }
 
-.contact_map {
+.contact__map {
   border-radius: 51px;
   border: none;
   filter: drop-shadow(-34px 53px 68px rgba($color: $black, $alpha: 0.13));
@@ -122,4 +127,163 @@
   background: linear-gradient(93.67deg, #30ce88 -3.53%, #1ea569 101.01%);
   border-radius: 48px;
   border: none;
+}
+
+@media only screen and (max-width: 1550px) {
+  .contact__box {
+    padding: 25px 50px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .contact__map {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 1340px) {
+  .contact__map {
+    width: 550px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .contact__map {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .contact__box {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contact__left {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contact {
+    padding-bottom: 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .contact__box {
+    border-radius: unset;
+    padding: 20px;
+    padding-top: 54px;
+    padding-bottom: 40px;
+  }
+
+  .contact__left {
+    width: 100%;
+
+    .contact__heading {
+      margin-bottom: 54px;
+    }
+  }
+
+  .contact__map {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    padding: 0;
+  }
+
+  .contact__box {
+    gap: 44px;
+    padding-left: 0;
+    padding-right: 0;
+
+    &::before {
+      top: -150px;
+      left: -50px;
+    }
+  }
+
+  .contact__map {
+    height: 695px;
+    border-radius: unset;
+    filter: unset;
+  }
+
+  .contact__right {
+    padding: 0 30px;
+
+    .contact__heading {
+      margin-bottom: 30px;
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+
+  .contact__inputs__box {
+    grid-template-columns: unset;
+    gap: 20px;
+  }
+
+  .contact__input {
+    &:nth-child(5) {
+      grid-column-start: unset;
+      grid-column-end: unset;
+    }
+
+    &:nth-child(6) {
+      padding: 25px 30px;
+      grid-column-start: unset;
+      grid-column-end: unset;
+      border-radius: 26px;
+    }
+  }
+
+  .contact__btn {
+    width: 100%;
+    margin-top: 33px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .container {
+    padding: 0;
+  }
+
+  .contact__left {
+    width: 100%;
+  }
+
+  .contact__map {
+    width: 100%;
+    border-radius: unset;
+  }
+
+  .contact__right {
+    padding: 0 30px;
+  }
+
+  .contact__inputs__box {
+    grid-template-columns: unset;
+  }
+
+  .contact__input {
+    &:nth-child(5) {
+      grid-column-start: unset;
+      grid-column-end: unset;
+    }
+
+    &:nth-child(6) {
+      padding: 25px 30px;
+      grid-column-start: unset;
+      grid-column-end: unset;
+      border-radius: 26px;
+    }
+  }
 }

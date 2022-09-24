@@ -44,15 +44,25 @@ const Hero = () => {
 
             <strong className={`${styles.hero__subheading}`}>Привет, мы команда “SANO”</strong>
 
-            <p className={`${styles.hero__description}`}>Мы предоставляем услуги SMM и дазйна для вашего бизнеса.</p>
+            <p className={`${styles.hero__description}`}>
+              Мы предоставляем услуги SMM и дазйна для вашего бизнеса.
+            </p>
 
-            <Link className={`${styles.hero__link}`} to={"contact"}>
+            <Link className={`${styles.hero__link}`} to={"contact"} offset={-200}>
               <span>Свяжись</span>
               <Arrow />
             </Link>
           </div>
 
-          {width > 1140 && <img className={`${styles.hero__image}`} src={HeroImage} alt="" width={800} height={656} />}
+          {width > 1140 && (
+            <img
+              className={`${styles.hero__image}`}
+              src={HeroImage}
+              alt=""
+              width={800}
+              height={656}
+            />
+          )}
         </div>
 
         {/* <span className={`${styles.hero__circle}`}></span> */}
