@@ -6,3 +6,70 @@
   color: $white;
   background: linear-gradient(93.73deg, #043649 0%, #205374 100%);
 }
+
+.container {
+  display: flex;
+}
+
+.footer__logo__block {
+  margin-right: auto;
+  padding-top: 20px;
+}
+
+.footer__link {
+  display: block;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.footer__nav {
+  margin-right: 135px;
+
+  .footer__heading {
+    text-transform: uppercase;
+  }
+}
+
+.footer__about {
+  max-width: 353px;
+  width: 100%;
+  margin-right: 70px;
+}
+
+.footer__heading {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.footer__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.footer__contact__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__item {
+  & + & {
+    margin-top: 5px;
+  }
+}

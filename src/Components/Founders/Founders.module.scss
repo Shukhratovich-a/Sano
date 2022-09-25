@@ -195,7 +195,7 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%) scale(0) rotate(20deg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,6 +210,7 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center 0;
+  transition: transform 0.25s ease;
 }
 
 .founder__quote__text {
@@ -222,7 +223,7 @@
     .founder__quote {
       top: calc(0% - 8px);
       left: calc(50% - 230px);
-      transform: translate(-50%, -100%) scaleX(-1);
+      transform: translate(-50%, -100%) scaleX(-1) scale(0);
 
       .founder__quote__text {
         transform: scaleX(-1);
@@ -252,6 +253,26 @@
       .founder__quote__text {
         max-width: 346px;
         width: 100%;
+      }
+    }
+  }
+
+  &:hover {
+    &:nth-child(1) {
+      .founder__quote {
+        transform: translate(-50%, -100%) scaleX(-1) scale(1) rotate(0deg);
+      }
+    }
+
+    &:nth-child(2) {
+      .founder__quote {
+        transform: translate(-50%, -100%) scale(1) rotate(0deg);
+      }
+    }
+
+    &:nth-child(3) {
+      .founder__quote {
+        transform: translate(-50%, -100%) scale(1) rotate(0deg);
       }
     }
   }

@@ -1,7 +1,38 @@
+import { HOST } from "../../config";
+
 import Container from "../Container/Container";
+
 import styles from "./Contact.module.scss";
 
 const Contact = () => {
+  const handleSubmit = async (evt) => {
+    evt.preventDefault();
+
+    const { firstname, surname, mail, phone, organization, message } = evt.target.elements;
+
+    const body = {
+      firstname: firstname.value.trim(),
+      surname: surname.value.trim(),
+      mail: mail.value.trim(),
+      phone: phone.value.trim(),
+    };
+
+    if (organization.value.trim().length > 2) body.organization = organization.value.trim();
+    if (message.value.trim().length > 2) body.message = message.value.trim();
+
+    const response = await fetch(HOST + "/message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+
+    const data = await response.json();
+
+    console.log(data);
+  };
+
   return (
     <section className={`${styles.contact}`}>
       <Container className={`${styles.container}`}>
@@ -21,24 +52,44 @@ const Contact = () => {
           <div className={`${styles.contact__right}`} id={"contact"}>
             <p className={`${styles.contact__heading}`}>Связаться с нами</p>
 
-            <form className={`${styles.contact__form}`}>
+            <form className={`${styles.contact__form}`} onSubmit={handleSubmit}>
               <div className={`${styles.contact__inputs__box}`}>
-                <input placeholder="Имя" className={`${styles.contact__input}`} type="text" />
-                <input placeholder="Фамилия" className={`${styles.contact__input}`} type="text" />
-                <input placeholder="E-mail" className={`${styles.contact__input}`} type="mail" />
-                <input placeholder="Телефон" className={`${styles.contact__input}`} type="number" />
+                <input
+                  placeholder="Имя"
+                  className={`${styles.contact__input}`}
+                  type="text"
+                  name="firstname"
+                />
+                <input
+                  placeholder="Фамилия"
+                  className={`${styles.contact__input}`}
+                  type="text"
+                  name="surname"
+                />
+                <input
+                  placeholder="E-mail"
+                  className={`${styles.contact__input}`}
+                  type="mail"
+                  name="mail"
+                />
+                <input
+                  placeholder="Телефон"
+                  className={`${styles.contact__input}`}
+                  type="number"
+                  name="phone"
+                />
                 <input
                   placeholder="Наименование организации"
                   className={`${styles.contact__input}`}
                   type="text"
+                  name="organization"
                 />
                 <textarea
                   placeholder="Ваше сообщение"
                   className={`${styles.contact__input}`}
-                  name=""
-                  id=""
                   cols="30"
                   rows="10"
+                  name="message"
                 ></textarea>
               </div>
 

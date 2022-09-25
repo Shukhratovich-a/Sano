@@ -112,6 +112,10 @@
     resize: none;
     height: 203px;
   }
+
+  &[name="message"] {
+    padding: 25px 30px;
+  }
 }
 
 .contact__btn {
