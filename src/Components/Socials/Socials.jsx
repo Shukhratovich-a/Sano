@@ -21,7 +21,7 @@ const Socials = ({ className }) => {
         <li className={`${styles.social}`}>
           <a
             className={`${styles.social__link}`}
-            href="https://t.me/sanoportfolio"
+            href="https://www.instagram.com/sano_agency"
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
@@ -31,7 +31,7 @@ const Socials = ({ className }) => {
         <li className={`${styles.social}`}>
           <a
             className={`${styles.social__link}`}
-            href="https://t.me/sanoportfolio"
+            href="https://www.behance.net/sanoagency"
             target={"_blank"}
             rel={"noopener noreferrer"}
           >
