@@ -119,7 +119,7 @@
     background-position: center;
   }
 
-  &:nth-child(2) {
+  &--yellow {
     .founder__inner {
       background: linear-gradient(315.63deg, #ffbe00 0%, #fff0a0 95.2%);
     }
@@ -133,7 +133,7 @@
     }
   }
 
-  &:nth-child(3) {
+  &--blue {
     .founder__inner {
       background: linear-gradient(314.38deg, #003246 1.5%, #0095d0 96.31%);
     }
@@ -261,19 +261,61 @@
     &:nth-child(1) {
       .founder__quote {
         transform: translate(-50%, -100%) scaleX(-1) scale(1) rotate(0deg);
+        animation: quoteAnimationFirst 0.4s;
+        animation-delay: 0.25s;
       }
     }
 
     &:nth-child(2) {
       .founder__quote {
         transform: translate(-50%, -100%) scale(1) rotate(0deg);
+        animation: quoteAnimation 0.4s;
+        animation-delay: 0.25s;
       }
     }
 
     &:nth-child(3) {
       .founder__quote {
         transform: translate(-50%, -100%) scale(1) rotate(0deg);
+        animation: quoteAnimation 0.4s;
+        animation-delay: 0.25s;
       }
     }
+  }
+}
+
+@keyframes quoteAnimation {
+  0% {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -100%) rotate(20deg);
+  }
+  50% {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50%, -100%) rotate(20deg);
+  }
+  100% {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+}
+
+@keyframes quoteAnimationFirst {
+  0% {
+    transform: translate(-50%, -100%) scaleX(-1) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -100%) scaleX(-1) rotate(20deg);
+  }
+  50% {
+    transform: translate(-50%, -100%) scaleX(-1) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50%, -100%) scaleX(-1) rotate(20deg);
+  }
+  100% {
+    transform: translate(-50%, -100%) scaleX(-1) rotate(0deg);
   }
 }

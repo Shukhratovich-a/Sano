@@ -82,6 +82,7 @@
   background-color: rgba($color: $white, $alpha: 0.7);
   backdrop-filter: blur(50px);
   border-radius: 47px;
+  background-size: 0 0;
 
   &::after {
     content: "";
@@ -90,6 +91,7 @@
     height: 110px;
     background-size: contain;
     background-repeat: no-repeat;
+    background-image: inherit;
   }
 
   &:nth-child(1) {
@@ -98,7 +100,6 @@
       right: -4px;
       width: 130px;
       height: 130px;
-      background-image: url(../../Assets/Images/Benefits/hit2x.png);
     }
   }
 
@@ -106,7 +107,6 @@
     &::after {
       top: -2px;
       right: 6px;
-      background-image: url(../../Assets/Images/Benefits/technologist2x.png);
     }
   }
 
@@ -118,7 +118,6 @@
     &::after {
       top: 0;
       right: 6px;
-      background-image: url(../../Assets/Images/Benefits/stars2x.png);
     }
   }
 
@@ -130,7 +129,6 @@
     &::after {
       top: -2px;
       right: 8px;
-      background-image: url(../../Assets/Images/Benefits/emoji2x.png);
     }
   }
 
@@ -142,7 +140,6 @@
     &::after {
       top: -2px;
       right: 8px;
-      background-image: url(../../Assets/Images/Benefits/money2x.png);
     }
   }
 }

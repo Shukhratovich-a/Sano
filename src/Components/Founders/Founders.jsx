@@ -38,7 +38,10 @@ const Founders = () => {
         <ul className={`${styles.founders__list}`}>
           {founders.length > 0 &&
             founders.map((founder, index) => (
-              <li className={`${styles.founder}`} key={index}>
+              <li
+                className={`${styles.founder} ${styles["founder--" + founder.color]}`}
+                key={index}
+              >
                 <div className={`${styles.founder__inner}`}>
                   <img
                     className={`${styles.founder__image}`}
