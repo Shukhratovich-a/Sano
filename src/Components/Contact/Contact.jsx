@@ -22,7 +22,7 @@ const Contact = () => {
       firstname: firstname.value.trim(),
       surname: surname.value.trim(),
       mail: mail.value.trim(),
-      phone: phone.value.trim(),
+      phone: phone.value.trim().split("+").join("").split(" ").join(""),
     };
 
     if (organization.value.trim().length > 2) body.organization = organization.value.trim();
