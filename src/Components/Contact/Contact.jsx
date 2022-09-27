@@ -1,4 +1,3 @@
-import React from "react";
 import { IMaskInput } from "react-imask";
 
 import { HOST } from "../../config";
@@ -8,9 +7,6 @@ import Container from "../Container/Container";
 import styles from "./Contact.module.scss";
 
 const Contact = () => {
-  const ref = React.useRef(null);
-  const inputRef = React.useRef(null);
-
   const handleSubmit = async (evt) => {
     evt.preventDefault();
 
