@@ -179,9 +179,10 @@
 @media only screen and (max-width: 768px) {
   .photo {
     &::before {
-      top: calc(50% + 497px);
+      top: unset;
+      bottom: -635px;
       left: calc(50% - 260px);
-      transform: translate(-50%, -50%) rotate(-27.27deg);
+      transform: translate(-50%, 0) rotate(-27.27deg);
       width: 1250px;
       height: 1192px;
       background-image: url("../../Assets/Images/Design/VectorMobile.svg");

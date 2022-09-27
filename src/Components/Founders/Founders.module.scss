@@ -35,6 +35,15 @@
   }
 }
 
+.founder__circle {
+  position: absolute;
+  top: 130px;
+  left: calc(50% - 230px);
+  transform: translate(-50%, 0);
+  // filter: blur(25px);
+  opacity: 0.8;
+}
+
 .founders__top {
   position: relative;
   margin-bottom: 135px;
@@ -154,6 +163,7 @@
   position: absolute;
   bottom: 0;
   right: 50%;
+  z-index: 1;
   transform: translateX(50%);
 }
 
@@ -224,7 +234,6 @@
     .founder__quote {
       top: calc(0% - 8px);
       left: calc(50% - 230px);
-      // transform: translate(-50%, -100%) scaleX(-1);
       transform: translate(-50%, -100%) scaleX(-1) scale(0) rotate(20deg);
 
       .founder__quote__text {
@@ -283,6 +292,197 @@
         // animation-delay: 0.25s;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1750px) {
+  .founders {
+    &::before {
+      left: 20px;
+      transform: translate(0);
+      width: 1021px;
+      height: 251px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .founder {
+    &:nth-child(1) {
+      .founder__quote {
+        top: calc(0% - 20px);
+        left: calc(50% - 200px);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1530px) {
+  .founder {
+    &:nth-child(1) {
+      .founder__quote {
+        left: calc(50% + 220px);
+        transform: translate(-50%, -100%) scaleX(1) scale(0) rotate(20deg);
+
+        .founder__quote__text {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .founder__quote {
+        left: calc(50% - 230px);
+        transform: translate(-50%, -100%) scaleX(-1) scale(0) rotate(20deg);
+
+        .founder__quote__text {
+          transform: scaleX(-1);
+        }
+      }
+    }
+
+    &:hover {
+      &:nth-child(1) {
+        .founder__quote {
+          transform: translate(-50%, -100%) scaleX(1) scale(1) rotate(0deg);
+        }
+      }
+
+      &:nth-child(3) {
+        .founder__quote {
+          transform: translate(-50%, -100%) scaleX(-1) scale(1) rotate(0deg);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .founders__heading__subtext {
+    font-size: 130px;
+    line-height: 150px;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .founders__heading__subtext {
+    font-size: 120px;
+    line-height: 150px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .founders {
+    &::before {
+      top: calc(50% - 170px);
+      left: calc(50%);
+      transform: translate(-50%, -50%);
+      width: calc(100% - 34px);
+    }
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .founders__heading__subtext {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .founders__list {
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .founders {
+    padding-top: 100px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      top: calc(50% + 400px);
+      left: calc(50% + 140px);
+      transform: translate(-50%, -50%) rotate(65.38deg);
+      width: 1702px;
+      height: 1625px;
+      background-image: url("../../Assets/Images/Design/Vector.svg");
+      background-size: 1702px 1625px;
+    }
+  }
+
+  .founder__circle {
+    position: absolute;
+    top: 140px;
+    left: calc(50% - 230px);
+    transform: translate(-50%, 0);
+    filter: blur(25px);
+    opacity: 0.8;
+  }
+
+  .founders__list {
+    flex-direction: column;
+    gap: 110px;
+  }
+
+  .founder {
+    &::before {
+      content: none;
+    }
+  }
+
+  .founder__quote {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .founders {
+    &::before {
+      top: calc(20px);
+      left: calc(50%);
+      transform: translate(-50%, 0);
+      width: calc(100% - 34px);
+      height: 170px;
+    }
+  }
+
+  .founders__top {
+    margin-bottom: 90px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .founders {
+    padding-top: 90px;
+
+    &::before {
+      top: calc(20px);
+      left: calc(50%);
+      transform: translate(-50%, 0);
+      width: calc(100% - 34px);
+      height: 170px;
+    }
+  }
+
+  .founders__top {
+    margin-bottom: 90px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .founders__heading__text {
+    font-size: 42px;
+    line-height: 48px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .founders__heading__text {
+    font-size: 38px;
+    line-height: 46px;
   }
 }
 

@@ -253,6 +253,16 @@
       width: calc(100% - 34px);
       height: 170px;
     }
+
+    &::before {
+      top: calc(50% + 595px);
+      left: calc(50% + 170px);
+      transform: translate(-50%, -50%) rotate(-109.56deg);
+      width: 1322px;
+      height: 1260px;
+      background-image: url("../../Assets/Images/Design/VectorMobile.svg");
+      background-size: 1322px 1260px;
+    }
   }
 
   .benefits__heading__top {
@@ -367,7 +377,7 @@
     }
 
     span:nth-child(2) {
-      max-width: 215px;
+      max-width: 190px;
       font-size: 34px;
       line-height: 36px;
     }

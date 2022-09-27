@@ -12,19 +12,18 @@
 
 .target__circle {
   position: absolute;
+  z-index: -3;
+  opacity: 0.8;
+  filter: blur(25px);
 
   &:nth-child(1) {
     top: 320px;
     right: calc(50% + 155px);
-    z-index: -6;
-    filter: blur(25px);
   }
 
   &:nth-child(2) {
     top: 460px;
     left: calc(50% + 475px);
-    z-index: -6;
-    filter: blur(25px);
   }
 }
 

@@ -1,6 +1,7 @@
 @import "../../Scss/Variables.scss";
 
 .achievements {
+  position: relative;
   padding-top: 133px;
   padding-bottom: 104px;
 }
@@ -22,6 +23,7 @@
 .achievement {
   position: relative;
   color: rgba($color: $textBlue, $alpha: 0.98);
+  background-size: 0 0;
 
   &:nth-child(1) {
     .achievement__image {
@@ -29,14 +31,14 @@
         top: calc(50% - 40px);
         width: 93px;
         height: 93px;
-        background-image: url("../../Assets/Images/Achievements/Bag.png");
+        background-image: inherit;
       }
 
       &::before {
         top: calc(50% - 25px);
         width: 93px;
         height: 93px;
-        background-image: url("../../Assets/Images/Achievements/Bag.png");
+        background-image: inherit;
       }
     }
   }
@@ -48,7 +50,7 @@
         left: calc(50% - 117px);
         width: 128px;
         height: 128px;
-        background-image: url("../../Assets/Images/Achievements/Hit.png");
+        background-image: inherit;
       }
 
       &::before {
@@ -56,7 +58,7 @@
         left: calc(50% - 127px);
         width: 128px;
         height: 128px;
-        background-image: url("../../Assets/Images/Achievements/Hit.png");
+        background-image: inherit;
       }
     }
   }
@@ -70,13 +72,13 @@
       &::after {
         width: 93px;
         height: 93px;
-        background-image: url("../../Assets/Images/Achievements/Heart.png");
+        background-image: inherit;
       }
 
       &::before {
         width: 93px;
         height: 93px;
-        background-image: url("../../Assets/Images/Achievements/Heart.png");
+        background-image: inherit;
       }
     }
   }
@@ -92,17 +94,22 @@
         left: calc(50% - 140px);
         width: 114px;
         height: 114px;
-        background-image: url("../../Assets/Images/Achievements/Hat.png");
+        background-image: inherit;
       }
 
       &::before {
         left: calc(50% - 150px);
         width: 114px;
         height: 114px;
-        background-image: url("../../Assets/Images/Achievements/Hat.png");
+        background-image: inherit;
       }
     }
   }
+}
+
+.achievement__image {
+  background-image: inherit;
+  background-size: 0 0;
 }
 
 .achievement__inner {
@@ -197,6 +204,18 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .achievements__circle {
+    position: absolute;
+    left: calc(50% + 410px);
+    top: -460px;
+    z-index: -1;
+    transform: translate(-50%, 0);
+    opacity: 0.8;
+    filter: blur(25px);
+  }
+}
+
 @media only screen and (max-width: 550px) {
   .achievements {
     padding-top: 108px;
@@ -219,13 +238,11 @@
       .achievement__image {
         &::after {
           top: calc(-30px);
-          background-image: url("../../Assets/Images/Achievements/Bag.png");
         }
 
         &::before {
           top: calc(-18px);
           left: calc(50% - 10px);
-          background-image: url("../../Assets/Images/Achievements/Bag.png");
         }
       }
     }

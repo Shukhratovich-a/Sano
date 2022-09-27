@@ -37,7 +37,7 @@
 
 .hero__circle {
   position: absolute;
-  top: 85px;
+  top: 0;
   left: calc(50% + 360px);
   z-index: -5;
   filter: blur(133px);
@@ -227,6 +227,7 @@
       width: 878px;
       height: 836px;
       background-image: url("../../Assets/Images/Design/VectorMobile.svg");
+      background-size: 878px 836px;
     }
 
     &::after {
@@ -236,6 +237,7 @@
       width: 878px;
       height: 836px;
       background-image: url("../../Assets/Images/Design/VectorMobile.svg");
+      background-size: 878px 836px;
     }
   }
 }

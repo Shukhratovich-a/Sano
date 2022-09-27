@@ -173,10 +173,30 @@
 @media only screen and (max-width: 900px) {
   .contact {
     padding-bottom: 0;
+
+    &::before {
+      top: calc(50% - 1000px);
+      left: calc(50% + 195px);
+      transform: translate(-50%, -50%) rotate(81.34deg);
+      width: 1702px;
+      height: 1625px;
+      background-image: url("../../Assets/Images/Design/VectorMobile.svg");
+      background-size: 1702px 1625px;
+    }
   }
 
   .container {
     padding: 0;
+  }
+
+  .contact__circle {
+    position: absolute;
+    top: -380px;
+    left: calc(50% - 17px);
+    transform: translate(-50%);
+    z-index: -1;
+    opacity: 0.8;
+    filter: blur(25px);
   }
 
   .contact__box {
@@ -199,7 +219,21 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .contact {
+    &::before {
+      top: calc(50% - 1000px);
+    }
+  }
+}
+
 @media only screen and (max-width: 700px) {
+  .contact {
+    &::before {
+      top: calc(50% - 1200px);
+    }
+  }
+
   .container {
     padding: 0;
   }
@@ -293,6 +327,14 @@
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .contact {
+    &::before {
+      top: calc(50% - 1630px);
+    }
+  }
+}
+
 @media only screen and (max-width: 475px) {
   .contact__right {
     padding: 0 20px;
@@ -321,6 +363,7 @@
   }
 
   .contact__right {
+    width: 100%;
     padding: 0 20px;
 
     .contact__heading {
@@ -335,6 +378,16 @@
       margin-bottom: 30px;
       font-size: 32px;
       line-height: 42px;
+    }
+  }
+
+  .contact__input {
+    padding: 12px 18px;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:nth-child(6) {
+      padding: 14px 18px;
     }
   }
 }
@@ -364,15 +417,5 @@
       font-size: 26px;
       line-height: 32px;
     }
-  }
-
-  .contact__input {
-    padding: 12px 18px;
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .contact__input:nth-child(6) {
-    padding: 12px 18px;
   }
 }

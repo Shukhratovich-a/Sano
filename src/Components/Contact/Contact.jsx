@@ -2,11 +2,17 @@ import { IMaskInput } from "react-imask";
 
 import { HOST } from "../../config";
 
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
+
+import Circle from "../Lib/Icons/Circle";
+
 import Container from "../Container/Container";
 
 import styles from "./Contact.module.scss";
 
 const Contact = () => {
+  const { width } = useWindowDimensions();
+
   const handleSubmit = async (evt) => {
     evt.preventDefault();
 
@@ -38,6 +44,10 @@ const Contact = () => {
   return (
     <section className={`${styles.contact}`}>
       <Container className={`${styles.container}`}>
+        {width <= 900 ? (
+          <Circle className={`${styles.contact__circle}`} width={1245} height={1245} />
+        ) : null}
+
         <div className={`${styles.contact__box}`}>
           <div className={`${styles.contact__left}`} id={"maps"}>
             <p className={`${styles.contact__heading}`}>Мы на карте</p>

@@ -1,14 +1,18 @@
 import React from "react";
 
+import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import useSection from "../../Hooks/useSection";
 
 import founders from "../../Datas/Founders";
+
+import Circle from "../Lib/Icons/Circle";
 
 import Container from "../Container/Container";
 
 import styles from "./Founders.module.scss";
 
 const Founders = () => {
+  const { width } = useWindowDimensions();
   const [, setSection] = useSection();
 
   const ref = React.useRef(null);
@@ -29,10 +33,16 @@ const Founders = () => {
   return (
     <section className={`${styles.founders}`} id={"founders"} ref={ref}>
       <Container>
+        {width <= 900 ? (
+          <Circle className={`${styles.founder__circle}`} width={825} height={825} />
+        ) : null}
+
         <div className={`${styles.founders__top}`}>
           <h2 className={`${styles.founders__heading__text}`}>основатели</h2>
 
-          <span className={`${styles.founders__heading__subtext}`}>наша команда</span>
+          {width > 1020 && (
+            <span className={`${styles.founders__heading__subtext}`}>наша команда</span>
+          )}
         </div>
 
         <ul className={`${styles.founders__list}`}>
@@ -60,11 +70,13 @@ const Founders = () => {
                   <span className={`${styles.founder__experience}`}>{founder.experience}</span>
                 </div>
 
-                <div className={`${styles.founder__quote}`}>
-                  <blockquote className={`${styles.founder__quote__text}`}>
-                    {founder.quote}
-                  </blockquote>
-                </div>
+                {width > 900 && (
+                  <div className={`${styles.founder__quote}`}>
+                    <blockquote className={`${styles.founder__quote__text}`}>
+                      {founder.quote}
+                    </blockquote>
+                  </div>
+                )}
               </li>
             ))}
         </ul>
