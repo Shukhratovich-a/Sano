@@ -201,6 +201,19 @@
   }
 }
 
+@media only screen and (min-height: 1000px) and (min-width: 1250px) {
+  .photo__inner {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .photo__image {
+    top: 50%;
+    left: calc(50% - 30px);
+    transform: translate(-50%, -50%);
+  }
+}
+
 @media only screen and (min-height: 1080px) and (min-width: 1640px) {
   .photo {
     height: 1080px;

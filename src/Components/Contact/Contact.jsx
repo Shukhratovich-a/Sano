@@ -1,3 +1,6 @@
+import React from "react";
+import { IMaskInput } from "react-imask";
+
 import { HOST } from "../../config";
 
 import Container from "../Container/Container";
@@ -5,6 +8,9 @@ import Container from "../Container/Container";
 import styles from "./Contact.module.scss";
 
 const Contact = () => {
+  const ref = React.useRef(null);
+  const inputRef = React.useRef(null);
+
   const handleSubmit = async (evt) => {
     evt.preventDefault();
 
@@ -46,6 +52,7 @@ const Contact = () => {
               width="665"
               height="487"
               title="yandex-map"
+              state={{ center: "center", zoom: "zoom", behaviors: ["disable('scrollZoom')"] }}
             ></iframe>
           </div>
 
@@ -72,11 +79,11 @@ const Contact = () => {
                   type="mail"
                   name="mail"
                 />
-                <input
-                  placeholder="Телефон"
+                <IMaskInput
                   className={`${styles.contact__input}`}
-                  type="number"
                   name="phone"
+                  mask={"+{998} 00 000 00 00"}
+                  placeholder="Телефон"
                 />
                 <input
                   placeholder="Наименование организации"
