@@ -35,20 +35,12 @@
 .photo__inner {
   position: relative;
   height: 100%;
-  background-image: url("../../Assets/Images/Photo/Background.jpg");
-  background-size: 1920px 1080px;
-  background-position: -190px -108px;
+  background-image: url("../../Assets/Images/Photo/BackgroundDesktop.jpg");
+  background-size: auto 115%;
+  background-position: right -130px top -108px;
   background-repeat: no-repeat;
   border-radius: 81px;
   overflow: hidden;
-}
-
-.photo__image {
-  position: absolute;
-  top: -108px;
-  left: -190px;
-  z-index: 9;
-  pointer-events: none;
 }
 
 .photo__inner__top {
@@ -66,6 +58,7 @@
   line-height: 183px;
   text-transform: uppercase;
   color: $white;
+  filter: drop-shadow(rgba(0, 0, 0, 0.4) 0px 5px 15px);
 
   span {
     display: block;
@@ -73,6 +66,7 @@
 
   span + span {
     margin-top: -55px;
+    margin-left: 5px;
   }
 }
 
@@ -173,6 +167,32 @@
 
   .photo__inner {
     border-radius: 0;
+    background-image: url("../../Assets/Images/Photo/BackgroundMobile.jpg");
+    background-size: 100% auto;
+    background-position: center -100px;
+  }
+
+  .photo__inner__top {
+    right: calc(50% - 100px);
+    bottom: 400px;
+  }
+
+  .photo__heading {
+    font-size: 80px;
+    line-height: 120px;
+  }
+
+  .photo__wrapper {
+    top: unset;
+    right: calc(50%);
+    bottom: 50px;
+    transform: translate(50%);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .photo__inner {
+    background-position: center -50px;
   }
 }
 
@@ -202,16 +222,15 @@
   }
 }
 
-@media only screen and (min-height: 1000px) and (min-width: 1250px) {
+@media only screen and (max-width: 550px) {
   .photo__inner {
-    background-size: cover;
-    background-position: center;
+    background-position: center 0;
   }
+}
 
-  .photo__image {
-    top: 50%;
-    left: calc(50% - 30px);
-    transform: translate(-50%, -50%);
+@media only screen and (max-width: 520px) {
+  .photo__inner {
+    background-size: auto 100%;
   }
 }
 
@@ -230,6 +249,12 @@
 @media only screen and (min-height: 1080px) and (max-width: 1640px) {
   .photo {
     height: 1080px;
+  }
+}
+
+@media only screen and (max-height: 900px) and (min-width: 1450px) {
+  .photo__inner {
+    background-size: 115% auto;
   }
 }
 

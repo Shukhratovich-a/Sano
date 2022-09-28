@@ -46,7 +46,16 @@ const Achievements = () => {
                 key={index}
               >
                 <div className={`${styles.achievement__inner}`}>
-                  <svg className={`${styles.achievement__circle}`} width="170" height="170">
+                  <svg
+                    className={`${styles.achievement__circle}`}
+                    width="170"
+                    height="170"
+                    style={
+                      !achievement.isFull
+                        ? { transform: "translate(-50%, -50%) rotate(-85deg)" }
+                        : null
+                    }
+                  >
                     <circle
                       cx="50%"
                       cy="50%"
@@ -55,6 +64,8 @@ const Achievements = () => {
                       strokeWidth={13}
                       fillOpacity={0}
                       strokeLinecap={"round"}
+                      strokeDasharray={!achievement.isFull ? 465 : 0}
+                      strokeDashoffset={!achievement.isFull ? 40 : 0}
                     />
                   </svg>
 

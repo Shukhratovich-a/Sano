@@ -3,8 +3,6 @@ import React from "react";
 import useSection from "../../Hooks/useSection";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
-import Human from "../../Assets/Images/Photo/Human.png";
-
 import Circle from "../Lib/Icons/Circle";
 
 import Container from "../Container/Container";
@@ -40,14 +38,6 @@ const Photo = () => {
         />
 
         <div className={`${styles.photo__inner}`}>
-          <img
-            className={`${styles.photo__image}`}
-            src={Human}
-            alt="Human with camera"
-            width={1920}
-            height={1080}
-          />
-
           <div className={`${styles.photo__inner__top}`}>
             <h2 className={`${styles.photo__heading}`}>
               <span className={`${styles.photo__heading__text}`}>photo</span>
