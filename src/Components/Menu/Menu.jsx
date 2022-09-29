@@ -83,12 +83,18 @@ const Menu = () => {
               className={`${styles.menu__link}`}
               to={"founders"}
               onClick={() => setIsOpen(false)}
+              offset={60}
             >
               Основатели
             </Link>
           </li>
           <li className={`${styles.menu__item}`} onClick={() => setIsOpen(false)}>
-            <Link className={`${styles.menu__link}`} to={"maps"} onClick={() => setIsOpen(false)}>
+            <Link
+              className={`${styles.menu__link}`}
+              to={"maps"}
+              onClick={() => setIsOpen(false)}
+              offset={-30}
+            >
               Мы на карте
             </Link>
           </li>
@@ -97,6 +103,7 @@ const Menu = () => {
               className={`${styles.menu__link}`}
               to={"contact"}
               onClick={() => setIsOpen(false)}
+              offset={-30}
             >
               Связаться с нами
             </Link>

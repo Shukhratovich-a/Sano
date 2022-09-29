@@ -48,7 +48,11 @@ const Hero = () => {
               Мы предоставляем услуги SMM и дазйна для вашего бизнеса.
             </p>
 
-            <Link className={`${styles.hero__link}`} to={"contact"} offset={-200}>
+            <Link
+              className={`${styles.hero__link}`}
+              to={"contact"}
+              offset={width > 900 ? -200 : -30}
+            >
               <span>Свяжись</span>
               <Arrow />
             </Link>
@@ -64,8 +68,6 @@ const Hero = () => {
             />
           )}
         </div>
-
-        {/* <span className={`${styles.hero__circle}`}></span> */}
       </Container>
     </section>
   );

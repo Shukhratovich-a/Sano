@@ -31,7 +31,7 @@ const Footer = () => {
               <Link
                 className={`${styles.footer__nav__link} ${styles.footer__text}`}
                 to="hero"
-                offset={-80}
+                offset={-155}
               >
                 Главная
               </Link>
