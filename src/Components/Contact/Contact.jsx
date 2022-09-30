@@ -1,3 +1,4 @@
+import React from "react";
 import { IMaskInput } from "react-imask";
 
 import { HOST } from "../../config";
@@ -5,6 +6,7 @@ import { HOST } from "../../config";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 
 import Circle from "../Lib/Icons/Circle";
+import Loading from "../Lib/Loading/Loading";
 
 import Container from "../Container/Container";
 
@@ -12,8 +14,11 @@ import styles from "./Contact.module.scss";
 
 const Contact = () => {
   const { width } = useWindowDimensions();
+  const [isLoading, setLoading] = React.useState(false);
 
   const handleSubmit = async (evt) => {
+    setLoading(true);
+
     evt.preventDefault();
 
     const { firstname, surname, mail, phone, organization, message } = evt.target.elements;
@@ -38,6 +43,11 @@ const Contact = () => {
 
     const data = await response.json();
 
+    if (data.status === 202) {
+      setLoading(false);
+    } else if (data.status === 401) {
+      setLoading(false);
+    }
     console.log(data);
   };
 
@@ -107,7 +117,8 @@ const Contact = () => {
               </div>
 
               <button className={`${styles.contact__btn}`} type="submit">
-                Отправить
+                {!isLoading && <span>Отправить</span>}
+                {isLoading && <Loading />}
               </button>
             </form>
           </div>

@@ -103,7 +103,7 @@ const Menu = () => {
               className={`${styles.menu__link}`}
               to={"contact"}
               onClick={() => setIsOpen(false)}
-              offset={width > 900 ? -200 : width > 700 ? -16 : -30}
+              offset={width > 900 ? -200 : width > 700 ? -16 : width > 375 ? -30 : -20}
             >
               Связаться с нами
             </Link>

@@ -51,7 +51,7 @@ const Hero = () => {
             <Link
               className={`${styles.hero__link}`}
               to={"contact"}
-              offset={width > 900 ? -200 : width > 700 ? -16 : -30}
+              offset={width > 900 ? -200 : width > 700 ? -16 : width > 375 ? -30 : -20}
             >
               <span>Свяжись</span>
               <Arrow />
@@ -65,6 +65,7 @@ const Hero = () => {
               alt=""
               width={800}
               height={656}
+              loading={"lazy"}
             />
           )}
         </div>
