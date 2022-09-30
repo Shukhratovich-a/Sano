@@ -93,7 +93,7 @@ const Menu = () => {
               className={`${styles.menu__link}`}
               to={"maps"}
               onClick={() => setIsOpen(false)}
-              offset={-30}
+              offset={width > 900 ? -25 : width > 475 ? -54 : width > 375 ? -30 : -20}
             >
               Мы на карте
             </Link>
@@ -103,7 +103,7 @@ const Menu = () => {
               className={`${styles.menu__link}`}
               to={"contact"}
               onClick={() => setIsOpen(false)}
-              offset={-30}
+              offset={width > 900 ? -200 : width > 700 ? -16 : -30}
             >
               Связаться с нами
             </Link>

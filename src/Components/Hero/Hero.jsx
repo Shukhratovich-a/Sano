@@ -51,7 +51,7 @@ const Hero = () => {
             <Link
               className={`${styles.hero__link}`}
               to={"contact"}
-              offset={width > 900 ? -200 : -30}
+              offset={width > 900 ? -200 : width > 700 ? -16 : -30}
             >
               <span>Свяжись</span>
               <Arrow />

@@ -34,7 +34,7 @@ const Graphic = () => {
   return (
     <section className={`${styles.graphic}`} id={"graphic"} ref={ref}>
       <Container className={`${styles.container}`}>
-        <Circle className={`${styles.graphic__circle}`} />
+        {width > 900 && <Circle className={`${styles.graphic__circle}`} />}
 
         <div className={`${styles.graphic__inner}`}>
           <img

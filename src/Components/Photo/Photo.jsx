@@ -31,11 +31,13 @@ const Photo = () => {
   return (
     <section className={`${styles.photo}`} id={"photo"} ref={ref}>
       <Container className={`${styles.container}`}>
-        <Circle
-          className={`${styles.photo__circle}`}
-          width={width > 768 ? 1382 : 825}
-          height={width > 768 ? 1382 : 825}
-        />
+        {width > 900 && (
+          <Circle
+            className={`${styles.photo__circle}`}
+            width={width > 768 ? 1382 : 825}
+            height={width > 768 ? 1382 : 825}
+          />
+        )}
 
         <div className={`${styles.photo__inner}`}>
           <div className={`${styles.photo__inner__top}`}>

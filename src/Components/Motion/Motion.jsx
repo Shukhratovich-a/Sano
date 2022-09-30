@@ -34,7 +34,7 @@ const Motion = () => {
   return (
     <section className={`${styles.motion}`} id={"motion"} ref={ref}>
       <Container className={`${styles.container}`}>
-        <Circle className={`${styles.motion__circle}`} width={550} height={550} />
+        {width > 900 && <Circle className={`${styles.motion__circle}`} width={550} height={550} />}
 
         <div className={`${styles.motion__inner}`}>
           <img

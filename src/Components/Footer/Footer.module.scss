@@ -109,7 +109,7 @@
   .footer__logo__block {
     width: 100%;
     margin-right: unset;
-    margin-bottom: 90px;
+    margin-bottom: 45px;
     padding: 0;
 
     svg {
@@ -143,6 +143,12 @@
 
   .footer__about {
     margin-bottom: 45px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer__logo__block {
+    margin-bottom: 90px;
   }
 }
 
