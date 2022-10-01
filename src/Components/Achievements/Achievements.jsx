@@ -1,7 +1,7 @@
 import React from "react";
 
-import useSection from "../../Hooks/useSection";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import useScroll from "../../Hooks/useScroll";
 
 import achievements from "../../Datas/Achievements";
 
@@ -12,23 +12,10 @@ import Container from "../Container/Container";
 import styles from "../Achievements/Achievements.module.scss";
 
 const Achievements = () => {
-  const [, setSection] = useSection();
   const { width } = useWindowDimensions();
-
   const ref = React.useRef(null);
 
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        if (
-          window.scrollY >= ref.current.offsetTop &&
-          window.scrollY < ref.current.offsetTop + ref.current.offsetHeight
-        ) {
-          setSection("achievements");
-        }
-      });
-    }
-  });
+  useScroll("achievements", ref);
 
   return (
     <section className={`${styles.achievements}`} id={"achievements"} ref={ref}>

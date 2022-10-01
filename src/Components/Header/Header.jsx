@@ -2,6 +2,7 @@ import React from "react";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import useSection from "../../Hooks/useSection";
+import useScroll from "../../Hooks/useScroll";
 import useMenu from "../../Hooks/useMenu";
 
 import Nav from "../Nav/Nav";
@@ -18,8 +19,10 @@ const Header = () => {
   const { width } = useWindowDimensions();
   const [, setOpen] = useMenu();
   const [section] = useSection();
-
   const [small, setSmall] = React.useState(false);
+  const ref = React.useRef(null);
+
+  useScroll("header", ref);
 
   React.useEffect(() => {
     if (typeof window !== "undefined") {
@@ -28,7 +31,11 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`${styles.header} ${small && width > 1140 ? styles["header--small"] : ""}`}>
+    <header
+      className={`${styles.header} ${small && width > 1140 ? styles["header--small"] : ""}`}
+      id={"header"}
+      ref={ref}
+    >
       <Container className={`${styles.container}`}>
         <div className={`${styles.header__inner}`}>
           <div className={`${styles.header__wrapper}`}>
@@ -47,7 +54,10 @@ const Header = () => {
             {width <= 1140 && (
               <button
                 className={`${styles.header__burger} ${
-                  ["graphic", "target", "photo"].includes(section) ? styles["header__burger--yellow"] : ""
+                  ["graphic", "photo", "footer"].includes(section) ||
+                  (width < 600 && section === "target")
+                    ? styles["header__burger--yellow"]
+                    : ""
                 }`}
                 onClick={() => setOpen(true)}
               >

@@ -1,4 +1,7 @@
+import React from "react";
 import { Link } from "react-scroll";
+
+import useScroll from "../../Hooks/useScroll";
 
 import Socials from "../Socials/Socials";
 
@@ -12,8 +15,12 @@ import Container from "../Container/Container";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
+  const ref = React.useRef(null);
+
+  useScroll("footer", ref);
+
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id={"footer"} ref={ref}>
       <Container className={`${styles.container}`}>
         <div className={`${styles.footer__logo__block}`}>
           <Link className={`${styles.footer__link}`} to="hero" offset={-80}>

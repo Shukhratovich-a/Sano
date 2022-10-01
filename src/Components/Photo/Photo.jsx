@@ -1,7 +1,7 @@
 import React from "react";
 
-import useSection from "../../Hooks/useSection";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import useScroll from "../../Hooks/useScroll";
 
 import Circle from "../Lib/Icons/Circle";
 
@@ -11,22 +11,9 @@ import styles from "./Photo.module.scss";
 
 const Photo = () => {
   const { width } = useWindowDimensions();
-  const [, setSection] = useSection();
-
   const ref = React.useRef(null);
 
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        if (
-          window.scrollY >= ref.current.offsetTop - 28 &&
-          window.scrollY < ref.current.offsetTop + ref.current.offsetHeight - 28
-        ) {
-          setSection("photo");
-        }
-      });
-    }
-  });
+  useScroll("photo", ref);
 
   return (
     <section className={`${styles.photo}`} id={"photo"} ref={ref}>

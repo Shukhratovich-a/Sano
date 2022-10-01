@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import benefits from "../../Datas/Benefits";
 
-import useSection from "../../Hooks/useSection";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import useScroll from "../../Hooks/useScroll";
 
 import Container from "../Container/Container";
 
@@ -14,25 +14,12 @@ import styles from "../Benefits/Benefits.module.scss";
 
 const Benefits = () => {
   const { width } = useWindowDimensions();
-  const [, setSection] = useSection();
-
   const ref = React.useRef(null);
 
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        if (
-          window.scrollY >= ref.current.offsetTop &&
-          window.scrollY < ref.current.offsetTop + ref.current.offsetHeight
-        ) {
-          setSection("benefits");
-        }
-      });
-    }
-  });
+  useScroll("benefits", ref);
 
   return (
-    <section className={`${styles.benefits}`} ref={ref} id={"benefits"}>
+    <section className={`${styles.benefits}`} id={"benefits"} ref={ref}>
       <Container className={`${styles.container}`}>
         <div className={`${styles.benefits__heading__top}`}>
           <h2 className={`${styles.benefits__heading__text}`}>

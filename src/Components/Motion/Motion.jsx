@@ -1,7 +1,7 @@
 import React from "react";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
-import useSection from "../../Hooks/useSection";
+import useScroll from "../../Hooks/useScroll";
 
 import HumanDesktop from "../../Assets/Images/Motion/HumanDesktop.png";
 import HumanMobile from "../../Assets/Images/Motion/HumanMobile.png";
@@ -14,22 +14,9 @@ import styles from "./Motion.module.scss";
 
 const Motion = () => {
   const { width } = useWindowDimensions();
-  const [, setSection] = useSection();
-
   const ref = React.useRef(null);
 
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        if (
-          window.scrollY >= ref.current.offsetTop - 28 &&
-          window.scrollY < ref.current.offsetTop + ref.current.offsetHeight - 28
-        ) {
-          setSection("motion");
-        }
-      });
-    }
-  });
+  useScroll("motion", ref);
 
   return (
     <section className={`${styles.motion}`} id={"motion"} ref={ref}>

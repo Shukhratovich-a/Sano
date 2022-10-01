@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
-import useSection from "../../Hooks/useSection";
+import useScroll from "../../Hooks/useScroll";
 
 import HeroImage from "../../Assets/Images/Hero/Main.webp";
 
@@ -15,22 +15,9 @@ import styles from "./Hero.module.scss";
 
 const Hero = () => {
   const { width } = useWindowDimensions();
-  const [, setSection] = useSection();
-
   const ref = React.useRef(null);
 
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        if (
-          window.scrollY >= ref.current.offsetTop - 28 &&
-          window.scrollY < ref.current.offsetTop + ref.current.offsetHeight - 28
-        ) {
-          setSection("hero");
-        }
-      });
-    }
-  });
+  useScroll("hero", ref);
 
   return (
     <section className={`${styles.hero}`} id={"hero"} ref={ref}>

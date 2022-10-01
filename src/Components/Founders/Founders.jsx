@@ -1,7 +1,7 @@
 import React from "react";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
-import useSection from "../../Hooks/useSection";
+import useScroll from "../../Hooks/useScroll";
 
 import founders from "../../Datas/Founders";
 
@@ -13,22 +13,9 @@ import styles from "./Founders.module.scss";
 
 const Founders = () => {
   const { width } = useWindowDimensions();
-  const [, setSection] = useSection();
-
   const ref = React.useRef(null);
 
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => {
-        if (
-          window.scrollY >= ref.current.offsetTop &&
-          window.scrollY < ref.current.offsetTop + ref.current.offsetHeight
-        ) {
-          setSection("founders");
-        }
-      });
-    }
-  });
+  useScroll("founders", ref);
 
   return (
     <section className={`${styles.founders}`} id={"founders"} ref={ref}>

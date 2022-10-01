@@ -4,6 +4,7 @@ import { IMaskInput } from "react-imask";
 import { HOST } from "../../config";
 
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
+import useScroll from "../../Hooks/useScroll";
 
 import Circle from "../Lib/Icons/Circle";
 import Loading from "../Lib/Loading/Loading";
@@ -15,6 +16,9 @@ import styles from "./Contact.module.scss";
 const Contact = () => {
   const { width } = useWindowDimensions();
   const [isLoading, setLoading] = React.useState(false);
+  const ref = React.useRef(null);
+
+  useScroll("founders", ref);
 
   const handleSubmit = async (evt) => {
     setLoading(true);
@@ -52,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <section className={`${styles.contact}`}>
+    <section className={`${styles.contact}`} ref={ref}>
       <Container className={`${styles.container}`}>
         {width <= 900 ? (
           <Circle className={`${styles.contact__circle}`} width={1245} height={1245} />
