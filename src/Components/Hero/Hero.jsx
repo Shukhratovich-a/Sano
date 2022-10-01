@@ -49,7 +49,7 @@ const Hero = () => {
             <img
               className={`${styles.hero__image}`}
               src={HeroImage}
-              alt=""
+              alt="Человек указывает пальцем на описания сайта"
               width={800}
               height={656}
               loading={"lazy"}
