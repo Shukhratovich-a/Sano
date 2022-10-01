@@ -183,7 +183,25 @@
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1050px) {
+  .photo__inner__top {
+    right: calc(50% + 20px);
+  }
+
+  .photo__heading {
+    font-size: 100px;
+    line-height: 140px;
+  }
+
+  .photo__wrapper {
+    right: calc(50% + 0px);
+  }
+
+  .photo__info {
+    padding-top: 100px;
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -226,8 +244,6 @@
     padding-right: 20px;
     padding-bottom: 28px;
     padding-left: 20px;
-    font-size: 15px;
-    line-height: 18px;
     border-radius: 60px;
   }
 
@@ -400,6 +416,13 @@
 @media only screen and (max-height: 820px) and (min-width: 1640px) {
   .photo {
     height: 820px;
+  }
+}
+
+@media only screen and (max-height: 890px) and (min-width: 1500px) {
+  .photo__inner {
+    background-size: 100% auto;
+    background-position: center;
   }
 }
 

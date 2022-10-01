@@ -59,6 +59,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(rgba(0, 0, 0, 0.4) 0px 5px 10px);
 }
 
 .motion__heading__design {
@@ -316,6 +317,7 @@
   .motion__inner {
     background-size: auto 100%;
     background-position: 40% center;
+    border-radius: 50px;
   }
 
   .motion__image {
