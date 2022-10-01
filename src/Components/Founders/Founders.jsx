@@ -57,13 +57,11 @@ const Founders = () => {
                   <span className={`${styles.founder__experience}`}>{founder.experience}</span>
                 </div>
 
-                {width > 900 && (
-                  <div className={`${styles.founder__quote}`}>
-                    <blockquote className={`${styles.founder__quote__text}`}>
-                      {founder.quote}
-                    </blockquote>
-                  </div>
-                )}
+                <div className={`${styles.founder__quote}`}>
+                  <blockquote className={`${styles.founder__quote__text}`}>
+                    {founder.quote}
+                  </blockquote>
+                </div>
               </li>
             ))}
         </ul>
