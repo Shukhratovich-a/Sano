@@ -132,14 +132,6 @@
     .founder__inner {
       background: linear-gradient(315.63deg, #ffbe00 0%, #fff0a0 95.2%);
     }
-
-    .founder__image {
-      right: calc(50% + 7px);
-    }
-
-    .founder__name {
-      color: $textBlue;
-    }
   }
 
   &--blue {
@@ -232,7 +224,7 @@
 .founder {
   &:nth-child(1) {
     .founder__quote {
-      top: calc(0% - 8px);
+      top: calc(0% - 18px);
       left: calc(50% - 230px);
       transform: translate(-50%, -100%) scaleX(-1) scale(0) rotate(20deg);
 
@@ -246,8 +238,8 @@
 
   &:nth-child(2) {
     .founder__quote {
-      top: calc(0% - 40px);
-      left: calc(50% + 220px);
+      top: calc(0% - 50px);
+      left: calc(50% + 230px);
 
       .founder__quote__text {
         max-width: 345px;
@@ -258,8 +250,8 @@
 
   &:nth-child(3) {
     .founder__quote {
-      top: calc(0% - 20px);
-      left: calc(50% + 200px);
+      top: calc(0% - 40px);
+      left: calc(50% + 230px);
 
       .founder__quote__text {
         max-width: 346px;
@@ -306,21 +298,11 @@
   }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1580px) {
   .founder {
     &:nth-child(1) {
       .founder__quote {
-        top: calc(0% - 20px);
-        left: calc(50% - 200px);
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1530px) {
-  .founder {
-    &:nth-child(1) {
-      .founder__quote {
+        top: calc(0% - 38px);
         left: calc(50% + 220px);
         transform: translate(-50%, -100%) scaleX(1) scale(0) rotate(20deg);
 
@@ -330,7 +312,16 @@
       }
     }
 
+    &:nth-child(2) {
+      .founder__quote {
+        top: calc(0% - 60px);
+        left: calc(50% + 230px);
+      }
+    }
+
     &:nth-child(3) {
+      top: calc(0% - 60px);
+
       .founder__quote {
         left: calc(50% - 230px);
         transform: translate(-50%, -100%) scaleX(-1) scale(0) rotate(20deg);

@@ -6,8 +6,8 @@ const founders = [
   {
     image: {
       image: Nurislom,
-      width: 293,
-      height: 307,
+      width: 238,
+      height: 302,
     },
     name: "Санаев Нурислом",
     job: "Кто делает рабочие дизайны",
@@ -19,8 +19,8 @@ const founders = [
   {
     image: {
       image: Sadiya,
-      width: 263,
-      height: 301,
+      width: 217,
+      height: 311,
     },
     name: "Закирова Садия",
     job: "Кто делает сетевую рекламу",
@@ -32,8 +32,8 @@ const founders = [
   {
     image: {
       image: Jama,
-      width: 239,
-      height: 296,
+      width: 197,
+      height: 310,
     },
     name: "Исмаилов Джамшид",
     job: "Кто делает движение интересным",

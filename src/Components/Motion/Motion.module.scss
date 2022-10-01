@@ -520,6 +520,21 @@
     top: 292px;
     left: 50%;
     transform: translate(-50%, 0);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+      z-index: -1;
+      width: calc(100% + 200px);
+      height: 100%;
+      background-color: #ffe664;
+      border-radius: 50%;
+      filter: blur(25px);
+      opacity: 0.9;
+    }
   }
 
   .motion__heading {
