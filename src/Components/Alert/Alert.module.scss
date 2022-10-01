@@ -1,0 +1,51 @@
+@import "../../Scss/Variables.scss";
+
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 50%;
+  z-index: 99;
+  transform: translate(50%, calc(-100% - 20px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  padding: 20px 15px;
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $textBlue;
+  border-radius: 5px;
+  border-left: 5px solid $green;
+  background: $greenGradient;
+  box-shadow: 0 0 15px 5px rgba($color: $green, $alpha: 0.8);
+  transition: transform 0.25s ease;
+
+  &--open {
+    transform: translate(50%, calc(0));
+  }
+
+  &--danger {
+    color: $white;
+    border-left: 5px solid $darkRed;
+    background: $redGradient;
+    box-shadow: 0 0 15px 5px rgba($color: $red, $alpha: 0.8);
+
+    .alert__close {
+      border-color: $white;
+    }
+  }
+}
+
+.alert__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  color: inherit;
+  background-color: transparent;
+  border: 1.5px solid $textBlue;
+  border-radius: 50%;
+  cursor: pointer;
+}

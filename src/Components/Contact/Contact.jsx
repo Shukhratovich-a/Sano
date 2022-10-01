@@ -6,9 +6,12 @@ import { HOST } from "../../config";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import useScroll from "../../Hooks/useScroll";
 
+import validation from "../../Utils/Validation/Message";
+
 import Circle from "../Lib/Icons/Circle";
 import Loading from "../Lib/Loading/Loading";
 
+import Alert from "../Alert/Alert";
 import Container from "../Container/Container";
 
 import styles from "./Contact.module.scss";
@@ -16,13 +19,19 @@ import styles from "./Contact.module.scss";
 const Contact = () => {
   const { width } = useWindowDimensions();
   const [isLoading, setLoading] = React.useState(false);
+  const [isOpen, setOpen] = React.useState(false);
+  const [type, setType] = React.useState("");
   const ref = React.useRef(null);
 
   useScroll("founders", ref);
 
-  const handleSubmit = async (evt) => {
-    setLoading(true);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setOpen(false);
+    }, 5000);
+  }, [isOpen]);
 
+  const handleSubmit = async (evt) => {
     evt.preventDefault();
 
     const { firstname, surname, mail, phone, organization, message } = evt.target.elements;
@@ -34,8 +43,15 @@ const Contact = () => {
       phone: phone.value.trim().split("+").join("").split(" ").join(""),
     };
 
+    if (!validation.name(firstname)) return;
+    else if (!validation.name(surname)) return;
+    else if (!validation.mail(mail)) return;
+    else if (!validation.phone(phone)) return;
+
     if (organization.value.trim().length > 2) body.organization = organization.value.trim();
     if (message.value.trim().length > 2) body.message = message.value.trim();
+
+    setLoading(true);
 
     const response = await fetch(HOST + "/message", {
       method: "POST",
@@ -49,14 +65,22 @@ const Contact = () => {
 
     if (data.status === 202) {
       setLoading(false);
+      evt.target.reset();
+      setOpen(true);
+      setType("success");
     } else if (data.status === 401) {
       setLoading(false);
+      setOpen(true);
+      setType("danger");
     }
-    console.log(data);
   };
 
   return (
     <section className={`${styles.contact}`} ref={ref}>
+      <Alert isOpen={isOpen} type={type} setOpen={setOpen}>
+        {type === "success" ? "Мы получили ваше сообщение." : "Произошла ошибка, попробуйте позже"}
+      </Alert>
+
       <Container className={`${styles.container}`}>
         {width <= 900 ? (
           <Circle className={`${styles.contact__circle}`} width={1245} height={1245} />
