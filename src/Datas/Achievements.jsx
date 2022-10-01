@@ -38,7 +38,7 @@ const achievements = [
       symbol: "+",
     },
     image: Hat,
-    isFull: false,
+    isFull: true,
   },
 ];
 
