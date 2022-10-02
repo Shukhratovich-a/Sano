@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import useScroll from "../../Hooks/useScroll";
 
-import HeroImage from "../../Assets/Images/Hero/Main.webp";
+import hero from "../../Datas/Hero";
 
 import Arrow from "../Lib/Icons/Arrow";
 import Circle from "../Lib/Icons/Circle";
@@ -46,14 +46,22 @@ const Hero = () => {
           </div>
 
           {width > 1140 && (
-            <img
-              className={`${styles.hero__image}`}
-              src={HeroImage}
-              alt="Человек указывает пальцем на описания сайта"
-              width={800}
-              height={656}
-              loading={"lazy"}
-            />
+            <picture className={`${styles.hero__image}`}>
+              <source
+                type="image/webp"
+                media="(min-width: 1140px)"
+                srcSet={`${hero.heroWebp1x} 1x, ${hero.heroWebp2x} 2x`}
+              />
+
+              <img
+                className={`${styles.hero__image}`}
+                src={hero.heroPng1x}
+                srcSet={`${hero.heroPng1x} 1x, ${hero.heroPng2x} 2x`}
+                alt="Человек указывает пальцем на описания сайта"
+                width={800}
+                height={656}
+              />
+            </picture>
           )}
         </div>
       </Container>

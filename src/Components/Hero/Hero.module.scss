@@ -77,7 +77,7 @@
     width: 163px;
     height: 145px;
     display: inline-block;
-    background-image: url("../../Assets/Images/Hero/Hit.webp");
+    background-image: url("../../Assets/Images/Hero/Hit@1x.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -390,5 +390,18 @@
 @media only screen and (max-height: 550px) and (max-width: 425px) {
   .hero {
     height: 425px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .hero__heading {
+    &::after {
+      background-image: url("../../Assets/Images/Hero/Hit@2x.webp");
+    }
   }
 }
