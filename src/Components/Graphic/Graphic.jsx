@@ -3,8 +3,7 @@ import React from "react";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import useScroll from "../../Hooks/useScroll";
 
-import HumanDesktop from "../../Assets/Images/Graphic/HumanDesktop.png";
-import HumanMobile from "../../Assets/Images/Graphic/HumanMobile.png";
+import graphic from "../../Datas/Graphic";
 
 import Circle from "../Lib/Icons/Circle";
 
@@ -24,13 +23,38 @@ const Graphic = () => {
         {width > 900 && <Circle className={`${styles.graphic__circle}`} />}
 
         <div className={`${styles.graphic__inner}`}>
-          <img
-            className={`${styles.graphic__image}`}
-            src={width > 900 ? HumanDesktop : HumanMobile}
-            alt="Graphic"
-            width={width > 900 ? 1920 : 900}
-            height={width > 900 ? 1080 : 1600}
-          />
+          <picture className={`${styles.hero__image}`}>
+            <source
+              type="image/webp"
+              media="(max-width: 900px)"
+              srcSet={`${graphic.mobile.graphicWebp1x} 1x, ${graphic.mobile.graphicWebp2x} 2x`}
+            />
+
+            <source
+              type="image/webp"
+              srcSet={`${graphic.desktop.graphicWebp1x} 1x, ${graphic.desktop.graphicWebp2x} 2x`}
+            />
+
+            <source
+              media="(max-width: 900px)"
+              srcSet={`${graphic.mobile.graphicPng1x} 1x, ${graphic.mobile.graphicPng2x} 2x`}
+            />
+
+            <img
+              className={`${styles.graphic__image}`}
+              src={
+                width > 900 ? graphic.desktop.graphicPng1x : graphic.mobile.graphicPng1x
+              }
+              srcSet={`${
+                width > 900 ? graphic.desktop.graphicPng1x : graphic.mobile.graphicPng1x
+              } 1x, ${
+                width > 900 ? graphic.desktop.graphicPng2x : graphic.mobile.graphicPng2x
+              } 2x`}
+              alt="Graphic"
+              width={width > 900 ? 1920 : 900}
+              height={width > 900 ? 1080 : 1600}
+            />
+          </picture>
 
           <div className={`${styles.graphic__inner__top}`}>
             <h2 className={`${styles.graphic__heading}`}>graphic</h2>
