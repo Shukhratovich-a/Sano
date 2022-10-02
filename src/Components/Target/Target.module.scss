@@ -44,7 +44,7 @@
     width: 525px;
     z-index: 3;
     height: 486px;
-    background-image: url("../../Assets/Images/Target/Like.webp");
+    background-image: url("../../Assets/Images/Target/Like@1x.webp");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@
     right: 75px;
     width: 190px;
     height: 190px;
-    background-image: url("../../Assets/Images/Target/Fire.webp");
+    background-image: url("../../Assets/Images/Target/Fire@1x.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -138,7 +138,7 @@
     display: inline-block;
     width: 272px;
     height: 228px;
-    background-image: url("../../Assets/Images/Target/Ball.webp");
+    background-image: url("../../Assets/Images/Target/Ball@1x.webp");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -600,5 +600,30 @@
 @media only screen and (max-height: 724px) and (max-width: 410px) {
   .target {
     height: 724px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .target__inner {
+    &::before {
+      background-image: url("../../Assets/Images/Target/Like@2x.webp");
+    }
+  }
+
+  .target__heading {
+    &::after {
+      background-image: url("../../Assets/Images/Target/Fire@2x.webp");
+    }
+  }
+
+  .target__info {
+    &::before {
+      background-image: url("../../Assets/Images/Target/Ball@2x.webp");
+    }
   }
 }
