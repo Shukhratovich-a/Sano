@@ -1,26 +1,26 @@
-import graphicDesktopPng1x from "../Assets/Images/Graphic/HumanDesktop@1x.png";
-import graphicDesktopPng2x from "../Assets/Images/Graphic/HumanDesktop@2x.png";
-import graphicDesktopWebp1x from "../Assets/Images/Graphic/HumanDesktop@1x.webp";
-import graphicDesktopWebp2x from "../Assets/Images/Graphic/HumanDesktop@2x.webp";
+import desktopPng1x from "../Assets/Images/Graphic/HumanDesktop@1x.png";
+import desktopPng2x from "../Assets/Images/Graphic/HumanDesktop@2x.png";
+import desktopWebp1x from "../Assets/Images/Graphic/HumanDesktop@1x.webp";
+import desktopWebp2x from "../Assets/Images/Graphic/HumanDesktop@2x.webp";
 
-import graphicMobilePng1x from "../Assets/Images/Graphic/HumanMobile@1x.png";
-import graphicMobilePng2x from "../Assets/Images/Graphic/HumanMobile@2x.png";
-import graphicMobileWebp1x from "../Assets/Images/Graphic/HumanMobile@1x.webp";
-import graphicMobileWebp2x from "../Assets/Images/Graphic/HumanMobile@2x.webp";
+import mobilePng1x from "../Assets/Images/Graphic/HumanMobile@1x.png";
+import mobilePng2x from "../Assets/Images/Graphic/HumanMobile@2x.png";
+import mobileWebp1x from "../Assets/Images/Graphic/HumanMobile@1x.webp";
+import mobileWebp2x from "../Assets/Images/Graphic/HumanMobile@2x.webp";
 
 const graphic = {
   desktop: {
-    graphicPng1x: graphicDesktopPng1x,
-    graphicPng2x: graphicDesktopPng2x,
-    graphicWebp1x: graphicDesktopWebp1x,
-    graphicWebp2x: graphicDesktopWebp2x,
+    png1x: desktopPng1x,
+    png2x: desktopPng2x,
+    webp1x: desktopWebp1x,
+    webp2x: desktopWebp2x,
   },
 
   mobile: {
-    graphicPng1x: graphicMobilePng1x,
-    graphicPng2x: graphicMobilePng2x,
-    graphicWebp1x: graphicMobileWebp1x,
-    graphicWebp2x: graphicMobileWebp2x,
+    png1x: mobilePng1x,
+    png2x: mobilePng2x,
+    webp1x: mobileWebp1x,
+    webp2x: mobileWebp2x,
   },
 };
 

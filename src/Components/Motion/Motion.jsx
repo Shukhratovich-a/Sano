@@ -3,8 +3,7 @@ import React from "react";
 import useWindowDimensions from "../../Hooks/useWindowDimensions";
 import useScroll from "../../Hooks/useScroll";
 
-import HumanDesktop from "../../Assets/Images/Motion/HumanDesktop.png";
-import HumanMobile from "../../Assets/Images/Motion/HumanMobile.png";
+import motion from "../../Datas/Motion";
 
 import Circle from "../Lib/Icons/Circle";
 
@@ -23,15 +22,36 @@ const Motion = () => {
       <Container className={`${styles.container}`}>
         {width > 900 && <Circle className={`${styles.motion__circle}`} width={550} height={550} />}
 
-        <div className={`${styles.motion__inner}`}>
+        <picture className={`${styles.hero__image}`}>
+          <source
+            type="image/webp"
+            media="(max-width: 900px)"
+            srcSet={`${motion.mobile.webp1x} 1x, ${motion.mobile.webp2x} 2x`}
+          />
+
+          <source
+            type="image/webp"
+            srcSet={`${motion.desktop.webp1x} 1x, ${motion.desktop.webp2x} 2x`}
+          />
+
+          <source
+            media="(max-width: 900px)"
+            srcSet={`${motion.mobile.png1x} 1x, ${motion.mobile.png2x} 2x`}
+          />
+
           <img
             className={`${styles.motion__image}`}
-            src={width > 900 ? HumanDesktop : HumanMobile}
+            src={width > 900 ? motion.desktop.png1x : motion.mobile.png1x}
+            srcSet={`${width > 900 ? motion.desktop.png1x : motion.mobile.png1x} 1x, ${
+              width > 900 ? motion.desktop.png2x : motion.mobile.png2x
+            } 2x`}
             alt="motion"
             width={width > 900 ? 1920 : 1080}
             height={width > 900 ? 1080 : 1920}
           />
+        </picture>
 
+        <div className={`${styles.motion__inner}`}>
           <div className={`${styles.motion__inner__top}`}>
             <h2 className={`${styles.motion__heading}`}>motion</h2>
             <span className={`${styles.motion__heading__design}`}></span>

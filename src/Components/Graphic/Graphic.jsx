@@ -27,28 +27,24 @@ const Graphic = () => {
             <source
               type="image/webp"
               media="(max-width: 900px)"
-              srcSet={`${graphic.mobile.graphicWebp1x} 1x, ${graphic.mobile.graphicWebp2x} 2x`}
+              srcSet={`${graphic.mobile.webp1x} 1x, ${graphic.mobile.webp2x} 2x`}
             />
 
             <source
               type="image/webp"
-              srcSet={`${graphic.desktop.graphicWebp1x} 1x, ${graphic.desktop.graphicWebp2x} 2x`}
+              srcSet={`${graphic.desktop.webp1x} 1x, ${graphic.desktop.webp2x} 2x`}
             />
 
             <source
               media="(max-width: 900px)"
-              srcSet={`${graphic.mobile.graphicPng1x} 1x, ${graphic.mobile.graphicPng2x} 2x`}
+              srcSet={`${graphic.mobile.png1x} 1x, ${graphic.mobile.png2x} 2x`}
             />
 
             <img
               className={`${styles.graphic__image}`}
-              src={
-                width > 900 ? graphic.desktop.graphicPng1x : graphic.mobile.graphicPng1x
-              }
-              srcSet={`${
-                width > 900 ? graphic.desktop.graphicPng1x : graphic.mobile.graphicPng1x
-              } 1x, ${
-                width > 900 ? graphic.desktop.graphicPng2x : graphic.mobile.graphicPng2x
+              src={width > 900 ? graphic.desktop.png1x : graphic.mobile.png1x}
+              srcSet={`${width > 900 ? graphic.desktop.png1x : graphic.mobile.png1x} 1x, ${
+                width > 900 ? graphic.desktop.png2x : graphic.mobile.png2x
               } 2x`}
               alt="Graphic"
               width={width > 900 ? 1920 : 900}
