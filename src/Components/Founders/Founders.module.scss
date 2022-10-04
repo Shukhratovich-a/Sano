@@ -197,8 +197,8 @@
   position: absolute;
   top: 0;
   left: 50%;
+  z-index: 2;
   transform: translate(-50%, -100%) scale(0) rotate(20deg);
-  // transform: translate(-50%, -100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,7 +213,7 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center 0;
-  transition: transform 0.25s ease;
+  transition: transform 0.35s ease, top 0.35s ease, left 0.35s ease;
 }
 
 .founder__quote__text {
@@ -224,8 +224,8 @@
 .founder {
   &:nth-child(1) {
     .founder__quote {
-      top: calc(0% - 18px);
-      left: calc(50% - 230px);
+      top: calc(50%);
+      left: calc(50%);
       transform: translate(-50%, -100%) scaleX(-1) scale(0) rotate(20deg);
 
       .founder__quote__text {
@@ -238,8 +238,8 @@
 
   &:nth-child(2) {
     .founder__quote {
-      top: calc(0% - 50px);
-      left: calc(50% + 230px);
+      top: calc(50%);
+      left: calc(50%);
 
       .founder__quote__text {
         max-width: 345px;
@@ -250,8 +250,8 @@
 
   &:nth-child(3) {
     .founder__quote {
-      top: calc(0% - 40px);
-      left: calc(50% + 230px);
+      top: calc(50%);
+      left: calc(50%);
 
       .founder__quote__text {
         max-width: 346px;
@@ -263,6 +263,8 @@
   &:hover {
     &:nth-child(1) {
       .founder__quote {
+        top: calc(0% - 18px);
+        left: calc(50% - 230px);
         transform: translate(-50%, -100%) scaleX(-1) scale(1) rotate(0deg);
         // animation: quoteAnimationFirst 0.4s;
         // animation-delay: 0.25s;
@@ -271,6 +273,8 @@
 
     &:nth-child(2) {
       .founder__quote {
+        top: calc(0% - 50px);
+        left: calc(50% + 230px);
         transform: translate(-50%, -100%) scale(1) rotate(0deg);
         // animation: quoteAnimation 0.4s;
         // animation-delay: 0.25s;
@@ -279,6 +283,8 @@
 
     &:nth-child(3) {
       .founder__quote {
+        top: calc(0% - 40px);
+        left: calc(50% + 230px);
         transform: translate(-50%, -100%) scale(1) rotate(0deg);
         // animation: quoteAnimation 0.4s;
         // animation-delay: 0.25s;
@@ -302,8 +308,6 @@
   .founder {
     &:nth-child(1) {
       .founder__quote {
-        top: calc(0% - 38px);
-        left: calc(50% + 220px);
         transform: translate(-50%, -100%) scaleX(1) scale(0) rotate(20deg);
 
         .founder__quote__text {
@@ -312,16 +316,8 @@
       }
     }
 
-    &:nth-child(2) {
-      .founder__quote {
-        top: calc(0% - 60px);
-        left: calc(50% + 230px);
-      }
-    }
-
     &:nth-child(3) {
       .founder__quote {
-        left: calc(50% - 230px);
         transform: translate(-50%, -100%) scaleX(-1) scale(0) rotate(20deg);
 
         .founder__quote__text {
@@ -333,12 +329,15 @@
     &:hover {
       &:nth-child(1) {
         .founder__quote {
+          top: calc(0% - 38px);
+          left: calc(50% + 220px);
           transform: translate(-50%, -100%) scaleX(1) scale(1) rotate(0deg);
         }
       }
 
       &:nth-child(3) {
         .founder__quote {
+          left: calc(50% - 230px);
           transform: translate(-50%, -100%) scaleX(-1) scale(1) rotate(0deg);
         }
       }
@@ -383,7 +382,7 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 960px) {
   .founders {
     padding-top: 100px;
 
@@ -434,8 +433,6 @@
   .founders {
     .founder {
       .founder__quote {
-        left: 50%;
-        top: -50px;
         filter: drop-shadow(rgba($color: $accent, $alpha: 0.6) 0px 2px 8px);
       }
     }
@@ -449,7 +446,7 @@
 
       &:nth-child(3) {
         .founder__quote {
-          transform: translate(-50%) scaleX(1) scale(0) rotate(20deg);
+          transform: translate(-50%, -100%) scaleX(1) scale(0) rotate(20deg);
 
           .founder__quote__text {
             transform: scaleX(-1);
@@ -458,59 +455,27 @@
       }
 
       &:hover {
+        &:nth-child(1) {
+          .founder__quote {
+            left: calc(50%);
+          }
+        }
+
+        &:nth-child(2) {
+          .founder__quote {
+            left: calc(50%);
+          }
+        }
+
         &:nth-child(3) {
           .founder__quote {
+            left: calc(50%);
             transform: translate(-50%, -100%) scaleX(1) scale(1) rotate(0deg);
           }
 
           .founder__quote__text {
             transform: scaleX(1);
           }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .founder__quote {
-    width: 300px;
-    height: 180px;
-    padding: 16px;
-    padding: 10px;
-    padding-bottom: 37px;
-    font-size: 10px;
-    line-height: 16px;
-    background-image: url("../../Assets/Images/Founders/QuoteBackgroundMobile.svg");
-  }
-
-  .founder {
-    &:nth-child(1) {
-      .founder__quote {
-        top: -50px;
-
-        .founder__quote__text {
-          max-width: 270px;
-        }
-      }
-    }
-
-    &:nth-child(2) {
-      .founder__quote {
-        top: -50px;
-
-        .founder__quote__text {
-          max-width: 270px;
-        }
-      }
-    }
-
-    &:nth-child(3) {
-      .founder__quote {
-        top: -50px;
-
-        .founder__quote__text {
-          max-width: 246px;
         }
       }
     }
@@ -548,6 +513,51 @@
 
   .founders__top {
     margin-bottom: 90px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .founder__quote {
+    width: 300px;
+    height: 180px;
+    padding: 16px;
+    padding: 10px;
+    padding-bottom: 37px;
+    font-size: 10px;
+    line-height: 16px;
+    background-image: url("../../Assets/Images/Founders/QuoteBackgroundMobile.svg");
+  }
+
+  .founder {
+    &:nth-child(1) {
+      .founder__quote {
+        top: 40%;
+
+        .founder__quote__text {
+          max-width: 270px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .founder__quote {
+        top: 40%;
+
+        .founder__quote__text {
+          max-width: 270px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .founder__quote {
+        top: 40%;
+
+        .founder__quote__text {
+          max-width: 246px;
+        }
+      }
+    }
   }
 }
 
