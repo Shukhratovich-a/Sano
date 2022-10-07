@@ -35,11 +35,11 @@ const founders = [
       width: 197,
       height: 310,
     },
-    name: "Исмаилов Джамшид",
+    name: "Исмаилов Жамшид",
     job: "Кто делает движение интересным",
     experience: "5 лет опыта в сфере Motion design",
     quote:
-      "Доброго времени суток! Меня зовут Джамшид я графический и моушен дизайнер. Работаю в этой сфере более 5 лет. Владею такими программами как: Adobe (Photoshop, After Effects, Premiere Pro, Illustrator), Corel Draw и Figma.",
+      "Доброго времени суток! Меня зовут Жамшид. Я графический и моушен дизайнер. Работаю в этой сфере более 5 лет. Владею такими программами как: Adobe (Photoshop, After Effects, Premiere Pro, Illustrator), Corel Draw и Figma.",
     color: "blue",
   },
 ];

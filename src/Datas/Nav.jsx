@@ -3,11 +3,11 @@ const nav = [
     id: 1,
     title: "Главная",
     name: "hero",
-    offset: -80,
+    offset: -155,
   },
   {
     id: 2,
-    title: "Smm & Target",
+    title: "SMM & Target",
     name: "target",
     offset: 0,
   },

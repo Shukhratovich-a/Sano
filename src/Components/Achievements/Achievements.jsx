@@ -65,7 +65,7 @@ const Achievements = () => {
                   </span>
                 </div>
 
-                <p className={`${styles.achievement__text}`}>Проектов</p>
+                <p className={`${styles.achievement__text}`}>{achievement.title}</p>
 
                 <span className={`${styles.achievement__image}`}></span>
               </li>

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-scroll";
 
+import nav from "../../Datas/Nav";
+
 import useScroll from "../../Hooks/useScroll";
 
 import Socials from "../Socials/Socials";
@@ -34,35 +36,18 @@ const Footer = () => {
           <h5 className={`${styles.footer__heading}`}>Карта сайта</h5>
 
           <ul className={`${styles.footer__list}`}>
-            <li className={`${styles.footer__item}`}>
-              <Link
-                className={`${styles.footer__nav__link} ${styles.footer__text}`}
-                to="hero"
-                offset={-155}
-              >
-                Главная
-              </Link>
-            </li>
-            <li className={`${styles.footer__item}`}>
-              <Link className={`${styles.footer__nav__link} ${styles.footer__text}`} to="target">
-                Smm & Target
-              </Link>
-            </li>
-            <li className={`${styles.footer__item}`}>
-              <Link className={`${styles.footer__nav__link} ${styles.footer__text}`} to="graphic">
-                Graphic Design
-              </Link>
-            </li>
-            <li className={`${styles.footer__item}`}>
-              <Link className={`${styles.footer__nav__link} ${styles.footer__text}`} to="motion">
-                Motion Design
-              </Link>
-            </li>
-            <li className={`${styles.footer__item}`}>
-              <Link className={`${styles.footer__nav__link} ${styles.footer__text}`} to="photo">
-                Фото и Видео
-              </Link>
-            </li>
+            {nav.length > 0 &&
+              nav.map((link) => (
+                <li className={`${styles.footer__item}`} key={link.id}>
+                  <Link
+                    className={`${styles.footer__nav__link} ${styles.footer__text}`}
+                    to={link.name}
+                    offset={link.offset}
+                  >
+                    {link.title}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
 

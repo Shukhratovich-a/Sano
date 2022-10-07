@@ -32,7 +32,7 @@ const Hero = () => {
             <strong className={`${styles.hero__subheading}`}>Привет, мы команда “SANO”</strong>
 
             <p className={`${styles.hero__description}`}>
-              Мы предоставляем услуги SMM и дазйна для вашего бизнеса.
+              Мы предоставляем услуги SMM и дизайна для вашего бизнеса.
             </p>
 
             <Link
