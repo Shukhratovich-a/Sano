@@ -163,6 +163,22 @@
 }
 
 .achievement__image {
+  &[aria-label="bag"] {
+    background-image: url("../../Assets/Images/Achievements/Bag@1x.png");
+  }
+
+  &[aria-label="hit"] {
+    background-image: url("../../Assets/Images/Achievements/Hit@1x.png");
+  }
+
+  &[aria-label="heart"] {
+    background-image: url("../../Assets/Images/Achievements/Heart@1x.png");
+  }
+
+  &[aria-label="hat"] {
+    background-image: url("../../Assets/Images/Achievements/Hat@1x.png");
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -301,6 +317,31 @@
       top: calc(50%);
       left: calc(50%);
       transform: translate(-50%, -100%);
+    }
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .achievement__image {
+    &[aria-label="bag"] {
+      background-image: url("../../Assets/Images/Achievements/Bag@2x.png");
+    }
+
+    &[aria-label="hit"] {
+      background-image: url("../../Assets/Images/Achievements/Hit@2x.png");
+    }
+
+    &[aria-label="heart"] {
+      background-image: url("../../Assets/Images/Achievements/Heart@2x.png");
+    }
+
+    &[aria-label="hat"] {
+      background-image: url("../../Assets/Images/Achievements/Hat@2x.png");
     }
   }
 }

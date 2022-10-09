@@ -27,11 +27,7 @@ const Achievements = () => {
         <ul className={`${styles.achievements__list}`}>
           {achievements.length &&
             achievements.map((achievement, index) => (
-              <li
-                className={`${styles.achievement}`}
-                style={{ backgroundImage: `url(${achievement.image})` }}
-                key={index}
-              >
+              <li className={`${styles.achievement}`} key={index}>
                 <div className={`${styles.achievement__inner}`}>
                   <svg
                     className={`${styles.achievement__circle}`}
@@ -67,7 +63,10 @@ const Achievements = () => {
 
                 <p className={`${styles.achievement__text}`}>{achievement.title}</p>
 
-                <span className={`${styles.achievement__image}`}></span>
+                <span
+                  className={`${styles.achievement__image}`}
+                  aria-label={`${achievement.image}`}
+                ></span>
               </li>
             ))}
         </ul>

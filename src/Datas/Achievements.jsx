@@ -1,8 +1,3 @@
-import Bag from "../Assets/Images/Achievements/Bag.png";
-import Hit from "../Assets/Images/Achievements/Hit.png";
-import Heart from "../Assets/Images/Achievements/Heart.png";
-import Hat from "../Assets/Images/Achievements/Hat.png";
-
 const achievements = [
   {
     title: "Проектов",
@@ -10,34 +5,37 @@ const achievements = [
       number: 23,
       symbol: "+",
     },
-    image: Bag,
+    image: "bag",
     isFull: true,
   },
+
   {
     title: "Заявок",
     text: {
       number: 150,
       symbol: "+",
     },
-    image: Hit,
+    image: "hit",
     isFull: true,
   },
+
   {
     title: "Довольные клиенты",
     text: {
       number: 100,
       symbol: "%",
     },
-    image: Heart,
+    image: "heart",
     isFull: true,
   },
+
   {
     title: "Квалификационных сотрудников",
     text: {
       number: 7,
       symbol: "+",
     },
-    image: Hat,
+    image: "hat",
     isFull: true,
   },
 ];
